@@ -10,7 +10,7 @@ class SidebarComponent < ViewComponent::Base
       <div class="flex-1 p-4 space-y-6">
         <%= link_to root_path, class: 'text-2xl font-bold flex items-center gap-2' do %>
           <%= image_tag 'logo.png', alt: 'Logo', class: 'h-10 w-10' %>
-          <span data-sidebar-target="label" class="hidden">App name</span>
+          <span data-sidebar-target="label" class="hidden">Gymboard</span>
         <% end %>
 
         <nav class="space-y-4">

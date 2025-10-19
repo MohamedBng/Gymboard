@@ -15,6 +15,12 @@ fr:
         role:
           name: "Nom"
           color: "Couleur"
+        session:
+          start_time: "Heure de début"
+          end_time: "Heure de fin"
+          title: "Titre"
+        exercise:
+          title: "Titre"
         fields:
           first_name: "Prénom"
           last_name: "Nom de famille"
@@ -22,6 +28,20 @@ fr:
           role: "Rôle"
       errors:
         models:
+        session:
+          attributes:
+            start_time:
+              blank: "ne peut pas être vide"
+            end_time:
+              blank: "ne peut pas être vide"
+              must_be_after_start_time: "doit être après l'heure de début"
+            title:
+              blank: "ne peut pas être vide"
+        exercise:
+          attributes:
+            title:
+              blank: "ne peut pas être vide"
+              taken: "est déjà utilisé"
           user:
             attributes:
               first_name:

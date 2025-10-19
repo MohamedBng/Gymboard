@@ -44,12 +44,32 @@ en:
       role:
         name: "Name"
         color: "Color"
+      session:
+        start_time: "Start Time"
+        end_time: "End Time"
+        title: "Title"
+      exercise:
+        title: "Title"
     errors:
       models:
         user:
           attributes:
             first_name:
               blank: "can't be blank"
+      session:
+        attributes:
+          start_time:
+            blank: "can't be blank"
+          end_time:
+            blank: "can't be blank"
+            must_be_after_start_time: "must be after start time"
+          title:
+            blank: "can't be blank"
+      exercise:
+        attributes:
+          title:
+            blank: "can't be blank"
+            taken: "has already been taken"
       image:
         file_size: "is too large (max is %{max_size} MB)"
         mime_type: "is not a valid image type. Allowed types: %{valid_types}"

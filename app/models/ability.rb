@@ -17,6 +17,11 @@ class Ability
     can :create, RolesPermission if user.has_permission?("create_roles_permission")
     can :destroy, RolesPermission if user.has_permission?("destroy_roles_permission")
 
+    can :read, Exercise if user.has_permission?("read_exercise")
+    can :create, Exercise if user.has_permission?("create_exercise")
+    can :update, Exercise if user.has_permission?("update_exercise")
+    can :destroy, Exercise if user.has_permission?("destroy_exercise")
+
     if user.has_permission?("update_any_user")
       can [ :update, :delete_profile_image ], User
     elsif user.has_permission?("update_own_user")
