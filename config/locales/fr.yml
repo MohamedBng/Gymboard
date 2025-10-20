@@ -109,6 +109,8 @@ fr:
       search:
         placeholder: "Rechercher par nom d'exercice"
         submit_button: "Rechercher"
+        all_muscle_groups: "Tous les groupes musculaires"
+        all_muscles: "Tous les muscles"
       actions:
         confirm_delete: "Êtes-vous sûr de vouloir supprimer cet exercice ?"
     user_roles:

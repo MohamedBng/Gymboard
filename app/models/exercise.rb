@@ -15,6 +15,10 @@ class Exercise < ApplicationRecord
   has_many :muscles, through: :exercise_muscles
 
   def self.ransackable_attributes(auth_object = nil)
-    %w[title]
+    %w[title muscle_group]
+  end
+
+  def self.ransackable_associations(auth_object = nil)
+    %w[muscles]
   end
 end

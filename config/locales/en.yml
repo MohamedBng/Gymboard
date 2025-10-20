@@ -125,6 +125,8 @@ en:
       search:
         placeholder: "Search by exercise name"
         submit_button: "Search"
+        all_muscle_groups: "All muscle groups"
+        all_muscles: "All muscles"
       actions:
         confirm_delete: "Are you sure you want to delete this exercise?"
     user_roles:
