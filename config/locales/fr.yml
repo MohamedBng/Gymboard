@@ -21,6 +21,12 @@ fr:
           title: "Titre"
         exercise:
           title: "Titre"
+          muscle_group: "Groupe musculaire"
+        muscle:
+          name: "Nom"
+          muscle_group: "Groupe musculaire"
+        exercise_muscle:
+          role: "Rôle"
         fields:
           first_name: "Prénom"
           last_name: "Nom de famille"
@@ -28,34 +34,48 @@ fr:
           role: "Rôle"
       errors:
         models:
-        session:
-          attributes:
-            start_time:
-              blank: "ne peut pas être vide"
-            end_time:
-              blank: "ne peut pas être vide"
-              must_be_after_start_time: "doit être après l'heure de début"
-            title:
-              blank: "ne peut pas être vide"
-        exercise:
-          attributes:
-            title:
-              blank: "ne peut pas être vide"
-              taken: "est déjà utilisé"
+          session:
+            attributes:
+              start_time:
+                blank: "ne peut pas être vide"
+              end_time:
+                blank: "ne peut pas être vide"
+                must_be_after_start_time: "doit être après l'heure de début"
+              title:
+                blank: "ne peut pas être vide"
+          exercise:
+            attributes:
+              title:
+                blank: "ne peut pas être vide"
+                taken: "est déjà utilisé"
+              muscle_group:
+                blank: "ne peut pas être vide"
+          muscle:
+            attributes:
+              name:
+                blank: "ne peut pas être vide"
+                taken: "est déjà utilisé"
+              muscle_group:
+                blank: "ne peut pas être vide"
+          exercise_muscle:
+            attributes:
+              role:
+                blank: "ne peut pas être vide"
+                taken: "est déjà utilisé"
           user:
             attributes:
               first_name:
                 blank: "ne peut pas être vide"
+          role:
+            attributes:
+              name:
+                blank: "ne peut pas être vide"
+                too_short: "est trop court (minimum %{min} caractères)"
+                too_long: "est trop long (maximum %{max} caractères)"
         image:
           file_size: "est trop volumineux (maximum %{max_size} Mo)"
           mime_type: "n'est pas un type d'image valide. Types autorisés : %{valid_types}"
           extension: "n'est pas une extension d'image valide. Extensions autorisées : %{valid_extensions}"
-        role:
-          attributes:
-            name:
-              blank: "ne peut pas être vide"
-              too_short: "est trop court (minimum %{min} caractères)"
-              too_long: "est trop long (maximum %{max} caractères)"
   errors:
     messages:
       not_saved:
@@ -83,6 +103,14 @@ fr:
         other: "%{count} erreurs ont empêché l'enregistrement de ce document"
 
   admin:
+    exercises:
+      index:
+        title: "Gestion des exercices"
+      search:
+        placeholder: "Rechercher par nom d'exercice"
+        submit_button: "Rechercher"
+      actions:
+        confirm_delete: "Êtes-vous sûr de vouloir supprimer cet exercice ?"
     user_roles:
       user_removed: "L'utilisateur a été supprimé du rôle %{role_name} avec succès"
       confirm_removal: "Êtes-vous sûr de vouloir supprimer l'utilisateur du rôle %{role_name}?"
@@ -195,6 +223,8 @@ fr:
     logout: "Déconnexion"
     dashboard: "Tableau de bord"
     roles: "Rôles"
+    exercises: "Exercices"
+  exercises:
   tables:
     users:
       name: "Nom"
@@ -204,6 +234,10 @@ fr:
       actions: "Actions"
       profile: "Profil"
       delete: "Supprimer"
+    exercises:
+      title: "Titre"
+      created_at: "Créé le"
+      actions: "Actions"
   time:
     formats:
       default: "%a, %d %b %Y %H:%M:%S %z"

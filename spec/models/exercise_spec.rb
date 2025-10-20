@@ -11,5 +11,6 @@ RSpec.describe Exercise, type: :model do
   describe 'validations' do
     it { should validate_presence_of(:title) }
     it { should validate_uniqueness_of(:title) }
+    it { should validate_presence_of(:muscle_group) }
   end
 end

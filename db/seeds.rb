@@ -13,6 +13,169 @@ roles_with_colors.each do |role_name, color|
   role.update!(color: color)
 end
 
+# Seed muscles (idempotent)
+muscle_seeds = [
+  # Chest muscles
+  { name: "Pectoralis Major", muscle_group: :chest },
+  { name: "Pectoralis Minor", muscle_group: :chest },
+  { name: "Serratus Anterior", muscle_group: :chest },
+
+  # Back muscles
+  { name: "Latissimus Dorsi", muscle_group: :back },
+  { name: "Rhomboids", muscle_group: :back },
+  { name: "Trapezius", muscle_group: :back },
+  { name: "Erector Spinae", muscle_group: :back },
+
+  # Shoulder muscles
+  { name: "Anterior Deltoid", muscle_group: :shoulders },
+  { name: "Medial Deltoid", muscle_group: :shoulders },
+  { name: "Posterior Deltoid", muscle_group: :shoulders },
+
+  # Arm muscles
+  { name: "Biceps Brachii", muscle_group: :arm },
+  { name: "Triceps Brachii", muscle_group: :arm },
+  { name: "Forearms", muscle_group: :arm },
+
+  # Leg muscles
+  { name: "Quadriceps", muscle_group: :legs },
+  { name: "Hamstrings", muscle_group: :legs },
+  { name: "Glutes", muscle_group: :legs },
+  { name: "Calves", muscle_group: :legs },
+
+  # Abs muscles
+  { name: "Rectus Abdominis", muscle_group: :abs },
+  { name: "Obliques", muscle_group: :abs },
+  { name: "Transverse Abdominis", muscle_group: :abs }
+]
+
+muscle_seeds.each do |attrs|
+  Muscle.find_or_create_by!(name: attrs[:name]) do |muscle|
+    muscle.muscle_group = attrs[:muscle_group]
+  end
+end
+
+# Seed exercises with muscle associations (idempotent)
+exercise_seeds = [
+  {
+    title: "Bench Press",
+    muscle_group: :chest,
+    muscles: [
+      { name: "Pectoralis Major", role: :primary },
+      { name: "Anterior Deltoid", role: :secondary },
+      { name: "Triceps Brachii", role: :secondary }
+    ]
+  },
+  {
+    title: "Squat",
+    muscle_group: :legs,
+    muscles: [
+      { name: "Quadriceps", role: :primary },
+      { name: "Glutes", role: :primary },
+      { name: "Rectus Abdominis", role: :secondary }
+    ]
+  },
+  {
+    title: "Deadlift",
+    muscle_group: :legs,
+    muscles: [
+      { name: "Hamstrings", role: :primary },
+      { name: "Glutes", role: :primary },
+      { name: "Erector Spinae", role: :primary },
+      { name: "Trapezius", role: :secondary }
+    ]
+  },
+  {
+    title: "Military Press",
+    muscle_group: :shoulders,
+    muscles: [
+      { name: "Anterior Deltoid", role: :primary },
+      { name: "Medial Deltoid", role: :primary },
+      { name: "Triceps Brachii", role: :secondary }
+    ]
+  },
+  {
+    title: "Pull-ups",
+    muscle_group: :back,
+    muscles: [
+      { name: "Latissimus Dorsi", role: :primary },
+      { name: "Rhomboids", role: :primary },
+      { name: "Biceps Brachii", role: :secondary }
+    ]
+  },
+  {
+    title: "Push-ups",
+    muscle_group: :chest,
+    muscles: [
+      { name: "Pectoralis Major", role: :primary },
+      { name: "Anterior Deltoid", role: :secondary },
+      { name: "Triceps Brachii", role: :secondary },
+      { name: "Rectus Abdominis", role: :secondary }
+    ]
+  },
+  {
+    title: "Plank",
+    muscle_group: :abs,
+    muscles: [
+      { name: "Rectus Abdominis", role: :primary },
+      { name: "Obliques", role: :primary },
+      { name: "Transverse Abdominis", role: :primary },
+      { name: "Anterior Deltoid", role: :secondary }
+    ]
+  },
+  {
+    title: "Lunges",
+    muscle_group: :legs,
+    muscles: [
+      { name: "Quadriceps", role: :primary },
+      { name: "Glutes", role: :primary },
+      { name: "Hamstrings", role: :secondary }
+    ]
+  },
+  {
+    title: "Bicep Curls",
+    muscle_group: :arm,
+    muscles: [
+      { name: "Biceps Brachii", role: :primary },
+      { name: "Forearms", role: :secondary }
+    ]
+  },
+  {
+    title: "Tricep Extensions",
+    muscle_group: :arm,
+    muscles: [
+      { name: "Triceps Brachii", role: :primary },
+      { name: "Forearms", role: :secondary }
+    ]
+  },
+  {
+    title: "Leg Raises",
+    muscle_group: :abs,
+    muscles: [
+      { name: "Rectus Abdominis", role: :primary },
+      { name: "Obliques", role: :secondary }
+    ]
+  }
+]
+
+exercise_seeds.each do |attrs|
+  exercise = Exercise.find_or_create_by!(title: attrs[:title]) do |ex|
+    ex.muscle_group = attrs[:muscle_group]
+  end
+
+  # Clear existing muscle associations
+  exercise.exercise_muscles.destroy_all
+
+  # Add new muscle associations
+  attrs[:muscles].each do |muscle_attr|
+    muscle = Muscle.find_by!(name: muscle_attr[:name])
+    ExerciseMuscle.create!(
+      exercise: exercise,
+      muscle: muscle,
+      role: muscle_attr[:role]
+    )
+  end
+end
+
 # Assign permissions
 perms = {
   "admin" => %w[destroy_user read_user read_dashboard update_any_user create_user read_role create_role update_role create_users_role destroy_users_role create_roles_permission destroy_roles_permission read_exercise create_exercise update_exercise destroy_exercise],

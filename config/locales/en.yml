@@ -50,26 +50,45 @@ en:
         title: "Title"
       exercise:
         title: "Title"
+        muscle_group: "Muscle Group"
+      muscle:
+        name: "Name"
+        muscle_group: "Muscle Group"
+      exercise_muscle:
+        role: "Role"
     errors:
       models:
         user:
           attributes:
             first_name:
               blank: "can't be blank"
-      session:
-        attributes:
-          start_time:
-            blank: "can't be blank"
-          end_time:
-            blank: "can't be blank"
-            must_be_after_start_time: "must be after start time"
-          title:
-            blank: "can't be blank"
-      exercise:
-        attributes:
-          title:
-            blank: "can't be blank"
-            taken: "has already been taken"
+        session:
+          attributes:
+            start_time:
+              blank: "can't be blank"
+            end_time:
+              blank: "can't be blank"
+              must_be_after_start_time: "must be after start time"
+            title:
+              blank: "can't be blank"
+        exercise:
+          attributes:
+            title:
+              blank: "can't be blank"
+              taken: "has already been taken"
+            muscle_group:
+              blank: "can't be blank"
+        muscle:
+          attributes:
+            name:
+              blank: "can't be blank"
+              taken: "has already been taken"
+            muscle_group:
+              blank: "can't be blank"
+        exercise_muscle:
+          attributes:
+            role:
+              blank: "can't be blank"
       image:
         file_size: "is too large (max is %{max_size} MB)"
         mime_type: "is not a valid image type. Allowed types: %{valid_types}"
@@ -100,6 +119,14 @@ en:
         one: "1 error prohibited this record from being saved"
         other: "%{count} errors prohibited this record from being saved"
   admin:
+    exercises:
+      index:
+        title: "Exercises"
+      search:
+        placeholder: "Search by exercise name"
+        submit_button: "Search"
+      actions:
+        confirm_delete: "Are you sure you want to delete this exercise?"
     user_roles:
       user_removed: "User was successfully removed from %{role_name} Role"
       confirm_removal: "Are you sure you want to remove this user from %{role_name} Role?"
@@ -214,6 +241,7 @@ en:
     logout: "Logout"
     dashboard: "Dashboard"
     roles: "Roles"
+    exercises: "Exercises"
   tables:
     users:
       name: "Name"
@@ -223,6 +251,10 @@ en:
       actions: "Actions"
       profile: "Profile"
       delete: "Delete"
+    exercises:
+      title: "Title"
+      created_at: "Created at"
+      actions: "Actions"
   time:
     formats:
       default: "%a, %d %b %Y %H:%M:%S %z"
