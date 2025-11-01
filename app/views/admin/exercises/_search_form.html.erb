@@ -10,13 +10,13 @@
 
     <div class="flex items-center gap-2 grow">
       <i class="fas fa-filter"></i>
-      <%= f.select :muscle_group_eq, Exercise.muscle_groups.transform_keys { |k| k.to_s.titleize }, { include_blank: t("admin.exercises.search.all_muscle_groups") },
+      <%= f.select :muscle_group_name_eq, MuscleGroup.order(:name).pluck(:name).map { |n| [n.capitalize, n] }, { include_blank: t("admin.exercises.search.all_muscle_groups") },
           class: "select select-bordered w-full" %>
     </div>
 
     <div class="flex items-center gap-2 grow">
       <i class="fas fa-dumbbell"></i>
-      <%= f.select :muscles_name_eq, Muscle.pluck(:name), { include_blank: t("admin.exercises.search.all_muscles") },
+      <%= f.select :muscles_name_eq, Muscle.order(:name).pluck(:name).map { |n| [n.capitalize, n] }, { include_blank: t("admin.exercises.search.all_muscles") },
           class: "select select-bordered w-full" %>
     </div>
 

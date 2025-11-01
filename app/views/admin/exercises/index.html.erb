@@ -12,13 +12,13 @@
           <h2 class="card-title text-lg"><%= exercise.title %></h2>
           <% if exercise.muscle_group.present? %>
             <div class="badge badge-accent">
-              <%= exercise.muscle_group.humanize %>
+              <%= exercise.muscle_group.name %>
             </div>
           <% end %>
         </div>
 
         <div class="flex flex-wrap gap-2 justify-end mt-4">
-          <% exercise.exercise_muscles.includes(:muscle).each do |exercise_muscle| %>
+          <% exercise.exercise_muscles.each do |exercise_muscle| %>
             <% if exercise_muscle.role == 'primary' %>
               <div class="badge badge-outline badge-primary">
                 <%= exercise_muscle.muscle.name %>
