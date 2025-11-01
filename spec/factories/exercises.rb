@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :exercise do
     title { Faker::Sports::Basketball.player }
-    muscle_group { Exercise.muscle_groups.keys.sample }
+    association :muscle_group
   end
 end
