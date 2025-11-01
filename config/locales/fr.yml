@@ -26,6 +26,10 @@ fr:
           name: "Nom"
         exercise_muscle:
           role: "Rôle"
+        training_session:
+          name: "Nom"
+          start_time: "Heure de début"
+          end_time: "Heure de fin"
         fields:
           first_name: "Prénom"
           last_name: "Nom de famille"
@@ -57,6 +61,13 @@ fr:
               role:
                 blank: "ne peut pas être vide"
                 taken: "est déjà utilisé"
+          training_session:
+            attributes:
+              start_time:
+                blank: "ne peut pas être vide"
+              end_time:
+                blank: "ne peut pas être vide"
+                must_be_after_start_time: "doit être après l'heure de début"
           user:
             attributes:
               first_name:
