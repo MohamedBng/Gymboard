@@ -1,24 +1,16 @@
 class Exercise < ApplicationRecord
   validates :title, presence: true, uniqueness: true
-  validates :muscle_group, presence: true
 
-  enum :muscle_group, [
-    :chest,
-    :back,
-    :shoulders,
-    :arm,
-    :legs,
-    :abs
-  ]
+  belongs_to :muscle_group
 
   has_many :exercise_muscles, dependent: :destroy
   has_many :muscles, through: :exercise_muscles
 
   def self.ransackable_attributes(auth_object = nil)
-    %w[title muscle_group]
+    %w[title]
   end
 
   def self.ransackable_associations(auth_object = nil)
-    %w[muscles]
+    %w[muscles muscle_group]
   end
 end

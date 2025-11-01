@@ -47,8 +47,6 @@ fr:
               title:
                 blank: "ne peut pas être vide"
                 taken: "est déjà utilisé"
-              muscle_group:
-                blank: "ne peut pas être vide"
           muscle:
             attributes:
               name:

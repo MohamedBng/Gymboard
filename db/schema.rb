@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_11_01_122243) do
+ActiveRecord::Schema[8.0].define(version: 2025_11_01_131338) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -64,9 +64,10 @@ ActiveRecord::Schema[8.0].define(version: 2025_11_01_122243) do
 
   create_table "exercises", force: :cascade do |t|
     t.string "title", null: false
-    t.integer "muscle_group", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "muscle_group_id", null: false
+    t.index ["muscle_group_id"], name: "index_exercises_on_muscle_group_id"
   end
 
   create_table "muscle_groups", force: :cascade do |t|
@@ -165,6 +166,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_11_01_122243) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "exercise_muscles", "exercises"
   add_foreign_key "exercise_muscles", "muscles"
+  add_foreign_key "exercises", "muscle_groups"
   add_foreign_key "muscles", "muscle_groups"
   add_foreign_key "roles_permissions", "permissions"
   add_foreign_key "roles_permissions", "roles"
