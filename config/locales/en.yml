@@ -55,13 +55,17 @@ en:
         name: "Name"
       exercise_muscle:
         role: "Role"
+      training_session:
+        name: "Name"
+        start_time: "Start Time"
+        end_time: "End Time"
     errors:
       models:
         user:
           attributes:
             first_name:
               blank: "can't be blank"
-        session:
+        training_session:
           attributes:
             start_time:
               blank: "can't be blank"
@@ -80,10 +84,17 @@ en:
             name:
               blank: "can't be blank"
               taken: "has already been taken"
-        exercise_muscle:
-          attributes:
-            role:
-              blank: "can't be blank"
+      exercise_muscle:
+        attributes:
+          role:
+            blank: "can't be blank"
+      training_session:
+        attributes:
+          start_time:
+            blank: "can't be blank"
+          end_time:
+            blank: "can't be blank"
+            must_be_after_start_time: "must be after start time"
       image:
         file_size: "is too large (max is %{max_size} MB)"
         mime_type: "is not a valid image type. Allowed types: %{valid_types}"
