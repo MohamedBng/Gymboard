@@ -53,7 +53,6 @@ en:
         muscle_group: "Muscle Group"
       muscle:
         name: "Name"
-        muscle_group: "Muscle Group"
       exercise_muscle:
         role: "Role"
     errors:
@@ -83,8 +82,6 @@ en:
             name:
               blank: "can't be blank"
               taken: "has already been taken"
-            muscle_group:
-              blank: "can't be blank"
         exercise_muscle:
           attributes:
             role:
