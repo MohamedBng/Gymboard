@@ -24,7 +24,6 @@ fr:
           muscle_group: "Groupe musculaire"
         muscle:
           name: "Nom"
-          muscle_group: "Groupe musculaire"
         exercise_muscle:
           role: "Rôle"
         fields:
@@ -55,8 +54,6 @@ fr:
               name:
                 blank: "ne peut pas être vide"
                 taken: "est déjà utilisé"
-              muscle_group:
-                blank: "ne peut pas être vide"
           exercise_muscle:
             attributes:
               role:

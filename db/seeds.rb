@@ -13,46 +13,12 @@ roles_with_colors.each do |role_name, color|
   role.update!(color: color)
 end
 
-# Seed muscles (idempotent)
-muscle_seeds = [
-  # Chest muscles
-  { name: "Pectoralis Major", muscle_group: :chest },
-  { name: "Pectoralis Minor", muscle_group: :chest },
-  { name: "Serratus Anterior", muscle_group: :chest },
+# Seed muscle group
+load Rails.root.join('db', 'seeds', 'muscle_groups.rb')
 
-  # Back muscles
-  { name: "Latissimus Dorsi", muscle_group: :back },
-  { name: "Rhomboids", muscle_group: :back },
-  { name: "Trapezius", muscle_group: :back },
-  { name: "Erector Spinae", muscle_group: :back },
+# Seed muscles
+load Rails.root.join('db', 'seeds', 'muscles.rb')
 
-  # Shoulder muscles
-  { name: "Anterior Deltoid", muscle_group: :shoulders },
-  { name: "Medial Deltoid", muscle_group: :shoulders },
-  { name: "Posterior Deltoid", muscle_group: :shoulders },
-
-  # Arm muscles
-  { name: "Biceps Brachii", muscle_group: :arm },
-  { name: "Triceps Brachii", muscle_group: :arm },
-  { name: "Forearms", muscle_group: :arm },
-
-  # Leg muscles
-  { name: "Quadriceps", muscle_group: :legs },
-  { name: "Hamstrings", muscle_group: :legs },
-  { name: "Glutes", muscle_group: :legs },
-  { name: "Calves", muscle_group: :legs },
-
-  # Abs muscles
-  { name: "Rectus Abdominis", muscle_group: :abs },
-  { name: "Obliques", muscle_group: :abs },
-  { name: "Transverse Abdominis", muscle_group: :abs }
-]
-
-muscle_seeds.each do |attrs|
-  Muscle.find_or_create_by!(name: attrs[:name]) do |muscle|
-    muscle.muscle_group = attrs[:muscle_group]
-  end
-end
 
 # Seed exercises with muscle associations (idempotent)
 exercise_seeds = [
