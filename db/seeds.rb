@@ -22,6 +22,9 @@ load Rails.root.join('db', 'seeds', 'muscles.rb')
 # Seed exercises
 load Rails.root.join('db', 'seeds', 'exercises.rb')
 
+# Seed training sessions
+load Rails.root.join('db', 'seeds', 'training_sessions.rb')
+
 # Assign permissions
 perms = {
   "admin" => %w[destroy_user read_user read_dashboard update_any_user create_user read_role create_role update_role create_users_role destroy_users_role create_roles_permission destroy_roles_permission read_exercise create_exercise update_exercise destroy_exercise],
