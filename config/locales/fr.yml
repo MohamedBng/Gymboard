@@ -30,6 +30,9 @@ fr:
           name: "Nom"
           start_time: "Heure de début"
           end_time: "Heure de fin"
+        training_session_muscle_group:
+          training_session: "Session d'entraînement"
+          muscle_group: "Groupe musculaire"
         fields:
           first_name: "Prénom"
           last_name: "Nom de famille"
