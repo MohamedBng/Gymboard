@@ -75,8 +75,6 @@ en:
             title:
               blank: "can't be blank"
               taken: "has already been taken"
-            muscle_group:
-              blank: "can't be blank"
         muscle:
           attributes:
             name:
