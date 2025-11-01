@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_11_01_184432) do
+ActiveRecord::Schema[8.0].define(version: 2025_11_01_191455) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -108,14 +108,6 @@ ActiveRecord::Schema[8.0].define(version: 2025_11_01_184432) do
     t.index ["permission_id"], name: "index_roles_permissions_on_permission_id"
     t.index ["role_id", "permission_id"], name: "index_roles_permissions_on_role_id_and_permission_id", unique: true
     t.index ["role_id"], name: "index_roles_permissions_on_role_id"
-  end
-
-  create_table "sessions", force: :cascade do |t|
-    t.datetime "start_time", null: false
-    t.datetime "end_time", null: false
-    t.string "title", null: false
-    t.datetime "created_at", null: false
-    t.datetime "updated_at", null: false
   end
 
   create_table "training_session_muscle_groups", force: :cascade do |t|
