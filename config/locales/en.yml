@@ -44,10 +44,6 @@ en:
       role:
         name: "Name"
         color: "Color"
-      session:
-        start_time: "Start Time"
-        end_time: "End Time"
-        title: "Title"
       exercise:
         title: "Title"
         muscle_group: "Muscle Group"
@@ -59,6 +55,9 @@ en:
         name: "Name"
         start_time: "Start Time"
         end_time: "End Time"
+      training_session_muscle_group:
+        training_session: "Training Session"
+        muscle_group: "Muscle Group"
     errors:
       models:
         user:

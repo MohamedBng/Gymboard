@@ -5,6 +5,9 @@ class TrainingSession < ApplicationRecord
 
   before_validation :set_default_name, if: -> { name.blank? }
 
+  has_many :training_session_muscle_groups, dependent: :destroy
+  has_many :muscle_groups, through: :training_session_muscle_groups
+
   private
 
   def end_time_after_start_time

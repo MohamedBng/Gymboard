@@ -15,10 +15,6 @@ fr:
         role:
           name: "Nom"
           color: "Couleur"
-        session:
-          start_time: "Heure de début"
-          end_time: "Heure de fin"
-          title: "Titre"
         exercise:
           title: "Titre"
           muscle_group: "Groupe musculaire"
@@ -30,6 +26,9 @@ fr:
           name: "Nom"
           start_time: "Heure de début"
           end_time: "Heure de fin"
+        training_session_muscle_group:
+          training_session: "Session d'entraînement"
+          muscle_group: "Groupe musculaire"
         fields:
           first_name: "Prénom"
           last_name: "Nom de famille"
@@ -37,15 +36,6 @@ fr:
           role: "Rôle"
       errors:
         models:
-          session:
-            attributes:
-              start_time:
-                blank: "ne peut pas être vide"
-              end_time:
-                blank: "ne peut pas être vide"
-                must_be_after_start_time: "doit être après l'heure de début"
-              title:
-                blank: "ne peut pas être vide"
           exercise:
             attributes:
               title:

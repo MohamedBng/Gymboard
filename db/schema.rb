@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_11_01_181354) do
+ActiveRecord::Schema[8.0].define(version: 2025_11_01_191455) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -110,12 +110,14 @@ ActiveRecord::Schema[8.0].define(version: 2025_11_01_181354) do
     t.index ["role_id"], name: "index_roles_permissions_on_role_id"
   end
 
-  create_table "sessions", force: :cascade do |t|
-    t.datetime "start_time", null: false
-    t.datetime "end_time", null: false
-    t.string "title", null: false
+  create_table "training_session_muscle_groups", force: :cascade do |t|
+    t.bigint "training_session_id", null: false
+    t.bigint "muscle_group_id", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.index ["muscle_group_id"], name: "index_training_session_muscle_groups_on_muscle_group_id"
+    t.index ["training_session_id", "muscle_group_id"], name: "index_training_session_muscle_groups_unique", unique: true
+    t.index ["training_session_id"], name: "index_training_session_muscle_groups_on_training_session_id"
   end
 
   create_table "training_sessions", force: :cascade do |t|
@@ -178,6 +180,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_11_01_181354) do
   add_foreign_key "muscles", "muscle_groups"
   add_foreign_key "roles_permissions", "permissions"
   add_foreign_key "roles_permissions", "roles"
+  add_foreign_key "training_session_muscle_groups", "muscle_groups"
+  add_foreign_key "training_session_muscle_groups", "training_sessions"
   add_foreign_key "users_roles", "roles"
   add_foreign_key "users_roles", "users"
 end
