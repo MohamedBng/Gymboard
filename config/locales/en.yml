@@ -44,10 +44,6 @@ en:
       role:
         name: "Name"
         color: "Color"
-      session:
-        start_time: "Start Time"
-        end_time: "End Time"
-        title: "Title"
       exercise:
         title: "Title"
         muscle_group: "Muscle Group"
