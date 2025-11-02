@@ -58,6 +58,11 @@ en:
       training_session_muscle_group:
         training_session: "Training Session"
         muscle_group: "Muscle Group"
+      exercise_set:
+        training_session_exercise: "Training Session Exercise"
+        reps: "Reps"
+        weight: "Weight"
+        rest: "Rest"
     errors:
       models:
         user:
@@ -83,17 +88,24 @@ en:
             name:
               blank: "can't be blank"
               taken: "has already been taken"
-      exercise_muscle:
-        attributes:
-          role:
-            blank: "can't be blank"
-      training_session:
-        attributes:
-          start_time:
-            blank: "can't be blank"
-          end_time:
-            blank: "can't be blank"
-            must_be_after_start_time: "must be after start time"
+        exercise_muscle:
+          attributes:
+            role:
+              blank: "can't be blank"
+        exercise_set:
+          attributes:
+            reps:
+              blank: "can't be blank"
+              not_a_number: "must be a number"
+              greater_than_or_equal_to: "must be greater than or equal to %{count}"
+            weight:
+              blank: "can't be blank"
+              not_a_number: "must be a number"
+              greater_than_or_equal_to: "must be greater than or equal to %{count}"
+            rest:
+              blank: "can't be blank"
+              not_a_number: "must be a number"
+              greater_than_or_equal_to: "must be greater than or equal to %{count}"
       image:
         file_size: "is too large (max is %{max_size} MB)"
         mime_type: "is not a valid image type. Allowed types: %{valid_types}"
