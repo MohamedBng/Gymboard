@@ -5,6 +5,8 @@ class Exercise < ApplicationRecord
 
   has_many :exercise_muscles, dependent: :destroy
   has_many :muscles, through: :exercise_muscles
+  has_many :training_session_exercises, dependent: :destroy
+  has_many :training_sessions, through: :training_session_exercises
 
   def self.ransackable_attributes(auth_object = nil)
     %w[title]

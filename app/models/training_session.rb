@@ -7,6 +7,8 @@ class TrainingSession < ApplicationRecord
 
   has_many :training_session_muscle_groups, dependent: :destroy
   has_many :muscle_groups, through: :training_session_muscle_groups
+  has_many :training_session_exercises, dependent: :destroy
+  has_many :exercises, through: :training_session_exercises
 
   private
 
