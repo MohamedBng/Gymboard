@@ -29,6 +29,11 @@ fr:
         training_session_muscle_group:
           training_session: "Session d'entraînement"
           muscle_group: "Groupe musculaire"
+        exercise_set:
+          training_session_exercise: "Exercice de session d'entraînement"
+          reps: "Répétitions"
+          weight: "Poids"
+          rest: "Repos"
         fields:
           first_name: "Prénom"
           last_name: "Nom de famille"
@@ -58,6 +63,20 @@ fr:
               end_time:
                 blank: "ne peut pas être vide"
                 must_be_after_start_time: "doit être après l'heure de début"
+          exercise_set:
+            attributes:
+              reps:
+                blank: "ne peut pas être vide"
+                not_a_number: "doit être un nombre"
+                greater_than_or_equal_to: "doit être supérieur ou égal à %{count}"
+              weight:
+                blank: "ne peut pas être vide"
+                not_a_number: "doit être un nombre"
+                greater_than_or_equal_to: "doit être supérieur ou égal à %{count}"
+              rest:
+                blank: "ne peut pas être vide"
+                not_a_number: "doit être un nombre"
+                greater_than_or_equal_to: "doit être supérieur ou égal à %{count}"
           user:
             attributes:
               first_name:

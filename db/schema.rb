@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_11_02_120501) do
+ActiveRecord::Schema[8.0].define(version: 2025_11_02_124416) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -60,6 +60,16 @@ ActiveRecord::Schema[8.0].define(version: 2025_11_02_120501) do
     t.datetime "updated_at", null: false
     t.index ["exercise_id"], name: "index_exercise_muscles_on_exercise_id"
     t.index ["muscle_id"], name: "index_exercise_muscles_on_muscle_id"
+  end
+
+  create_table "exercise_sets", force: :cascade do |t|
+    t.bigint "training_session_exercise_id", null: false
+    t.integer "reps", null: false
+    t.integer "weight", null: false
+    t.integer "rest", null: false
+    t.datetime "created_at", null: false
+    t.datetime "updated_at", null: false
+    t.index ["training_session_exercise_id"], name: "index_exercise_sets_on_training_session_exercise_id"
   end
 
   create_table "exercises", force: :cascade do |t|
@@ -186,6 +196,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_11_02_120501) do
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
   add_foreign_key "exercise_muscles", "exercises"
   add_foreign_key "exercise_muscles", "muscles"
+  add_foreign_key "exercise_sets", "training_session_exercises"
   add_foreign_key "exercises", "muscle_groups"
   add_foreign_key "muscles", "muscle_groups"
   add_foreign_key "roles_permissions", "permissions"

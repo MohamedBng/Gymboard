@@ -11,5 +11,6 @@ RSpec.describe TrainingSessionExercise, type: :model do
   describe 'associations' do
     it { should belong_to(:training_session) }
     it { should belong_to(:exercise) }
+    it { should have_many(:exercise_sets).dependent(:destroy) }
   end
 end

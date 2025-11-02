@@ -1,6 +1,5 @@
 puts "Seeding training sessions..."
 
-# Define exercises with complete data for idempotent creation
 exercises_data = {
   "Bench Press" => {
     muscle_group: "chest",
@@ -91,42 +90,134 @@ training_sessions = [
     start_time: Time.zone.parse("2024-11-01 08:00:00"),
     end_time: Time.zone.parse("2024-11-01 09:00:00"),
     muscle_groups: [ "chest", "arm" ],
-    exercises: [ "Bench Press", "Push-ups", "Bicep Curls" ]
+    exercises: {
+      "Bench Press" => [
+        { reps: 12, weight: 60000, rest: 45 },
+        { reps: 10, weight: 65000, rest: 60 },
+        { reps: 8, weight: 70000, rest: 75 }
+      ],
+      "Push-ups" => [
+        { reps: 15, weight: 0, rest: 45 },
+        { reps: 12, weight: 0, rest: 60 },
+        { reps: 10, weight: 0, rest: 75 }
+      ],
+      "Bicep Curls" => [
+        { reps: 12, weight: 25000, rest: 45 },
+        { reps: 10, weight: 25000, rest: 45 },
+        { reps: 8, weight: 25000, rest: 45 }
+      ]
+    }
   },
   {
     name: "Evening Training",
     start_time: Time.zone.parse("2024-11-01 18:00:00"),
     end_time: Time.zone.parse("2024-11-01 19:00:00"),
     muscle_groups: [ "back", "shoulders" ],
-    exercises: [ "Pull-ups", "Military Press" ]
+    exercises: {
+      "Pull-ups" => [
+        { reps: 10, weight: 0, rest: 60 },
+        { reps: 8, weight: 0, rest: 75 },
+        { reps: 6, weight: 0, rest: 90 }
+      ],
+      "Military Press" => [
+        { reps: 10, weight: 50000, rest: 60 },
+        { reps: 8, weight: 55000, rest: 75 },
+        { reps: 6, weight: 60000, rest: 90 }
+      ]
+    }
   },
   {
     name: "Weekend Session",
     start_time: Time.zone.parse("2024-11-03 10:00:00"),
     end_time: Time.zone.parse("2024-11-03 11:00:00"),
     muscle_groups: [ "legs" ],
-    exercises: [ "Squat", "Lunges", "Deadlift" ]
+    exercises: {
+      "Squat" => [
+        { reps: 10, weight: 80000, rest: 90 },
+        { reps: 8, weight: 85000, rest: 90 },
+        { reps: 6, weight: 90000, rest: 120 }
+      ],
+      "Lunges" => [
+        { reps: 12, weight: 40000, rest: 60 },
+        { reps: 10, weight: 40000, rest: 60 },
+        { reps: 8, weight: 40000, rest: 60 }
+      ],
+      "Deadlift" => [
+        { reps: 8, weight: 90000, rest: 120 },
+        { reps: 6, weight: 95000, rest: 120 },
+        { reps: 5, weight: 100000, rest: 120 }
+      ]
+    }
   },
   {
     name: nil, # Will use default name from callback
     start_time: Time.zone.parse("2024-11-02 14:00:00"),
     end_time: Time.zone.parse("2024-11-02 15:30:00"),
     muscle_groups: [ "chest", "back" ],
-    exercises: [ "Bench Press", "Pull-ups" ]
+    exercises: {
+      "Bench Press" => [
+        { reps: 10, weight: 65000, rest: 60 },
+        { reps: 8, weight: 70000, rest: 75 },
+        { reps: 6, weight: 75000, rest: 90 }
+      ],
+      "Pull-ups" => [
+        { reps: 12, weight: 0, rest: 60 },
+        { reps: 10, weight: 0, rest: 75 },
+        { reps: 8, weight: 0, rest: 90 },
+        { reps: 6, weight: 0, rest: 90 }
+      ]
+    }
   },
   {
     name: nil, # Will use default name from callback
     start_time: Time.zone.parse("2024-10-25 10:00:00"),
     end_time: Time.zone.parse("2024-10-25 12:00:00"),
     muscle_groups: [ "abs", "legs" ],
-    exercises: [ "Plank", "Leg Raises", "Squat" ]
+    exercises: {
+      "Plank" => [
+        { reps: 1, weight: 0, rest: 60 },
+        { reps: 1, weight: 0, rest: 60 },
+        { reps: 1, weight: 0, rest: 60 }
+      ],
+      "Leg Raises" => [
+        { reps: 15, weight: 0, rest: 45 },
+        { reps: 12, weight: 0, rest: 45 },
+        { reps: 10, weight: 0, rest: 45 }
+      ],
+      "Squat" => [
+        { reps: 12, weight: 70000, rest: 90 },
+        { reps: 10, weight: 75000, rest: 90 },
+        { reps: 8, weight: 80000, rest: 120 }
+      ]
+    }
   },
   {
     name: "Strength Training",
     start_time: Time.zone.parse("2024-11-04 16:00:00"),
     end_time: Time.zone.parse("2024-11-04 17:30:00"),
     muscle_groups: [ "legs", "back", "shoulders" ],
-    exercises: [ "Deadlift", "Squat", "Pull-ups", "Military Press" ]
+    exercises: {
+      "Deadlift" => [
+        { reps: 5, weight: 100000, rest: 180 },
+        { reps: 3, weight: 110000, rest: 180 },
+        { reps: 1, weight: 120000, rest: 240 }
+      ],
+      "Squat" => [
+        { reps: 8, weight: 85000, rest: 120 },
+        { reps: 6, weight: 90000, rest: 120 },
+        { reps: 5, weight: 95000, rest: 150 }
+      ],
+      "Pull-ups" => [
+        { reps: 10, weight: 0, rest: 90 },
+        { reps: 8, weight: 0, rest: 90 },
+        { reps: 6, weight: 0, rest: 120 }
+      ],
+      "Military Press" => [
+        { reps: 8, weight: 55000, rest: 90 },
+        { reps: 6, weight: 60000, rest: 90 },
+        { reps: 5, weight: 65000, rest: 120 }
+      ]
+    }
   }
 ]
 
@@ -156,9 +247,9 @@ training_sessions.each do |data|
   end
 
   if data[:exercises].present?
-    data[:exercises].each do |exercise_name|
+    data[:exercises].each do |exercise_name, exercise_sets|
       exercise_data = exercises_data[exercise_name]
-      exercise = nil
+      next unless exercise_data
 
       exercise_muscle_group = MuscleGroup.find_or_create_by!(name: exercise_data[:muscle_group])
 
@@ -177,11 +268,20 @@ training_sessions.each do |data|
         exercise_muscle.save!
       end
 
-      if exercise
-        TrainingSessionExercise.find_or_create_by!(
-          training_session: session,
-          exercise: exercise
-        )
+      training_session_exercise = TrainingSessionExercise.find_or_create_by!(
+        training_session: session,
+        exercise: exercise
+      )
+
+      if exercise_sets.is_a?(Array) && exercise_sets.any?
+        exercise_sets.each do |set_data|
+          ExerciseSet.find_or_create_by!(
+            training_session_exercise: training_session_exercise,
+            reps: set_data[:reps],
+            weight: set_data[:weight],
+            rest: set_data[:rest]
+          )
+        end
       end
     end
   end
