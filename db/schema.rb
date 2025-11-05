@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_11_02_124416) do
+ActiveRecord::Schema[8.0].define(version: 2025_11_05_194724) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -146,6 +146,8 @@ ActiveRecord::Schema[8.0].define(version: 2025_11_02_124416) do
     t.datetime "end_time", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
+    t.bigint "user_id", null: false
+    t.index ["user_id"], name: "index_training_sessions_on_user_id"
   end
 
   create_table "users", force: :cascade do |t|
@@ -205,6 +207,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_11_02_124416) do
   add_foreign_key "training_session_exercises", "training_sessions"
   add_foreign_key "training_session_muscle_groups", "muscle_groups"
   add_foreign_key "training_session_muscle_groups", "training_sessions"
+  add_foreign_key "training_sessions", "users"
   add_foreign_key "users_roles", "roles"
   add_foreign_key "users_roles", "users"
 end

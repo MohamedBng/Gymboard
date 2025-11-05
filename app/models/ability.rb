@@ -22,11 +22,12 @@ class Ability
     can :update, Exercise if user.has_permission?("update_exercise")
     can :destroy, Exercise if user.has_permission?("destroy_exercise")
 
-    if user.has_permission?("update_any_user")
-      can [ :update, :delete_profile_image ], User
-    elsif user.has_permission?("update_own_user")
-      can [ :update, :delete_profile_image ], User, id: user.id
-    end
+    can :read, TrainingSession if user.has_permission?("read_training_session")
+    can :read, TrainingSession, user_id: user.id if user.has_permission?("read_own_training_session")
+
+    can [ :update, :delete_profile_image ], User if user.has_permission?("update_any_user")
+    can [ :update, :delete_profile_image ], User, id: user.id if user.has_permission?("update_own_user")
+
 
     can :destroy, User do |target_user|
       true if user.has_permission?("destroy_user") && user != target_user
