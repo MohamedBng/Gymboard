@@ -9,6 +9,8 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
 
+  resources :training_sessions, only: [ :index ]
+
   namespace :admin do
     resources :dashboard, only: [ :index ]
     resources :users, only: [ :show, :destroy, :edit, :update, :index, :new, :create ] do

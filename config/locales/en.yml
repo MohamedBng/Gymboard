@@ -274,7 +274,28 @@ en:
       title: "Title"
       created_at: "Created at"
       actions: "Actions"
+  training_sessions:
+    hero:
+      title: "Power Your Progress"
+      subtitle: "Track every rep, every PR, every journey. Your fitness journey starts here."
+      create_button: "Create New Session"
+    search:
+      placeholder: "Search by name..."
+      from_date: "From date"
+      to_date: "To date"
+      all_muscle_groups: "All muscle groups"
+      submit_button: "Search"
+    card:
+      duration: "%{duration} minutes"
+      exercises_count:
+        zero: "No exercises"
+        one: "1 exercise"
+        other: "%{count} exercises"
+      view_button: "View"
+    empty_state:
+      message: "No training sessions found. Create your first session to get started!"
   time:
     formats:
       default: "%a, %d %b %Y %H:%M:%S %z"
       long: "%B %d, %Y at %I:%M %p"
+      short: "%b %d, %Y"
