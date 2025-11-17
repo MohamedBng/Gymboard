@@ -6,7 +6,7 @@ class SidebarComponent < ViewComponent::Base
   end
 
   erb_template <<-ERB
-    <aside class="bg-base-100 flex flex-col transition-all duration-300 w-20" data-controller="sidebar" data-sidebar-expanded-class="w-64" data-sidebar-collapsed-class="w-20">
+    <aside class="hidden md:flex bg-base-100 flex-col transition-all duration-300 w-20" data-controller="sidebar" data-sidebar-expanded-class="w-64" data-sidebar-collapsed-class="w-20">
       <div class="flex-1 p-4 space-y-6">
         <%= link_to root_path, class: 'text-2xl font-bold flex items-center gap-2' do %>
           <%= image_tag 'logo.png', alt: 'Logo', class: 'h-10 w-10' %>
@@ -21,11 +21,9 @@ class SidebarComponent < ViewComponent::Base
             <% end %>
           <% end %>
 
-          <% if @current_user.has_permission?("read_training_session") %>
-            <%= link_to training_sessions_path, data: { turbo_frame: "main", turbo_action: "advance" }, class: 'flex items-center gap-4 hover:bg-base-200 p-2 rounded' do %>
-              <i class="fas fa-bolt"></i>
-              <span data-sidebar-target="label" class="hidden"><%= t("sidebar.training_sessions") %></span>
-            <% end %>
+          <%= link_to training_sessions_path, data: { turbo_frame: "main", turbo_action: "advance" }, class: 'flex items-center gap-4 hover:bg-base-200 p-2 rounded' do %>
+            <i class="fas fa-bolt"></i>
+            <span data-sidebar-target="label" class="hidden"><%= t("sidebar.trainings") %></span>
           <% end %>
 
           <% if @current_user.has_permission?("read_exercise") %>

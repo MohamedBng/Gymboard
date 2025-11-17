@@ -241,6 +241,7 @@ fr:
     dashboard: "Tableau de bord"
     roles: "Rôles"
     exercises: "Exercices"
+    trainings: "Entraînements"
   exercises:
   tables:
     users:

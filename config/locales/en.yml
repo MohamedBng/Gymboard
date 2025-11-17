@@ -261,6 +261,7 @@ en:
     dashboard: "Dashboard"
     roles: "Roles"
     exercises: "Exercises"
+    trainings: "Trainings"
   tables:
     users:
       name: "Name"
