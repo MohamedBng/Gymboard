@@ -30,3 +30,9 @@ application.register("select-all", SelectAllController)
 
 import SidebarController from "./sidebar_controller"
 application.register("sidebar", SidebarController)
+
+import DockController from "./dock_controller"
+application.register("dock", DockController)
+
+import AutoSubmitController from "./auto_submit_controller"
+application.register("auto-submit", AutoSubmitController)

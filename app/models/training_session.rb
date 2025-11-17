@@ -5,10 +5,20 @@ class TrainingSession < ApplicationRecord
 
   before_validation :set_default_name, if: -> { name.blank? }
 
+  belongs_to :user
+
   has_many :training_session_muscle_groups, dependent: :destroy
   has_many :muscle_groups, through: :training_session_muscle_groups
   has_many :training_session_exercises, dependent: :destroy
   has_many :exercises, through: :training_session_exercises
+
+  def self.ransackable_attributes(auth_object = nil)
+    %w[name]
+  end
+
+  def self.ransackable_associations(auth_object = nil)
+    %w[muscle_groups]
+  end
 
   private
 

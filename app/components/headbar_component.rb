@@ -5,10 +5,13 @@ class HeadbarComponent < ViewComponent::Base
 
   erb_template <<-ERB
     <header class="navbar bg-base-100 shadow-sm sticky top-0 z-10" data-controller="headbar">
-      <div class="flex-1 flex items-center">
-        <button type="button" class="btn btn-ghost btn-sm" data-action="headbar#toggleSidebar">
+      <div class="flex-1 flex items-center gap-4">
+        <button type="button" class="btn btn-ghost btn-sm hidden md:flex" data-action="headbar#toggleSidebar">
           <i class="fas fa-bars text-2xl"></i>
         </button>
+        <%= link_to root_path, class: 'md:hidden flex items-center' do %>
+          <%= image_tag 'logo.png', alt: 'Logo', class: 'h-8 w-8' %>
+        <% end %>
       </div>
        <div class="dropdown dropdown-end">
         <div tabindex="0" role="button" class="btn btn-ghost btn-circle avatar">

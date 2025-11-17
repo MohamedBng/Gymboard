@@ -2,7 +2,7 @@
 <html>
 <head>
   <title><%= content_for(:title) || "Dashboard" %></title>
-  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="turbo-refresh-method" content="morph">
@@ -29,13 +29,14 @@
     <div class="flex flex-col flex-1 min-w-0 bg-base-200">
       <%= render HeadbarComponent.new(current_user: current_user) %>
 
-      <main class="flex-1 overflow-auto p-6 w-full max-w-screen-xl mx-auto">
+      <main class="flex-1 overflow-auto p-6 pb-20 md:pb-6 w-full max-w-screen-xl mx-auto">
         <turbo-frame id="main">
           <%= render "shared/flash_success" %>
           <%= yield %>
         </turbo-frame>
       </main>
     </div>
+    <%= render BottomNavComponent.new(current_user: current_user) %>
   </div>
 </body>
 </html>

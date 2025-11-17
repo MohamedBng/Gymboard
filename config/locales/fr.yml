@@ -241,6 +241,7 @@ fr:
     dashboard: "Tableau de bord"
     roles: "Rôles"
     exercises: "Exercices"
+    trainings: "Entraînements"
   exercises:
   tables:
     users:
@@ -255,7 +256,28 @@ fr:
       title: "Titre"
       created_at: "Créé le"
       actions: "Actions"
+  training_sessions:
+    hero:
+      title: "Boostez Votre Progression"
+      subtitle: "Suivez chaque répétition, chaque record, chaque parcours. Votre parcours fitness commence ici."
+      create_button: "Créer une Nouvelle Session"
+    search:
+      placeholder: "Rechercher par nom..."
+      from_date: "Date de début"
+      to_date: "Date de fin"
+      all_muscle_groups: "Tous les groupes musculaires"
+      submit_button: "Rechercher"
+    card:
+      duration: "%{duration} minutes"
+      exercises_count:
+        zero: "Aucun exercice"
+        one: "1 exercice"
+        other: "%{count} exercices"
+      view_button: "Voir"
+    empty_state:
+      message: "Aucune session d'entraînement trouvée. Créez votre première session pour commencer !"
   time:
     formats:
       default: "%a, %d %b %Y %H:%M:%S %z"
       long: "%d %B %Y à %H:%M"
+      short: "%d %b %Y"

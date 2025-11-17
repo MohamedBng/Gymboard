@@ -1,0 +1,14 @@
+<%= search_form_for q, url: training_sessions_path, method: :get, html: { data: { controller: "auto-submit" }, class: "w-full filter" } do |f| %>
+    <%= radio_button_tag "q[muscle_groups_name_eq]", "", params.dig(:q, :muscle_groups_name_eq).blank?,
+          id: "muscle_group_all",
+          class: "btn filter-reset",
+          data: { auto_submit_target: "input" } %>
+    <% MuscleGroup.order(:name).each do |muscle_group| %>
+      <%= radio_button_tag "q[muscle_groups_name_eq]", muscle_group.name, params.dig(:q, :muscle_groups_name_eq) == muscle_group.name,
+          id: "muscle_group_#{muscle_group.id}",
+          class: "btn",
+          aria: { label: muscle_group.name.capitalize },
+          data: { auto_submit_target: "input" } %>
+    <% end %>
+<% end %>
+

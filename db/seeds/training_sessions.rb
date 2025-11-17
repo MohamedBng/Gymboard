@@ -1,5 +1,42 @@
 puts "Seeding training sessions..."
 
+users_data = [
+  {
+    email: "alice@example.com",
+    first_name: "Alice",
+    last_name: "Martin"
+  },
+  {
+    email: "bob@example.com",
+    first_name: "Bob",
+    last_name: "Dupont"
+  },
+  {
+    email: "charlie@example.com",
+    first_name: "Charlie",
+    last_name: "Bernard"
+  },
+  {
+    email: "diana@example.com",
+    first_name: "Diana",
+    last_name: "Moreau"
+  }
+]
+
+users = []
+users_data.each do |user_data|
+  user = User.find_or_create_by!(email: user_data[:email]) do |u|
+    u.first_name = user_data[:first_name]
+    u.last_name = user_data[:last_name]
+    u.password = "password123"
+    u.password_confirmation = "password123"
+    u.confirmed_at = Time.current
+  end
+
+  user.roles << Role.find_or_create_by!(name: "user") if user.roles.empty?
+  users << user
+end
+
 exercises_data = {
   "Bench Press" => {
     muscle_group: "chest",
@@ -222,12 +259,17 @@ training_sessions = [
 ]
 
 training_sessions_created = 0
-training_sessions.each do |data|
+training_sessions.each_with_index do |data, index|
+  # Distribute sessions across users in a round-robin fashion
+  user = users[index % users.length]
+
   session = TrainingSession.find_or_initialize_by(
     start_time: data[:start_time],
-    end_time: data[:end_time]
+    end_time: data[:end_time],
+    user: user
   )
 
+  session.user = user
   session.name = data[:name] if data[:name].present?
 
   if session.new_record? || session.changed?
