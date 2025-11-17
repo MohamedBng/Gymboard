@@ -49,6 +49,55 @@ RSpec.describe 'TrainingSessions', type: :request do
       it 'assigns @q for Ransack' do
         expect(assigns(:q)).to be_a(Ransack::Search)
       end
+
+      it 'orders sessions by start_time descending' do
+        sessions = assigns(:training_sessions).to_a
+        expect(sessions).to eq(sessions.sort_by(&:start_time).reverse)
+      end
+
+      context 'with pagination' do
+        before do
+          create_list(:training_session, 4, user: admin_user)
+          create_list(:training_session, 4, user: other_user)
+          get training_sessions_path
+        end
+
+        it 'paginates results with 6 per page' do
+          expect(assigns(:training_sessions).limit_value).to eq(6)
+        end
+
+        it 'returns first page by default' do
+          expect(assigns(:training_sessions).current_page).to eq(1)
+        end
+
+        context 'when requesting second page' do
+          before do
+            get training_sessions_path, params: { page: 2 }
+          end
+
+          it 'returns second page' do
+            expect(assigns(:training_sessions).current_page).to eq(2)
+          end
+        end
+      end
+
+      context 'with Ransack search by muscle_groups' do
+        let!(:chest_group) { create(:muscle_group, name: 'Pectoraux') }
+        let!(:back_group) { create(:muscle_group, name: 'Dos') }
+        let!(:session_with_chest) { create(:training_session, user: admin_user) }
+        let!(:session_with_back) { create(:training_session, user: admin_user) }
+
+        before do
+          session_with_chest.muscle_groups << chest_group
+          session_with_back.muscle_groups << back_group
+          get training_sessions_path, params: { q: { muscle_groups_name_cont: 'Pectoraux' } }
+        end
+
+        it 'filters sessions by muscle group name' do
+          expect(assigns(:training_sessions)).to include(session_with_chest)
+          expect(assigns(:training_sessions)).not_to include(session_with_back)
+        end
+      end
     end
 
     context 'when user has read_own_training_session permission' do
@@ -79,6 +128,11 @@ RSpec.describe 'TrainingSessions', type: :request do
 
       it 'assigns @q for Ransack' do
         expect(assigns(:q)).to be_a(Ransack::Search)
+      end
+
+      it 'orders sessions by start_time descending' do
+        sessions = assigns(:training_sessions).to_a
+        expect(sessions).to eq(sessions.sort_by(&:start_time).reverse)
       end
     end
 

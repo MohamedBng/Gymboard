@@ -48,4 +48,3 @@ class BottomNavComponent < ViewComponent::Base
     </nav>
   ERB
 end
-
