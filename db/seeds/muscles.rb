@@ -27,7 +27,7 @@ muscles.each do |data|
     muscle = Muscle.find_or_initialize_by(name: data[:name])
     muscle.muscle_group = MuscleGroup.find_or_create_by!(name: data[:muscle_group])
     muscle.save!
-    muscles_created += 1 if muscle.persisted?
+    muscles_created += 1 if muscle.previously_new_record?
 end
 
 puts "#{muscles_created} muscles created"
