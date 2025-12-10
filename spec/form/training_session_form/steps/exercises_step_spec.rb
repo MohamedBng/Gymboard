@@ -4,10 +4,10 @@ RSpec.describe TrainingSessionForm::Steps::ExercisesStep, type: :model do
   let(:user) { create(:user) }
 
   let(:training_session) { create(:training_session, user: user) }
-  let(:exercise) { create(:exercise)}
-  let(:training_session_exercise) { create(:training_session_exercise, training_session:, exercise:)}
-  let(:exercise_set) { create(:exercise_set, training_session_exercise:, weight: nil, reps: nil, rest: nil)}
-  let(:session_hash) {{training_session_step: TrainingSessionForm::Steps::ExercisesStep::STEP_NAME}}
+  let(:exercise) { create(:exercise) }
+  let(:training_session_exercise) { create(:training_session_exercise, training_session:, exercise:) }
+  let(:exercise_set) { create(:exercise_set, training_session_exercise:, weight: nil, reps: nil, rest: nil) }
+  let(:session_hash) { { training_session_step: TrainingSessionForm::Steps::ExercisesStep::STEP_NAME } }
 
   let(:exercises_step) { described_class.new(training_session:, session: session_hash, **training_session_params) }
 
@@ -16,8 +16,7 @@ RSpec.describe TrainingSessionForm::Steps::ExercisesStep, type: :model do
   describe '#step' do
     let(:training_session_params) {
       {
-        "training_session_exercises_attributes" => {
-        }
+        "training_session_exercises_attributes" => {}
       }
     }
 
@@ -29,8 +28,7 @@ RSpec.describe TrainingSessionForm::Steps::ExercisesStep, type: :model do
   describe '#next_step' do
     let(:training_session_params) {
       {
-        "training_session_exercises_attributes" => {
-        }
+        "training_session_exercises_attributes" => {}
       }
     }
 
@@ -42,8 +40,7 @@ RSpec.describe TrainingSessionForm::Steps::ExercisesStep, type: :model do
   describe '#previous_step' do
     let(:training_session_params) {
       {
-        "training_session_exercises_attributes" => {
-        }
+        "training_session_exercises_attributes" => {}
       }
     }
 
@@ -56,8 +53,7 @@ RSpec.describe TrainingSessionForm::Steps::ExercisesStep, type: :model do
     context 'when training_session has no exercises' do
       let(:training_session_params) {
         {
-          "training_session_exercises_attributes" => {
-          }
+          "training_session_exercises_attributes" => {}
         }
       }
 
@@ -83,8 +79,7 @@ RSpec.describe TrainingSessionForm::Steps::ExercisesStep, type: :model do
             "0" => {
               "id" => training_session_exercise.id,
               "exercise_id" => exercise.id,
-              "exercise_sets_attributes" => {
-              }
+              "exercise_sets_attributes" => {}
             }
           }
         }
@@ -450,10 +445,10 @@ RSpec.describe TrainingSessionForm::Steps::ExercisesStep, type: :model do
     end
 
     context 'when training_session has multiple exercises with multiple sets' do
-      let!(:second_exercise_set) { create(:exercise_set, training_session_exercise:, weight: nil, reps: nil, rest: nil)}
-      let!(:second_exercise) { create(:exercise)}
+      let!(:second_exercise_set) { create(:exercise_set, training_session_exercise:, weight: nil, reps: nil, rest: nil) }
+      let!(:second_exercise) { create(:exercise) }
       let!(:second_training_session_exercise) { create(:training_session_exercise, training_session:, exercise: second_exercise) }
-      let!(:third_exercise_set) { create(:exercise_set, training_session_exercise: second_training_session_exercise, weight: nil, reps: nil, rest: nil)}
+      let!(:third_exercise_set) { create(:exercise_set, training_session_exercise: second_training_session_exercise, weight: nil, reps: nil, rest: nil) }
       let(:training_session_params) {
         {
           "training_session_exercises_attributes" => {
@@ -526,5 +521,3 @@ RSpec.describe TrainingSessionForm::Steps::ExercisesStep, type: :model do
     end
   end
 end
-
-

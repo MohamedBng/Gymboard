@@ -10,4 +10,3 @@ class TrainingSessionsController < BaseController
                            .per(6)
   end
 end
-

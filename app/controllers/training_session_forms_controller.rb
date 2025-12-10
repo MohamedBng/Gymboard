@@ -1,5 +1,5 @@
 class TrainingSessionFormsController < BaseController
-  load_and_authorize_resource class: 'TrainingSession', except: :go_back_to_previous_step
+  load_and_authorize_resource class: "TrainingSession", except: :go_back_to_previous_step
 
   def new
     @form = TrainingSessionForm.new(user: current_user, session: session)
@@ -38,4 +38,3 @@ class TrainingSessionFormsController < BaseController
     params.require(:training_session).permit(step.permitted_params)
   end
 end
-

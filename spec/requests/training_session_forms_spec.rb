@@ -3,7 +3,7 @@ require 'rails_helper'
 RSpec.describe TrainingSessionFormsController, type: :request do
   describe 'GET #new' do
     context "when user has permission create_own_training_session" do
-      let(:user) { create(:user, permissions_list: ['create_own_training_session']) }
+      let(:user) { create(:user, permissions_list: [ 'create_own_training_session' ]) }
 
       before do
         sign_in(user, scope: :user)
@@ -23,7 +23,7 @@ RSpec.describe TrainingSessionFormsController, type: :request do
     end
 
     context "when user has permission create_training_session" do
-      let(:user) { create(:user, permissions_list: ['create_training_session']) }
+      let(:user) { create(:user, permissions_list: [ 'create_training_session' ]) }
 
       before do
         sign_in(user, scope: :user)
@@ -49,9 +49,9 @@ RSpec.describe TrainingSessionFormsController, type: :request do
   end
 
   describe 'PATCH #update' do
-    let!(:user) { create(:user, permissions_list: ['update_own_training_session']) }
-    let!(:original_name) {'original name'}
-    let!(:training_session) {create(:training_session, name: original_name, user: user, start_time: nil, end_time: nil)}
+    let!(:user) { create(:user, permissions_list: [ 'update_own_training_session' ]) }
+    let!(:original_name) { 'original name' }
+    let!(:training_session) { create(:training_session, name: original_name, user: user, start_time: nil, end_time: nil) }
     let!(:params) {
       {
         training_session: {
@@ -63,7 +63,7 @@ RSpec.describe TrainingSessionFormsController, type: :request do
     }
 
     context 'when last step' do
-      let!(:session_hash) {{training_session_step: TrainingSessionForm::LAST_STEP}}
+      let!(:session_hash) { { training_session_step: TrainingSessionForm::LAST_STEP } }
 
       before do
         sign_in(user, scope: :user)
@@ -123,10 +123,10 @@ RSpec.describe TrainingSessionFormsController, type: :request do
     end
 
     context 'exercices step' do
-      let(:exercise) {create(:exercise)}
-      let(:training_session_exercise) {create(:training_session_exercise, training_session:, exercise:)}
-      let(:exercise_set) {create(:exercise_set, weight: nil, reps: nil, rest: nil, training_session_exercise:)}
-      let(:session_hash) {{training_session_step: 'exercises'}}
+      let(:exercise) { create(:exercise) }
+      let(:training_session_exercise) { create(:training_session_exercise, training_session:, exercise:) }
+      let(:exercise_set) { create(:exercise_set, weight: nil, reps: nil, rest: nil, training_session_exercise:) }
+      let(:session_hash) { { training_session_step: 'exercises' } }
 
       before do
         sign_in(user, scope: :user)
@@ -222,7 +222,7 @@ RSpec.describe TrainingSessionFormsController, type: :request do
     end
 
     context 'slot step' do
-      let!(:session_hash) {{training_session_step: 'slot'}}
+      let!(:session_hash) { { training_session_step: 'slot' } }
 
       before do
         sign_in(user, scope: :user)
@@ -295,7 +295,7 @@ RSpec.describe TrainingSessionFormsController, type: :request do
         context "start_time is nil" do
           let(:original_start_time) { Time.now.prev_day }
           let(:original_end_time) { Time.now.prev_day + 1 }
-          let(:user) {create(:user, permissions_list: ['update_own_training_session'])}
+          let(:user) { create(:user, permissions_list: [ 'update_own_training_session' ]) }
           let(:training_session) {  create(:training_session,
                                             start_time: original_start_time,
                                             end_time: original_end_time,
@@ -333,7 +333,7 @@ RSpec.describe TrainingSessionFormsController, type: :request do
     end
 
     context 'name step' do
-      let!(:session_hash) {{training_session_step: 'name'}}
+      let!(:session_hash) { { training_session_step: 'name' } }
 
       before do
         sign_in(user, scope: :user)
@@ -372,8 +372,8 @@ RSpec.describe TrainingSessionFormsController, type: :request do
 
       context "with invalid params" do
         context "start_time is nil" do
-          let(:start_time) {Time.current}
-          let(:user) {create(:user, permissions_list: ['update_own_training_session'])}
+          let(:start_time) { Time.current }
+          let(:user) { create(:user, permissions_list: [ 'update_own_training_session' ]) }
 
           let(:params) {
             {

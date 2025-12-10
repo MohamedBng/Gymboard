@@ -1,5 +1,5 @@
 class TrainingSession < ApplicationRecord
-  enum :status, [:draft, :active], default: :draft
+  enum :status, [ :draft, :active ], default: :draft
 
   belongs_to :user
 

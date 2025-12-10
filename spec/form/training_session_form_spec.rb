@@ -159,4 +159,3 @@ RSpec.describe TrainingSessionForm do
     end
   end
 end
-

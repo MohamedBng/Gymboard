@@ -8,7 +8,7 @@ class TrainingSessionForm
       validate :validate_start_time_before_end_time
 
       def step
-        'slot'
+        "slot"
       end
 
       def next_step
@@ -20,7 +20,7 @@ class TrainingSessionForm
       end
 
       def self.permitted_params
-        [:start_time, :end_time]
+        [ :start_time, :end_time ]
       end
 
       def submit

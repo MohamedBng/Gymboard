@@ -17,8 +17,7 @@ class TrainingSessionForm
       raise NotImplementedError
     end
 
-    def submit(attributes={})
-
+    def submit(attributes = {})
       return false unless valid?
 
       training_session.status = :active if TrainingSessionForm::LAST_STEP == step

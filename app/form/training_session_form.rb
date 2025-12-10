@@ -4,8 +4,8 @@ class TrainingSessionForm
   attr_accessor :training_session, :session, :user
   attr_reader :current_step
 
-  FIRST_STEP = 'exercises'
-  LAST_STEP = 'slot'
+  FIRST_STEP = "exercises"
+  LAST_STEP = "slot"
 
   def initialize(params = {})
     super(params)

@@ -4,7 +4,7 @@ class RemoveUniqueIndexFromTrainingSessionExercises < ActiveRecord::Migration[8.
                  name: "index_training_session_exercises_unique"
 
     add_index :training_session_exercises,
-              [:training_session_id, :exercise_id],
+              [ :training_session_id, :exercise_id ],
               name: "index_training_session_exercises_on_session_and_exercise"
   end
 end

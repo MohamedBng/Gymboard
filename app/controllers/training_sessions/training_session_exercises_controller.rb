@@ -18,4 +18,3 @@ class TrainingSessions::TrainingSessionExercisesController < BaseController
     redirect_to new_training_session_form_path(training_session_exercise.training_session)
   end
 end
-

@@ -20,7 +20,7 @@ class TrainingSessionForm
       end
 
       def self.permitted_params
-        [:name]
+        [ :name ]
       end
 
       def submit
@@ -29,4 +29,3 @@ class TrainingSessionForm
     end
   end
 end
-

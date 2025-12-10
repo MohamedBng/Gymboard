@@ -7,7 +7,7 @@ RSpec.describe TrainingSessionForm::Steps::NameStep do
   let!(:name_step) { described_class.new(training_session:, session: session_hash, **training_session_params) }
 
   describe '#step' do
-    let(:training_session_params) {{}}
+    let(:training_session_params) { {} }
 
     it 'returns "name"' do
       expect(name_step.step).to eq("name")
@@ -15,7 +15,7 @@ RSpec.describe TrainingSessionForm::Steps::NameStep do
   end
 
   describe '#next_step' do
-    let(:training_session_params) {{}}
+    let(:training_session_params) { {} }
 
     it 'returns nil' do
       expect(name_step.next_step).to eq('slot')
@@ -23,7 +23,7 @@ RSpec.describe TrainingSessionForm::Steps::NameStep do
   end
 
   describe '#previous_step' do
-    let(:training_session_params) {{}}
+    let(:training_session_params) { {} }
 
     it 'returns "exercises"' do
       expect(name_step.previous_step).to eq("exercises")
@@ -50,7 +50,7 @@ RSpec.describe TrainingSessionForm::Steps::NameStep do
 
     context "when params are invalid" do
       context 'when training_session has no name' do
-        let!(:training_session_params) {{}}
+        let!(:training_session_params) { {} }
 
         it 'returns false' do
           expect(name_step.submit).to be false
@@ -98,4 +98,3 @@ RSpec.describe TrainingSessionForm::Steps::NameStep do
     end
   end
 end
-

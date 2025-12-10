@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe TrainingSessionForm::Steps::SlotStep do
-  let(:training_session) {create(:training_session, start_time: nil, end_time: nil)}
-  let(:session) { {training_session_step: 'slot'} }
-  let(:step) {described_class.new(training_session: training_session, session:, **training_session_params)}
+  let(:training_session) { create(:training_session, start_time: nil, end_time: nil) }
+  let(:session) { { training_session_step: 'slot' } }
+  let(:step) { described_class.new(training_session: training_session, session:, **training_session_params) }
 
   before do
     training_session.assign_attributes(training_session_params)
@@ -63,7 +63,7 @@ RSpec.describe TrainingSessionForm::Steps::SlotStep do
       end
 
       context "when end_time anterior to start_time" do
-        let(:start_time) {DateTime.current}
+        let(:start_time) { DateTime.current }
 
         let(:training_session_params) {
           {
@@ -81,7 +81,7 @@ RSpec.describe TrainingSessionForm::Steps::SlotStep do
       end
 
       context "when end_time equal to start_time" do
-        let(:start_time) {DateTime.current}
+        let(:start_time) { DateTime.current }
 
         let(:training_session_params) {
           {
@@ -101,7 +101,7 @@ RSpec.describe TrainingSessionForm::Steps::SlotStep do
   end
 
   describe "#step" do
-    let(:training_session_params) {{}}
+    let(:training_session_params) { {} }
 
     it "return slot as current step" do
       expect(step.step).to eq('slot')
@@ -109,7 +109,7 @@ RSpec.describe TrainingSessionForm::Steps::SlotStep do
   end
 
   describe "#next_step" do
-    let(:training_session_params) {{}}
+    let(:training_session_params) { {} }
 
     it "return nil as next step" do
       expect(step.next_step).to be_nil
@@ -117,7 +117,7 @@ RSpec.describe TrainingSessionForm::Steps::SlotStep do
   end
 
   describe "#previous_step" do
-    let(:training_session_params) {{}}
+    let(:training_session_params) { {} }
 
     it "return nil as next step" do
       expect(step.previous_step).to eq('name')

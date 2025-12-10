@@ -6,7 +6,7 @@ class TrainingSessionForm
 
       attr_accessor :training_session_exercises_attributes
 
-      NEXT_STEP = 'name'
+      NEXT_STEP = "name"
       STEP_NAME = "exercises"
 
       def step

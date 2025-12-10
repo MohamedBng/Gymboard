@@ -10,18 +10,18 @@ Rails.application.routes.draw do
 
 
   resources :training_sessions, only: :index do
-    resources :training_session_exercises, only: [:create], module: :training_sessions
+    resources :training_session_exercises, only: [ :create ], module: :training_sessions
   end
 
-  resources :training_session_forms, only: [:new, :update] do
+  resources :training_session_forms, only: [ :new, :update ] do
     collection do
       post :go_back_to_previous_step
     end
   end
 
   namespace :training_sessions do
-    resources :training_session_exercises, only: [:destroy] do
-      resources :exercise_sets, only: [:create, :destroy]
+    resources :training_session_exercises, only: [ :destroy ] do
+      resources :exercise_sets, only: [ :create, :destroy ]
     end
   end
 
