@@ -1,0 +1,30 @@
+<div class="container mx-auto px-4 py-8">
+  <div class="mb-6 px-4">
+    <h1 class="text-2xl font-semibold">
+        <%= t("training_sessions.new.title") %>
+    </h1>
+  </div>
+
+  <!-- Barre de progression des étapes -->
+  <div class="mb-8">
+    <ul class="steps steps-horizontal w-full">
+      <li class="step <%= 'step-accent' if @form.current_step == 'exercises' %>">
+        <%= t("training_sessions.steps.exercises.step_name") %>
+      </li>
+      <li class="step <%= 'step-accent' if @form.current_step == 'name' %>">
+        <%= t("training_sessions.steps.name.step_name") %>
+      </li>
+       <li class="step <%= 'step-accent' if @form.current_step == 'slot' %>">
+        <%= t("training_sessions.steps.name.step_slot") %>
+      </li>
+    </ul>
+  </div>
+
+  <%= render "shared/flash_error" %>
+
+  <%= render "training_session_forms/steps/#{@form.current_step}",
+             form: @form,
+             training_session: @form.training_session,
+             exercises: @exercises %>
+</div>
+

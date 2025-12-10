@@ -24,6 +24,12 @@ class Ability
 
     can :read, TrainingSession if user.has_permission?("read_training_session")
     can :read, TrainingSession, user_id: user.id if user.has_permission?("read_own_training_session")
+    can :create, TrainingSession, user_id: user.id if user.has_permission?("create_training_session")
+    can :create, TrainingSession, user_id: user.id if user.has_permission?("create_own_training_session")
+    can :update, TrainingSession if user.has_permission?("update_training_session")
+    can :update, TrainingSession, user_id: user.id if user.has_permission?("update_own_training_session")
+    can :create, TrainingSessionExercise if user.has_permission?("create_training_session_exercise")
+    can :destroy, TrainingSessionExercise if user.has_permission?("destroy_training_session_exercise")
 
     can [ :update, :delete_profile_image ], User if user.has_permission?("update_any_user")
     can [ :update, :delete_profile_image ], User, id: user.id if user.has_permission?("update_own_user")

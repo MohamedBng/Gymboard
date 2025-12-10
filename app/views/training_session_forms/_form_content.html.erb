@@ -1,0 +1,10 @@
+<div class="w-full">
+  <div id="current_session_exercises_list">
+    <% training_session.training_session_exercises.each do |exercise_record| %>
+      <%= render "training_session_forms/exercise_item",
+                f: f,
+                training_session_exercise: exercise_record %>
+    <% end %>
+  </div>
+</div>
+

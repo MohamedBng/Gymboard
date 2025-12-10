@@ -93,6 +93,7 @@ fr:
           extension: "n'est pas une extension d'image valide. Extensions autorisées : %{valid_extensions}"
   errors:
     messages:
+      blank: "ne peut pas être vide"
       not_saved:
         one: "1 erreur a empêché l'enregistrement de ce %{resource} :"
         other: "%{count} erreurs ont empêché l'enregistrement de ce %{resource} :"
@@ -104,6 +105,10 @@ fr:
     per_page: "Résultats par page"
     save: "Enregistrer"
     cancel: "Annuler"
+    close: "Fermer"
+    continue: "Continuer"
+    back: "Retour"
+    finish: "Terminer"
     not_available: "-"
     personal_information: "Informations personnelles"
     edit: "Modifier"
@@ -276,6 +281,68 @@ fr:
       view_button: "Voir"
     empty_state:
       message: "Aucune session d'entraînement trouvée. Créez votre première session pour commencer !"
+    new:
+      title: "Nouvelle Session d'Entraînement"
+      subtitle: "Créez une nouvelle session d'entraînement en ajoutant des exercices"
+      add_exercise_button: "Ajouter un Exercice"
+      add_exercise_button_short: "Ajouter"
+      save_session_button: "Enregistrer la Session"
+    current_session:
+      title: "Session Courante"
+      exercises_count:
+        zero: "Aucun exercice"
+        one: "1 exercice"
+        other: "%{count} exercices"
+      empty_message: "Aucun exercice ajouté. Cliquez sur 'Ajouter un Exercice' pour commencer."
+    exercises_modal:
+      title: "Sélectionner un Exercice"
+      subtitle: "Recherchez et ajoutez des exercices à votre session d'entraînement"
+    exercises_search_form:
+      search_placeholder: "Rechercher par nom d'exercice..."
+      all_muscle_groups: "Tous les groupes musculaires"
+      all_muscles: "Tous les muscles"
+    exercises_list:
+      no_exercises: "Aucun exercice trouvé. Essayez de modifier vos critères de recherche."
+    modal_exercise_item:
+      add_button: "Ajouter"
+    exercise_item:
+      added: "Ajouté"
+      add_set_button: "Ajouter une série"
+    add_exercise:
+      success: "%{count} exercice(s) ajouté(s) avec succès à la session"
+      no_exercises_selected: "Aucun exercice sélectionné"
+    remove_exercise:
+      success: "Exercice retiré avec succès de la session"
+    create:
+      success: "Session d'entraînement créée avec succès"
+    steps:
+      exercises:
+        step_name: "Exercices"
+        title: "Ajoutez vos exercices"
+        subtitle: "Sélectionnez les exercices et configurez vos séries"
+        errors:
+          no_exercises: "Vous devez ajouter au moins un exercice"
+          no_sets: "Chaque exercice doit avoir au moins une série"
+          incomplete_sets: "Toutes les séries doivent avoir des répétitions, un poids et un temps de repos"
+          invalid_values: "Les répétitions doivent être supérieures à 0, le poids et le repos doivent être supérieurs ou égaux à 0"
+      name:
+        step_name: "Nom"
+        title: "Nommez votre session"
+        subtitle: "Donnez un nom descriptif à votre session d'entraînement"
+        name_placeholder: "Ex: Full Body, Jambes, Push..."
+        errors:
+          name_blank: "Le nom ne peut pas être vide"
+      slot:
+        step_name: "Créneau horaire"
+        title: "Planifiez votre session"
+        subtitle: "Définissez l'heure de début et de fin de votre session d'entraînement"
+        errors:
+          must_be_before_end_time: "doit être avant l'heure de fin"
+    training_session_exercises:
+      new:
+        title: "Ajouter des exercices"
+      exercises_list:
+        no_exercises: "Aucun exercice disponible"
   time:
     formats:
       default: "%a, %d %b %Y %H:%M:%S %z"

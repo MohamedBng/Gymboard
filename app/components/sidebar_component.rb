@@ -21,9 +21,12 @@ class SidebarComponent < ViewComponent::Base
             <% end %>
           <% end %>
 
-          <%= link_to training_sessions_path, data: { turbo_frame: "main", turbo_action: "advance" }, class: 'flex items-center gap-4 hover:bg-base-200 p-2 rounded' do %>
-            <i class="fas fa-bolt"></i>
-            <span data-sidebar-target="label" class="hidden"><%= t("sidebar.trainings") %></span>
+
+          <% if @current_user.has_permission?("read_training_session") %>
+            <%= link_to training_sessions_path, data: { turbo_frame: "main", turbo_action: "advance" }, class: 'flex items-center gap-4 hover:bg-base-200 p-2 rounded' do %>
+              <i class="fas fa-bolt"></i>
+              <span data-sidebar-target="label" class="hidden"><%= t("sidebar.trainings") %></span>
+            <% end %>
           <% end %>
 
           <% if @current_user.has_permission?("read_exercise") %>
