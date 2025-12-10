@@ -1,7 +1,7 @@
 Geocoder.configure(
   # Geocoding options
   timeout: 5,                 # geocoding service timeout (secs)
-  lookup: :nominatim,         # name of geocoding service (symbol)
+  lookup: :ban_data_gouv_fr,  # name of geocoding service (symbol)
   # ip_lookup: :ipinfo_io,      # name of IP address geocoding service (symbol)
   language: I18n.locale,      # ISO-639 language code (utilise la locale actuelle)
   use_https: true,            # use HTTPS for lookup requests? (if supported)

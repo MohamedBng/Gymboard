@@ -9,7 +9,23 @@ Rails.application.routes.draw do
   get "up" => "rails/health#show", as: :rails_health_check
 
 
-  resources :training_sessions, only: [ :index ]
+  resources :training_sessions, only: :index do
+    resources :training_session_exercises, only: [:create], module: :training_sessions
+  end
+
+  resources :training_session_forms, only: [:new, :update] do
+    collection do
+      post :go_back_to_previous_step
+    end
+  end
+
+  namespace :training_sessions do
+    resources :training_session_exercises, only: [:destroy] do
+      resources :exercise_sets, only: [:create, :destroy]
+    end
+  end
+
+
 
   namespace :admin do
     resources :dashboard, only: [ :index ]

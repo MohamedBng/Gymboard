@@ -119,10 +119,10 @@ exercises.each do |data|
       muscle: muscle
     )
     exercise_muscle.role = muscle_data[:role]
-    exercise_muscle.save!
-  end
 
-  exercises_created += 1 if exercise.persisted?
+    exercise.save!
+    exercises_created += 1 if exercise.previously_new_record?
+  end
 end
 
 puts "#{exercises_created} exercises created"

@@ -23,8 +23,8 @@ RSpec.describe 'TrainingSessions', type: :request do
     context 'when user has read_training_session permission' do
       let(:admin_user) { create(:user, permissions_list: [ 'read_training_session' ]) }
       let!(:other_user) { create(:user) }
-      let!(:admin_sessions) { create_list(:training_session, 2, user: admin_user) }
-      let!(:other_sessions) { create_list(:training_session, 3, user: other_user) }
+      let!(:admin_sessions) { create_list(:training_session, 2, user: admin_user, status: :active) }
+      let!(:other_sessions) { create_list(:training_session, 3, user: other_user, status: :active) }
 
       before do
         sign_in(admin_user, scope: :user)
@@ -57,8 +57,8 @@ RSpec.describe 'TrainingSessions', type: :request do
 
       context 'with pagination' do
         before do
-          create_list(:training_session, 4, user: admin_user)
-          create_list(:training_session, 4, user: other_user)
+          create_list(:training_session, 4, user: admin_user, status: :active)
+          create_list(:training_session, 4, user: other_user, status: :active)
           get training_sessions_path
         end
 
@@ -84,8 +84,8 @@ RSpec.describe 'TrainingSessions', type: :request do
       context 'with Ransack search by muscle_groups' do
         let!(:chest_group) { create(:muscle_group, name: 'Pectoraux') }
         let!(:back_group) { create(:muscle_group, name: 'Dos') }
-        let!(:session_with_chest) { create(:training_session, user: admin_user) }
-        let!(:session_with_back) { create(:training_session, user: admin_user) }
+        let!(:session_with_chest) { create(:training_session, user: admin_user, status: :active) }
+        let!(:session_with_back) { create(:training_session, user: admin_user, status: :active) }
 
         before do
           session_with_chest.muscle_groups << chest_group
@@ -103,8 +103,8 @@ RSpec.describe 'TrainingSessions', type: :request do
     context 'when user has read_own_training_session permission' do
       let(:user) { create(:user, permissions_list: [ 'read_own_training_session' ]) }
       let!(:other_user) { create(:user) }
-      let!(:user_sessions) { create_list(:training_session, 2, user: user) }
-      let!(:other_sessions) { create_list(:training_session, 3, user: other_user) }
+      let!(:user_sessions) { create_list(:training_session, 2, user: user, status: :active) }
+      let!(:other_sessions) { create_list(:training_session, 3, user: other_user, status: :active) }
 
       before do
         sign_in(user, scope: :user)
@@ -139,8 +139,8 @@ RSpec.describe 'TrainingSessions', type: :request do
     context 'when user has both read_training_session and read_own_training_session permissions' do
       let(:admin_user) { create(:user, permissions_list: [ 'read_training_session', 'read_own_training_session' ]) }
       let!(:other_user) { create(:user) }
-      let!(:admin_sessions) { create_list(:training_session, 2, user: admin_user) }
-      let!(:other_sessions) { create_list(:training_session, 3, user: other_user) }
+      let!(:admin_sessions) { create_list(:training_session, 2, user: admin_user, status: :active) }
+      let!(:other_sessions) { create_list(:training_session, 3, user: other_user, status: :active) }
 
       before do
         sign_in(admin_user, scope: :user)

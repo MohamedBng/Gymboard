@@ -27,8 +27,8 @@ load Rails.root.join('db', 'seeds', 'training_sessions.rb')
 
 # Assign permissions
 perms = {
-  "admin" => %w[destroy_user read_user read_dashboard update_any_user create_user read_role create_role update_role create_users_role destroy_users_role create_roles_permission destroy_roles_permission read_exercise create_exercise update_exercise destroy_exercise read_training_session],
-  "user"  => %w[read_dashboard update_own_user read_user read_own_training_session]
+  "admin" => %w[destroy_user read_user read_dashboard update_any_user create_user read_role create_role update_role create_users_role destroy_users_role create_roles_permission destroy_roles_permission read_exercise create_exercise update_exercise destroy_exercise read_training_session create_training_session update_training_session create_training_session_exercise destroy_training_session_exercise],
+  "user"  => %w[read_dashboard update_own_user read_user read_own_training_session create_training_session update_own_training_session create_training_session_exercise destroy_training_session_exercise]
 }
 
 perms.each do |role_name, keys|

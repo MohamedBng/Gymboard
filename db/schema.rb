@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2025_11_05_194724) do
+ActiveRecord::Schema[8.0].define(version: 2025_11_23_134701) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -64,9 +64,9 @@ ActiveRecord::Schema[8.0].define(version: 2025_11_05_194724) do
 
   create_table "exercise_sets", force: :cascade do |t|
     t.bigint "training_session_exercise_id", null: false
-    t.integer "reps", null: false
-    t.integer "weight", null: false
-    t.integer "rest", null: false
+    t.integer "reps"
+    t.integer "weight"
+    t.integer "rest"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["training_session_exercise_id"], name: "index_exercise_sets_on_training_session_exercise_id"
@@ -126,7 +126,7 @@ ActiveRecord::Schema[8.0].define(version: 2025_11_05_194724) do
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
     t.index ["exercise_id"], name: "index_training_session_exercises_on_exercise_id"
-    t.index ["training_session_id", "exercise_id"], name: "index_training_session_exercises_unique", unique: true
+    t.index ["training_session_id", "exercise_id"], name: "index_training_session_exercises_on_session_and_exercise"
     t.index ["training_session_id"], name: "index_training_session_exercises_on_training_session_id"
   end
 
@@ -141,12 +141,13 @@ ActiveRecord::Schema[8.0].define(version: 2025_11_05_194724) do
   end
 
   create_table "training_sessions", force: :cascade do |t|
-    t.string "name", null: false
-    t.datetime "start_time", null: false
-    t.datetime "end_time", null: false
+    t.string "name"
+    t.datetime "start_time"
+    t.datetime "end_time"
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.bigint "user_id", null: false
+    t.bigint "user_id"
+    t.integer "status", default: 0, null: false
     t.index ["user_id"], name: "index_training_sessions_on_user_id"
   end
 

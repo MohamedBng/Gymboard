@@ -112,6 +112,7 @@ en:
         extension: "is not a valid image extension. Allowed extensions: %{valid_extensions}"
   errors:
     messages:
+      blank: "can't be blank"
       not_saved:
         one: "1 error prohibited this %{model} from being saved:"
         other: "%{count} errors prohibited this %{model} from being saved:"
@@ -123,6 +124,10 @@ en:
     per_page: "Results per page"
     save: "Save"
     cancel: "Cancel"
+    close: "Close"
+    continue: "Continue"
+    back: "Back"
+    finish: "Finish"
     not_available: "-"
     personal_information: "Personal Information"
     edit: "Edit"
@@ -295,6 +300,68 @@ en:
       view_button: "View"
     empty_state:
       message: "No training sessions found. Create your first session to get started!"
+    new:
+      title: "New Training Session"
+      subtitle: "Create a new training session by adding exercises"
+      add_exercise_button: "Add Exercise"
+      add_exercise_button_short: "Add"
+      save_session_button: "Save Session"
+    current_session:
+      title: "Current Session"
+      exercises_count:
+        zero: "No exercises"
+        one: "1 exercise"
+        other: "%{count} exercises"
+      empty_message: "No exercises added yet. Click 'Add Exercise' to get started."
+    exercises_modal:
+      title: "Select an Exercise"
+      subtitle: "Search and add exercises to your training session"
+    exercises_search_form:
+      search_placeholder: "Search by exercise name..."
+      all_muscle_groups: "All muscle groups"
+      all_muscles: "All muscles"
+    exercises_list:
+      no_exercises: "No exercises found. Try adjusting your search criteria."
+    modal_exercise_item:
+      add_button: "Add"
+    exercise_item:
+      added: "Added"
+      add_set_button: "Add Set"
+    add_exercise:
+      success: "%{count} exercise(s) successfully added to session"
+      no_exercises_selected: "No exercises selected"
+    remove_exercise:
+      success: "Exercise successfully removed from session"
+    create:
+      success: "Training session created successfully"
+    steps:
+      exercises:
+        step_name: "Exercises"
+        title: "Add your exercises"
+        subtitle: "Select exercises and configure your sets"
+        errors:
+          no_exercises: "You must add at least one exercise"
+          no_sets: "Each exercise must have at least one set"
+          incomplete_sets: "All sets must have reps, weight, and rest time"
+          invalid_values: "Reps must be greater than 0, weight and rest must be greater than or equal to 0"
+      name:
+        step_name: "Name"
+        title: "Name your session"
+        subtitle: "Give your training session a descriptive name"
+        name_placeholder: "E.g: Full Body, Legs, Push..."
+        errors:
+          name_blank: "Name cannot be blank"
+      slot:
+        step_name: "Time Slot"
+        title: "Schedule your session"
+        subtitle: "Set the start and end time for your training session"
+        errors:
+          must_be_before_end_time: "must be before end time"
+    training_session_exercises:
+      new:
+        title: "Add Exercises"
+      exercises_list:
+        no_exercises: "No exercises available"
   time:
     formats:
       default: "%a, %d %b %Y %H:%M:%S %z"

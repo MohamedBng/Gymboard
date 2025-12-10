@@ -4,5 +4,14 @@ FactoryBot.define do
     name { Faker::Lorem.words(number: 2).join(" ") }
     start_time { Faker::Time.between(from: 1.month.ago, to: 1.month.from_now) }
     end_time { start_time&.+(rand(1..4).hours) }
+    status { :draft }
+
+    trait :draft do
+      status { :draft }
+    end
+
+    trait :published do
+      status { :published }
+    end
   end
 end

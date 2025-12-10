@@ -1,0 +1,27 @@
+<%= f.fields_for :training_session_exercises, training_session_exercise do |training_session_exercise_fields| %>
+
+  <div class="exercise-item bg-base p-4 rounded-xl mb-3 outline outline-1 outline-gray-300 dark:outline-gray-700">
+
+    <div class="flex justify-between items-center mb-4">
+      <p class="font-semibold text-lg">
+        <%= training_session_exercise.exercise.title %>
+      </p>
+
+      <%= link_to training_sessions_training_session_exercise_path(training_session_exercise.id),
+            data: { turbo_method: :delete },
+            class: "opacity-60 hover:opacity-100" do %>
+        <i class="fa-solid fa-trash text-lg"></i>
+      <% end %>
+    </div>
+
+    <%= training_session_exercise_fields.hidden_field :exercise_id %>
+
+    <%= turbo_frame_tag "exercise_sets_#{training_session_exercise.id}" do %>
+      <div class="sets-container">
+        <%= render "training_session_forms/set_fields", f: training_session_exercise_fields %>
+      </div>
+    <% end %>
+
+  </div>
+
+<% end %>
