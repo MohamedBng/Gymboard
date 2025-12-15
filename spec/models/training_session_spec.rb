@@ -58,33 +58,47 @@ RSpec.describe TrainingSession, type: :model do
         expect(training_session).to be_valid
       end
     end
+  end
 
-    describe 'default name generation' do
-      context 'when name is blank and start_time is nil' do
-        it 'does not set default name' do
-          training_session.name = nil
-          training_session.start_time = nil
-          training_session.valid?
-          expect(training_session.name).to be_nil
-        end
+  describe 'default name generation' do
+    let(:training_session) { build(:training_session) }
+
+    context 'when name is blank and start_time is nil' do
+      it 'does not set default name' do
+        training_session.name = nil
+        training_session.start_time = nil
+        training_session.valid?
+        expect(training_session.name).to be_nil
       end
+    end
 
-      context 'when name is blank and start_time is present' do
-        it 'sets default name from start_time' do
-          start_time = Time.zone.local(2025, 10, 30, 10, 0, 0)
-          training_session.name = nil
-          training_session.start_time = start_time
-          training_session.valid?
-          expect(training_session.name).to eq("Session — #{start_time.strftime('%B %d')}")
-        end
+    context 'when name is blank and start_time is present' do
+      it 'sets default name from start_time' do
+        start_time = Time.zone.local(2025, 10, 30, 10, 0, 0)
+        training_session.name = nil
+        training_session.start_time = start_time
+        training_session.valid?
+        expect(training_session.name).to eq("Session — #{start_time.strftime('%d/%m')}")
       end
+    end
 
-      context 'when name is provided' do
-        it 'does not override the name' do
-          training_session.name = "Custom Session"
-          training_session.valid?
-          expect(training_session.name).to eq("Custom Session")
-        end
+    context 'when name is blank and muscle_groups and start_time are present' do
+      it 'sets default name from start_time' do
+        start_time = Time.zone.local(2025, 10, 30, 10, 0, 0)
+        training_session.name = nil
+        training_session.start_time = start_time
+        training_session.muscle_groups << create_list(:muscle_group, 2)
+        muscle_group_format = training_session.muscle_groups.map { |group| group.name_capitalized }.join('/')
+        training_session.valid?
+        expect(training_session.name).to eq("#{muscle_group_format} — #{start_time.strftime('%d/%m')}")
+      end
+    end
+
+    context 'when name is provided' do
+      it 'does not override the name' do
+        training_session.name = "Custom Session"
+        training_session.valid?
+        expect(training_session.name).to eq("Custom Session")
       end
     end
   end
@@ -133,27 +147,6 @@ RSpec.describe TrainingSession, type: :model do
           expect(training_session.errors[:end_time]).to include(
             I18n.t('activerecord.errors.models.training_session.attributes.end_time.must_be_after_start_time')
           )
-        end
-      end
-    end
-
-    describe 'default name generation' do
-      context 'when name is blank and start_time is present' do
-        it 'sets default name from start_time' do
-          start_time = Time.zone.local(2025, 10, 30, 10, 0, 0)
-          training_session.name = nil
-          training_session.start_time = start_time
-          training_session.end_time = start_time + 1.hour
-          training_session.valid?
-          expect(training_session.name).to eq("Session — #{start_time.strftime('%B %d')}")
-        end
-      end
-
-      context 'when name is provided' do
-        it 'does not override the name' do
-          training_session.name = "Custom Session"
-          training_session.valid?
-          expect(training_session.name).to eq("Custom Session")
         end
       end
     end

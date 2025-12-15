@@ -32,8 +32,8 @@ RSpec.describe TrainingSessionForm::Steps::ExercisesStep, type: :model do
       }
     }
 
-    it 'returns "name"' do
-      expect(exercises_step.next_step).to eq("name")
+    it 'returns "muscle_groups"' do
+      expect(exercises_step.next_step).to eq("muscle_groups")
     end
   end
 
@@ -497,7 +497,7 @@ RSpec.describe TrainingSessionForm::Steps::ExercisesStep, type: :model do
 
       it 'updates the session step to next_step' do
         exercises_step.submit
-        expect(session_hash[:training_session_step]).to eq("name")
+        expect(session_hash[:training_session_step]).to eq("muscle_groups")
       end
 
       it 'update all the exercise_sets' do

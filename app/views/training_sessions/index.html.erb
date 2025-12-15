@@ -39,14 +39,14 @@
               </p>
             </div>
           </div>
+        </div>
 
-          <div class="flex flex-wrap gap-2 justify-end">
-            <% training_session.muscle_groups.limit(3).each do |muscle_group| %>
-              <span class="badge badge-accent badge-outline">
-                <%= muscle_group.name.capitalize %>
-              </span>
-            <% end %>
-          </div>
+        <div class="flex flex-wrap gap-2 mb-4 w-full ">
+          <% training_session.muscle_groups.limit(3).each do |muscle_group| %>
+            <span class="badge badge-accent badge-outline">
+              <%= muscle_group.name.capitalize %>
+            </span>
+          <% end %>
         </div>
 
         <div class="flex items-center gap-4 text-sm text-gray-400 mb-4">

@@ -9,15 +9,15 @@ class TrainingSessionFormsController < BaseController
 
   def update
     @form = TrainingSessionForm.new(user: current_user, session: session)
-    params = training_session_form_params(@form.current_step_class)
+    step_params = training_session_form_params(@form.current_step_class)
 
-    @step = @form.current_step_instance(params)
+    @step = @form.current_step_instance(step_params)
 
     if @step.submit
       if @step.next_step.nil?
         redirect_to training_sessions_path, notice: t("training_sessions.create.success")
       else
-        redirect_to new_training_session_form_path
+        redirect_to new_training_session_form_path, data: { turbo_frame: "main", turbo_action: "advance" }
       end
     else
       flash.now[:error] = @step.errors.full_messages.join(", ")

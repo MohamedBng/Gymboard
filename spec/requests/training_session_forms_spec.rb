@@ -51,7 +51,8 @@ RSpec.describe TrainingSessionFormsController, type: :request do
   describe 'PATCH #update' do
     let!(:user) { create(:user, permissions_list: [ 'update_own_training_session' ]) }
     let!(:original_name) { 'original name' }
-    let!(:training_session) { create(:training_session, name: original_name, user: user, start_time: nil, end_time: nil) }
+    let!(:training_session) { create(:training_session, name: original_name, user: user) }
+    let!(:muscle_group) { create(:muscle_group) }
     let!(:params) {
       {
         training_session: {
@@ -71,13 +72,10 @@ RSpec.describe TrainingSessionFormsController, type: :request do
       end
 
       context 'with valid params' do
-        let(:new_start_time) { Time.current }
-        let(:new_end_time) { new_start_time + 1 }
         let(:params) {
           {
             training_session: {
-              start_time: new_start_time,
-              end_time: new_end_time
+              name: "new name"
             }
           }
         }
@@ -100,8 +98,7 @@ RSpec.describe TrainingSessionFormsController, type: :request do
         let(:params) {
           {
             training_session: {
-              start_time: nil,
-              end_time: Time.current
+              nama: nil
             }
           }
         }
@@ -250,7 +247,7 @@ RSpec.describe TrainingSessionFormsController, type: :request do
         end
 
         it "render training_sessions index view" do
-          expect(response).to redirect_to(training_sessions_path)
+          expect(response).to redirect_to(new_training_session_form_path)
         end
 
         it 'update start_time and end_time' do
@@ -286,7 +283,7 @@ RSpec.describe TrainingSessionFormsController, type: :request do
         end
 
         it "render training_sessions new view" do
-          expect(response).to redirect_to(training_sessions_path)
+          expect(response).to redirect_to(new_training_session_form_path)
         end
       end
 
@@ -360,7 +357,7 @@ RSpec.describe TrainingSessionFormsController, type: :request do
         end
 
         it "render training_sessions index view" do
-          expect(response).to redirect_to(new_training_session_form_path)
+          expect(response).to redirect_to(training_sessions_path)
         end
 
         it 'update start_time and end_time' do
@@ -371,8 +368,8 @@ RSpec.describe TrainingSessionFormsController, type: :request do
       end
 
       context "with invalid params" do
-        context "start_time is nil" do
-          let(:start_time) { Time.current }
+        context "name is nil" do
+          let(:start_time) { Time.current - 1 }
           let(:user) { create(:user, permissions_list: [ 'update_own_training_session' ]) }
 
           let(:params) {
@@ -385,7 +382,7 @@ RSpec.describe TrainingSessionFormsController, type: :request do
           }
 
           before do
-            patch training_session_form_path(training_session), params: params
+            patch training_session_form_path(training_session, params: params)
           end
 
           it "render new_training_session_form" do
@@ -397,9 +394,71 @@ RSpec.describe TrainingSessionFormsController, type: :request do
           end
 
           it "do not update the object" do
-            expect(training_session.start_time).to eq(nil)
+            expect(training_session.start_time).to_not eq(start_time)
             expect(training_session.name).to eq(original_name)
           end
+        end
+      end
+    end
+
+    context 'muscle groups step' do
+      let!(:session_hash) { { training_session_step: TrainingSessionForm::Steps::MuscleGroupsStep::STEP_NAME } }
+
+      before do
+        sign_in(user, scope: :user)
+        allow_any_instance_of(TrainingSessionFormsController).to receive(:session).and_return(session_hash)
+      end
+
+      context 'with valid params' do
+        let!(:params) {
+          {
+            training_session: {
+              muscle_group_ids: [ muscle_group.id ]
+            }
+          }
+        }
+
+        it 'return a 302 status' do
+          patch training_session_form_path(training_session, params: params)
+
+          expect(response).to have_http_status(302)
+        end
+
+        it "render training_sessions index view" do
+          patch training_session_form_path(training_session, params: params)
+
+          expect(response).to redirect_to(new_training_session_form_path)
+        end
+
+        it "update the training_session_muscle_groups" do
+          expect {
+            patch training_session_form_path(training_session, params: params)
+          }.to change { training_session.training_session_muscle_groups.count }.by(1)
+        end
+      end
+
+      context "with invalid params" do
+        let(:start_time) { Time.current }
+        let(:user) { create(:user, permissions_list: [ 'update_own_training_session' ]) }
+
+        let!(:params) {
+          {
+            "training_session" => {
+              "muscle_group_ids" => []
+            }
+          }
+        }
+
+        before do
+          patch training_session_form_path(training_session), params: params
+        end
+
+        it "render new_training_session_form" do
+          expect(response).to render_template(:new)
+        end
+
+        it "render a 422 error" do
+          expect(response).to have_http_status(422)
         end
       end
     end

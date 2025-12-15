@@ -338,6 +338,12 @@ fr:
         subtitle: "Définissez l'heure de début et de fin de votre session d'entraînement"
         errors:
           must_be_before_end_time: "doit être avant l'heure de fin"
+      muscle_groups:
+        step_name: "Groupes musculaires"
+        title: "Sélectionnez vos groupes musculaires"
+        subtitle: "Choisissez au moins un groupe musculaire pour votre session"
+        errors:
+          no_muscle_groups: "Vous devez sélectionner au moins un groupe musculaire"
     training_session_exercises:
       new:
         title: "Ajouter des exercices"
