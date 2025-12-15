@@ -1,0 +1,38 @@
+<div class="card bg-base shadow-lg rounded-2xl p-4 md:p-6 mb-6 outline outline-1 outline-gray-300 dark:outline-gray-700">
+  <div class="mb-6">
+    <h2 class="text-lg sm:text-xl font-bold mb-2">
+      <%= t("training_sessions.steps.name.title") %>
+    </h2>
+    <p class="text-sm opacity-70">
+      <%= t("training_sessions.steps.name.subtitle") %>
+    </p>
+  </div>
+
+  <%= form_with(model: training_session, url: training_session_form_path(training_session), method: :patch, class: "w-full") do |f| %>
+    <div class="flex flex-row flex-wrap gap-4">
+      <%= f.collection_checkboxes :muscle_group_ids,
+            MuscleGroup.order(:name),
+            :id,
+            :name_capitalized do |b| %>
+        <label class="flex items-center gap-2 ">
+          <%= b.check_box class: "checkbox checkbox-sm" %>
+          <%= b.label %>
+        </label>
+      <% end %>
+    </div>
+
+    <div class="flex mt-6 gap-4">
+        <%= link_to go_back_to_previous_step_training_session_forms_path,
+              data: { turbo_method: :post },
+              class: "btn btn-outline btn-lg gap-2 flex-1" do %>
+          <i class="fa-solid fa-arrow-left"></i>
+          <%= t("common.back") %>
+        <% end %>
+
+        <%= f.button type: "submit", class: "btn btn-accent btn-lg gap-2 flex-1" do %>
+          <%= t("common.continue") %>
+          <i class="fa-solid fa-arrow-right"></i>
+        <% end %>
+    </div>
+  <% end %>
+</div>

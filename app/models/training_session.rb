@@ -39,7 +39,13 @@ class TrainingSession < ApplicationRecord
   def set_default_name
     return unless start_time
 
-    date_format = start_time.strftime("%B %d")
-    self.name = "Session — #{date_format}"
+    date_format = start_time.strftime("%d/%m")
+
+    unless muscle_groups.empty?
+      muscle_groups_format = muscle_groups.map { |group| group.name_capitalized }.join("/")
+      self.name = "#{muscle_groups_format || "Session"} — #{date_format}"
+    else
+      self.name = "Session — #{date_format}"
+    end
   end
 end

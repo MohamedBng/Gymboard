@@ -3,30 +3,25 @@ require 'rails_helper'
 RSpec.describe TrainingSessionForm::Steps::NameStep do
   let!(:user) { create(:user) }
   let!(:training_session) { create(:training_session, user: user) }
-  let!(:session_hash) { {} }
+  let!(:session_hash) { { training_session_step: TrainingSessionForm::Steps::NameStep::STEP_NAME } }
+  let(:training_session_params) { {} }
   let!(:name_step) { described_class.new(training_session:, session: session_hash, **training_session_params) }
 
   describe '#step' do
-    let(:training_session_params) { {} }
-
     it 'returns "name"' do
-      expect(name_step.step).to eq("name")
+      expect(name_step.step).to eq(TrainingSessionForm::Steps::NameStep::STEP_NAME)
     end
   end
 
   describe '#next_step' do
-    let(:training_session_params) { {} }
-
     it 'returns nil' do
-      expect(name_step.next_step).to eq('slot')
+      expect(name_step.next_step).to eq(TrainingSessionForm::Steps::NameStep::NEXT_STEP)
     end
   end
 
   describe '#previous_step' do
-    let(:training_session_params) { {} }
-
     it 'returns "exercises"' do
-      expect(name_step.previous_step).to eq("exercises")
+      expect(name_step.previous_step).to eq(TrainingSessionForm::Steps::NameStep::PREVIOUS_STEP)
     end
   end
 

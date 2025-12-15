@@ -7,16 +7,20 @@ class TrainingSessionForm
 
       validate :validate_start_time_before_end_time
 
+      PREVIOUS_STEP = "muscle_groups"
+      STEP_NAME = "slot"
+      NEXT_STEP = "name"
+
       def step
-        "slot"
+        STEP_NAME
       end
 
       def next_step
-        nil
+        NEXT_STEP
       end
 
       def previous_step
-        "name"
+        PREVIOUS_STEP
       end
 
       def self.permitted_params

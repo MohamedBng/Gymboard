@@ -6,7 +6,8 @@ class TrainingSessionForm
 
       attr_accessor :training_session_exercises_attributes
 
-      NEXT_STEP = "name"
+      PREVIOUS_STEP = nil
+      NEXT_STEP = "muscle_groups"
       STEP_NAME = "exercises"
 
       def step
@@ -18,7 +19,7 @@ class TrainingSessionForm
       end
 
       def previous_step
-        nil
+        PREVIOUS_STEP
       end
 
       def self.permitted_params

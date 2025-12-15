@@ -2,11 +2,30 @@ require 'rails_helper'
 
 RSpec.describe TrainingSessionForm::Steps::SlotStep do
   let(:training_session) { create(:training_session, start_time: nil, end_time: nil) }
-  let(:session) { { training_session_step: 'slot' } }
+  let(:session) { { training_session_step: TrainingSessionForm::Steps::SlotStep::STEP_NAME } }
+  let(:training_session_params) { {} }
   let(:step) { described_class.new(training_session: training_session, session:, **training_session_params) }
 
   before do
     training_session.assign_attributes(training_session_params)
+  end
+
+  describe '#step' do
+    it 'returns "name"' do
+      expect(step.step).to eq(TrainingSessionForm::Steps::SlotStep::STEP_NAME)
+    end
+  end
+
+  describe '#next_step' do
+    it 'returns nil' do
+      expect(step.next_step).to eq(TrainingSessionForm::Steps::SlotStep::NEXT_STEP)
+    end
+  end
+
+  describe '#previous_step' do
+    it 'returns "exercises"' do
+      expect(step.previous_step).to eq(TrainingSessionForm::Steps::SlotStep::PREVIOUS_STEP)
+    end
   end
 
   describe "validation" do
@@ -97,30 +116,6 @@ RSpec.describe TrainingSessionForm::Steps::SlotStep do
           expect(step.errors.full_messages).to include("Start time #{I18n.t('training_sessions.steps.slot.errors.must_be_before_end_time')}")
         end
       end
-    end
-  end
-
-  describe "#step" do
-    let(:training_session_params) { {} }
-
-    it "return slot as current step" do
-      expect(step.step).to eq('slot')
-    end
-  end
-
-  describe "#next_step" do
-    let(:training_session_params) { {} }
-
-    it "return nil as next step" do
-      expect(step.next_step).to be_nil
-    end
-  end
-
-  describe "#previous_step" do
-    let(:training_session_params) { {} }
-
-    it "return nil as next step" do
-      expect(step.previous_step).to eq('name')
     end
   end
 end

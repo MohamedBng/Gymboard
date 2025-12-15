@@ -103,8 +103,8 @@ RSpec.describe TrainingSessionForm do
     context 'when current step is "exercises"' do
       let(:session_hash) { { training_session_step: "exercises" } }
 
-      it 'returns "name"' do
-        expect(form.next_step).to eq("name")
+      it 'returns "muscle_groups"' do
+        expect(form.next_step).to eq("muscle_groups")
       end
     end
 
@@ -112,15 +112,15 @@ RSpec.describe TrainingSessionForm do
       let(:session_hash) { { training_session_step: "name" } }
 
       it 'returns nil (last step)' do
-        expect(form.next_step).to eq('slot')
+        expect(form.next_step).to be_nil
       end
     end
 
     context 'when current step is "slot"' do
       let(:session_hash) { { training_session_step: "slot" } }
 
-      it 'returns nil (last step)' do
-        expect(form.next_step).to be_nil
+      it 'returns eq name' do
+        expect(form.next_step).to eq("name")
       end
     end
   end
@@ -131,20 +131,20 @@ RSpec.describe TrainingSessionForm do
     context 'when current step is "slot"' do
       let(:session_hash) { { training_session_step: "slot" } }
 
-      it 'changes the session step to "exercises"' do
+      it 'changes the session step to "muscle_groups"' do
         form.go_back!
 
-        expect(session_hash[:training_session_step]).to eq("name")
+        expect(session_hash[:training_session_step]).to eq("muscle_groups")
       end
     end
 
     context 'when current step is "name"' do
       let(:session_hash) { { training_session_step: "name" } }
 
-      it 'changes the session step to "exercises"' do
+      it 'changes the session step to "slot"' do
         form.go_back!
 
-        expect(session_hash[:training_session_step]).to eq("exercises")
+        expect(session_hash[:training_session_step]).to eq("slot")
       end
     end
 

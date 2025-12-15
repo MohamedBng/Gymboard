@@ -5,7 +5,7 @@ class TrainingSessionForm
   attr_reader :current_step
 
   FIRST_STEP = "exercises"
-  LAST_STEP = "slot"
+  LAST_STEP = "name"
 
   def initialize(params = {})
     super(params)

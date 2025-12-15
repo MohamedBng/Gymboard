@@ -5,20 +5,7 @@
     </h1>
   </div>
 
-  <!-- Barre de progression des étapes -->
-  <div class="mb-8">
-    <ul class="steps steps-horizontal w-full">
-      <li class="step <%= 'step-accent' if @form.current_step == 'exercises' %>">
-        <%= t("training_sessions.steps.exercises.step_name") %>
-      </li>
-      <li class="step <%= 'step-accent' if @form.current_step == 'name' %>">
-        <%= t("training_sessions.steps.name.step_name") %>
-      </li>
-       <li class="step <%= 'step-accent' if @form.current_step == 'slot' %>">
-        <%= t("training_sessions.steps.name.step_slot") %>
-      </li>
-    </ul>
-  </div>
+  <%= render partial:'training_session_forms/progress_bar', locals:{current_step: @form.current_step} %>
 
   <%= render "shared/flash_error" %>
 

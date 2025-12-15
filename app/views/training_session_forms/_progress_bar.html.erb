@@ -1,0 +1,16 @@
+<div class="mb-8">
+  <ul class="steps steps-horizontal w-full">
+    <li class="step step-accent">
+      <%= t("training_sessions.steps.exercises.step_name") %>
+    </li>
+    <li class="step <%= 'step-accent' if ['muscle_groups', 'name', 'slot'].include?(current_step) %>">
+      <%= t("training_sessions.steps.muscle_groups.step_name") %>
+    </li>
+    <li class="step <%= 'step-accent' if ['name', 'slot'].include?(current_step) %>">
+      <%= t("training_sessions.steps.slot.step_name") %>
+    </li>
+    <li class="step <%= 'step-accent' if current_step == 'name' %>">
+      <%= t("training_sessions.steps.name.step_name") %>
+    </li>
+  </ul>
+</div>
