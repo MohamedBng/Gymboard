@@ -7,16 +7,10 @@ class PaginationComponent < ViewComponent::Base
 
   erb_template <<-ERB
     <% if collection.total_pages > 1 %>
-      <div class="flex justify-center mt-4">
-        <div class="join">
-          <% (1..collection.total_pages).each do |page| %>
-            <% if page == collection.current_page %>
-              <span class="join-item btn btn-active"><%= page %></span>
-            <% else %>
-              <%= link_to page, url_for(params.permit!.to_h.merge(page: page, per_page: params[:per_page])), class: "join-item btn" %>
-            <% end %>
-          <% end %>
-        </div>
+      <div class="join flex justify-center mt-4">
+        <%= link_to_prev_page collection, '«', class: "join-item btn" %>
+        <button class="join-item btn">Page <%= collection.current_page %></button>
+        <%= link_to_next_page collection, '»', class: "join-item btn" %>
       </div>
     <% end %>
   ERB
