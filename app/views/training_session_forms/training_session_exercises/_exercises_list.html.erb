@@ -1,0 +1,19 @@
+<turbo-frame id='exercises_list'>
+  <div class="max-h-96 overflow-y-auto">
+      <% exercises.each do |exercise| %>
+        <div class="bg-base-200 rounded-lg p-4 flex items-center justify-between mb-2">
+          <div class="flex-1">
+            <div class="text-sm font-medium"><%= exercise.title %></div>
+            <% if exercise.muscle_group.present? %>
+              <div class="text-xs text-gray-500"><%= exercise.muscle_group.name.capitalize %></div>
+            <% end %>
+          </div>
+          <%= button_to training_session_training_session_exercises_path(training_session_id: training_session_id, exercise_id: exercise.id),
+                data: { turbo_frame: "_top" },
+                class: "btn btn-sm btn-circle btn-ghost" do %>
+            <i class="fas fa-plus"></i>
+          <% end %>
+        </div>
+      <% end %>
+  </div>
+</turbo-frame>

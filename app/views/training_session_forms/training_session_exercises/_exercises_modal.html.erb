@@ -1,7 +1,5 @@
 <dialog id="exercises_modal" class="modal modal-bottom sm:modal-middle">
   <div class="modal-box relative">
-    <%= render "shared/flash_error" %>
-
     <form method="dialog">
       <button class="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
         <i class="fa-solid fa-xmark text-xl"></i>
@@ -11,22 +9,30 @@
     <h3 class="font-bold text-lg mb-4">
       <%= t("training_sessions.training_session_exercises.new.title") %>
     </h3>
-      <div class="max-h-96 overflow-y-auto">
-        <% exercises.each do |exercise| %>
-          <div class="bg-base-200 rounded-lg p-4 flex items-center justify-between mb-2">
-            <div class="flex-1">
-              <div class="text-sm font-medium"><%= exercise.title %></div>
-              <% if exercise.muscle_group.present? %>
-                <div class="text-xs text-gray-500"><%= exercise.muscle_group.name.capitalize %></div>
-              <% end %>
-            </div>
-            <%= button_to training_session_training_session_exercises_path(training_session_id: training_session.id, exercise_id: exercise.id),
-                  class: "btn btn-sm btn-circle btn-ghost" do %>
-              <i class="fas fa-plus"></i>
-            <% end %>
-          </div>
-        <% end %>
-      </div>
+
+    <%= form_with(url: training_session_forms_exercises_path, method: :get) do |f| %>
+      <label class="input input-bordered flex items-center gap-2 grow w-full">
+        <i class="fas fa-search"></i>
+        <%= f.text_field :q,
+            placeholder: t("admin.exercises.search.placeholder"),
+            class: "bg-transparent outline-none w-full" %>
+      </label>
+
+      <label class="input input-bordered flex items-center gap-2 grow w-full">
+        <%= f.select :muscle_group_id,
+              MuscleGroup.all.map { |muscle_group| [muscle_group.name, muscle_group.id] },
+              { include_blank: t("admin.exercises.search.placeholder") },
+              { class: "bg-transparent outline-none w-full" } %>
+      </label>
+
+
+      <%= f.hidden_field :training_session_id, value: training_session.id %>
+
+      <%= f.submit t("admin.exercises.search.submit_button"), class: "btn btn-accent btn-outline whitespace-nowrap w-full mt-2 mb-5" %>
+    <% end %>
+
+    <turbo-frame id='exercises_list' src="<%= training_session_forms_exercises_path(training_session_id: training_session.id) %>">
+    </turbo-frame>
   </div>
 </dialog>
 
