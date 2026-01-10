@@ -19,6 +19,10 @@ Rails.application.routes.draw do
     end
   end
 
+  namespace :training_session_forms do
+    resources :exercises, only: [ :index ]
+  end
+
   namespace :training_sessions do
     resources :training_session_exercises, only: [ :destroy ] do
       resources :exercise_sets, only: [ :create, :destroy ]

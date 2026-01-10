@@ -4,7 +4,6 @@ class TrainingSessionFormsController < BaseController
   def new
     @form = TrainingSessionForm.new(user: current_user, session: session)
     @step = @form.current_step_instance
-    @exercises = Exercise.all.includes(:muscle_group)
   end
 
   def update
