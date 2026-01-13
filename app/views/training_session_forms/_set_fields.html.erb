@@ -1,40 +1,40 @@
-<% # f est le form builder pour training_session_exercise %>
 <% f.object.exercise_sets.each do |exercise_set| %>
   <%= f.fields_for :exercise_sets, exercise_set do |set_fields| %>
-    <div class="set-fields bg-base-300 p-3 rounded-lg mb-2">
+    <div class="set-fields bg-base-300 p-3 rounded-lg mb-2", data-controller= "auto-save", data-auto-save-exercise-set-id-value= <%= exercise_set.id %>>
       <div class="flex items-center justify-between gap-3">
         <div class="flex-1 grid grid-cols-3 gap-3">
-          <!-- Répétitions -->
           <div class="form-control">
             <%= set_fields.label :reps, t("activerecord.attributes.exercise_set.reps"), class: "label label-text text-xs" %>
             <%= set_fields.number_field :reps,
                 min: 0,
-                class: "input input-bordered input-sm w-full" %>
+                step: 1,
+                class: "input input-bordered input-sm w-full",
+                data: { 'auto-save-target': 'input', 'auto-save-attribute-name': 'reps'} %>x
           </div>
 
-          <!-- Poids (kg) -->
           <div class="form-control">
-            <%= set_fields.label :weight, t("activerecord.attributes.exercise_set.weight"), class: "label label-text text-xs" %>
-            <%= set_fields.number_field :weight,
+            <%= set_fields.label :human_weight, t("activerecord.attributes.exercise_set.weight"), class: "label label-text text-xs" %>
+            <%= set_fields.number_field :human_weight,
                 min: 0,
-                step: 0.5,
-                class: "input input-bordered input-sm w-full" %>
+                step: 0.05,
+                class: "input input-bordered input-sm w-full",
+                data: { 'auto-save-target': 'input', 'auto-save-attribute-name': 'human_weight'} %>
           </div>
 
-          <!-- Repos (secondes) -->
           <div class="form-control">
             <%= set_fields.label :rest, t("activerecord.attributes.exercise_set.rest"), class: "label label-text text-xs" %>
             <%= set_fields.number_field :rest,
                 min: 0,
-                class: "input input-bordered input-sm w-full" %>
+                step: 1,
+                class: "input input-bordered input-sm w-full",
+                data: { 'auto-save-target': 'input', 'auto-save-attribute-name': 'rest'} %>
           </div>
         </div>
 
-        <!-- Bouton supprimer -->
-        <%= link_to training_sessions_training_session_exercise_exercise_set_path(f.object.id, exercise_set.id),
+        <%= link_to training_session_training_session_exercise_exercise_set_path(training_session_id: training_session_id, training_session_exercise_id: training_session_exercise_id, id: exercise_set.id),
               data: { turbo_method: :delete},
               class: "btn btn-ghost btn-sm btn-circle opacity-60 hover:opacity-100 hover:text-error" do %>
-          <i class="fa-solid fa-trash text-lg"></i>
+          <i class="fa-solid fa-xmark text-lg"></i>
         <% end %>
       </div>
 
@@ -44,7 +44,7 @@
 <% end %>
 
 <div class="mt-3">
-  <%= link_to training_sessions_training_session_exercise_exercise_sets_path(f.object.id),
+  <%= link_to training_session_training_session_exercise_exercise_sets_path(training_session_id: training_session_id, training_session_exercise_id: training_session_exercise_id),
         data: { turbo_method: :post },
         class: "btn btn-sm bg-base-300 hover:bg-base-200 btn-block gap-2" do %>
     <i class="fa-solid fa-plus"></i>

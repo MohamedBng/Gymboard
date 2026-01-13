@@ -4,11 +4,20 @@
 
 import { application } from "./application"
 
+import AutoSaveController from "./auto_save_controller"
+application.register("auto-save", AutoSaveController)
+
+import AutoSubmitController from "./auto_submit_controller"
+application.register("auto-submit", AutoSubmitController)
+
 import ColorPickerController from "./color_picker_controller"
 application.register("color-picker", ColorPickerController)
 
 import DashboardController from "./dashboard_controller"
 application.register("dashboard", DashboardController)
+
+import DockController from "./dock_controller"
+application.register("dock", DockController)
 
 import EnableSubmitButtonController from "./enable_submit_button_controller"
 application.register("enable-submit-button", EnableSubmitButtonController)
@@ -30,9 +39,3 @@ application.register("select-all", SelectAllController)
 
 import SidebarController from "./sidebar_controller"
 application.register("sidebar", SidebarController)
-
-import DockController from "./dock_controller"
-application.register("dock", DockController)
-
-import AutoSubmitController from "./auto_submit_controller"
-application.register("auto-submit", AutoSubmitController)

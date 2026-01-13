@@ -13,8 +13,8 @@ class TrainingSessions::TrainingSessionExercisesController < BaseController
 
 
   def destroy
-    training_session_exercise = TrainingSessionExercise.find(params[:id])
-    training_session_exercise.destroy
-    redirect_to new_training_session_form_path(training_session_exercise.training_session)
+    training_session_exercise = TrainingSessionExercise.find_by(id: params[:id])
+    training_session_exercise.destroy if training_session_exercise
+    redirect_to new_training_session_form_path(params[:training_session_id])
   end
 end

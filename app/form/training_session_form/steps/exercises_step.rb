@@ -29,7 +29,7 @@ class TrainingSessionForm
             :exercise_id,
             exercise_sets_attributes: [
               :id,
-              :weight,
+              :human_weight,
               :rest,
               :reps
             ]
@@ -44,22 +44,27 @@ class TrainingSessionForm
       private
 
       def at_least_one_exercise
-        unless training_session_exercises_attributes.any?
+        unless training_session_exercises_attributes.present?
           errors.add(:base, I18n.t("training_sessions.steps.exercises.errors.no_exercises"))
         end
       end
 
       def training_session_exercises_validity
+        return unless training_session_exercises_attributes
+
         training_session_exercises_attributes.each do |k, training_session_exercise|
-          unless training_session_exercise["exercise_sets_attributes"].any?
+          unless training_session_exercise["exercise_sets_attributes"].present?
             errors.add(:base, I18n.t("training_sessions.steps.exercises.errors.no_sets"))
+            return
           end
 
           training_session_exercise["exercise_sets_attributes"].each do |k, exercise_set|
-            if exercise_set["reps"].blank? || exercise_set["weight"].blank? || exercise_set["rest"].blank?
+            if exercise_set["reps"].blank? || exercise_set["human_weight"].blank? || exercise_set["rest"].blank?
               errors.add(:base, I18n.t("training_sessions.steps.exercises.errors.incomplete_sets"))
-            elsif exercise_set["reps"].to_i <= 0 || exercise_set["weight"].to_i < 0 || exercise_set["rest"].to_i < 0
+              return
+            elsif exercise_set["reps"].to_i <= 0 || exercise_set["human_weight"].to_f < 0 || exercise_set["rest"].to_i < 0
               errors.add(:base, I18n.t("training_sessions.steps.exercises.errors.invalid_values"))
+              return
             end
           end
         end

@@ -142,7 +142,7 @@ RSpec.describe TrainingSessionFormsController, type: :request do
                     "0" => {
                       "id" => exercise_set.id,
                       "reps" => 10,
-                      "weight" => 20,
+                      "human_weight" => 20,
                       "rest" => 60
                     }
                   }
@@ -163,7 +163,8 @@ RSpec.describe TrainingSessionFormsController, type: :request do
         it "update the training_session sets" do
           exercise_set.reload
 
-          expect(exercise_set.weight).to eq(20)
+          expect(exercise_set.weight).to eq(20000)
+          expect(exercise_set.human_weight).to eq(20.0)
           expect(exercise_set.reps).to eq(10)
           expect(exercise_set.rest).to eq(60)
         end
@@ -185,7 +186,7 @@ RSpec.describe TrainingSessionFormsController, type: :request do
                     "0" => {
                       "id" => exercise_set.id,
                       "reps" => 10,
-                      "weight" => nil,
+                      "human_weight" => nil,
                       "rest" => 60
                     }
                   }

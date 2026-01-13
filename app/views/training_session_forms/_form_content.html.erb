@@ -3,7 +3,8 @@
     <% training_session.training_session_exercises.each do |exercise_record| %>
       <%= render "training_session_forms/exercise_item",
                 f: f,
-                training_session_exercise: exercise_record %>
+                training_session_exercise: exercise_record,
+                training_session_id: training_session.id %>
     <% end %>
   </div>
 </div>

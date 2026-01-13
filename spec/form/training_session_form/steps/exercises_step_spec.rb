@@ -52,9 +52,7 @@ RSpec.describe TrainingSessionForm::Steps::ExercisesStep, type: :model do
   describe '#submit' do
     context 'when training_session has no exercises' do
       let(:training_session_params) {
-        {
-          "training_session_exercises_attributes" => {}
-        }
+        {}
       }
 
       it 'returns false' do
@@ -78,8 +76,7 @@ RSpec.describe TrainingSessionForm::Steps::ExercisesStep, type: :model do
           "training_session_exercises_attributes" => {
             "0" => {
               "id" => training_session_exercise.id,
-              "exercise_id" => exercise.id,
-              "exercise_sets_attributes" => {}
+              "exercise_id" => exercise.id
             }
           }
         }
@@ -112,7 +109,7 @@ RSpec.describe TrainingSessionForm::Steps::ExercisesStep, type: :model do
                   "0" => {
                     "id" => exercise_set.id,
                     "reps" => nil,
-                    "weight" => exercise_set.weight,
+                    "human_weight" => exercise_set.human_weight,
                     "rest" => exercise_set.rest
                   }
                 }
@@ -142,7 +139,7 @@ RSpec.describe TrainingSessionForm::Steps::ExercisesStep, type: :model do
                   "0" => {
                     "id" => exercise_set.id,
                     "reps" => exercise_set.reps,
-                    "weight" => nil,
+                    "human_weight" => nil,
                     "rest" => exercise_set.rest
                   }
                 }
@@ -172,7 +169,7 @@ RSpec.describe TrainingSessionForm::Steps::ExercisesStep, type: :model do
                   "0" => {
                     "id" => exercise_set.id,
                     "reps" => exercise_set.reps,
-                    "weight" =>  exercise_set.weight,
+                    "human_weight" =>  exercise_set.human_weight,
                     "rest" => nil
                   }
                 }
@@ -208,7 +205,7 @@ RSpec.describe TrainingSessionForm::Steps::ExercisesStep, type: :model do
                   "0" => {
                     "id" => exercise_set.id,
                     "reps" => 0,
-                    "weight" => 20,
+                    "human_weight" => 20,
                     "rest" => 60
                   }
                 }
@@ -242,7 +239,7 @@ RSpec.describe TrainingSessionForm::Steps::ExercisesStep, type: :model do
                   "0" => {
                     "id" => exercise_set.id,
                     "reps" => -1,
-                    "weight" => 20,
+                    "human_weight" => 20,
                     "rest" => 60
                   }
                 }
@@ -276,7 +273,7 @@ RSpec.describe TrainingSessionForm::Steps::ExercisesStep, type: :model do
                   "0" => {
                     "id" => exercise_set.id,
                     "reps" => 1,
-                    "weight" => -20,
+                    "human_weight" => -20,
                     "rest" => 60
                   }
                 }
@@ -310,7 +307,7 @@ RSpec.describe TrainingSessionForm::Steps::ExercisesStep, type: :model do
                   "0" => {
                     "id" => exercise_set.id,
                     "reps" => 1,
-                    "weight" => 20,
+                    "human_weight" => 20,
                     "rest" => -60
                   }
                 }
@@ -345,7 +342,7 @@ RSpec.describe TrainingSessionForm::Steps::ExercisesStep, type: :model do
                 "0" => {
                   "id" => exercise_set.id,
                   "reps" => 10,
-                  "weight" => 20,
+                  "human_weight" => 20,
                   "rest" => 60
                 }
               }
@@ -369,7 +366,7 @@ RSpec.describe TrainingSessionForm::Steps::ExercisesStep, type: :model do
       end
     end
 
-    context 'when training_session has exercises with weight = 0 (bodyweight exercises)' do
+    context 'when training_session has exercises with weight = 0 (bodyhuman_weight exercises)' do
       let(:training_session_params) {
         {
           "training_session_exercises_attributes" => {
@@ -380,7 +377,7 @@ RSpec.describe TrainingSessionForm::Steps::ExercisesStep, type: :model do
                 "0" => {
                   "id" => exercise_set.id,
                   "reps" => 10,
-                  "weight" => 0,
+                  "human_weight" => 0,
                   "rest" => 60
                 }
               }
@@ -415,7 +412,7 @@ RSpec.describe TrainingSessionForm::Steps::ExercisesStep, type: :model do
                 "0" => {
                   "id" => exercise_set.id,
                   "reps" => 10,
-                  "weight" => 15,
+                  "human_weight" => 15,
                   "rest" => 0
                 }
               }
@@ -439,7 +436,8 @@ RSpec.describe TrainingSessionForm::Steps::ExercisesStep, type: :model do
         exercise_set.reload
 
         expect(exercise_set.reps).to eq(10)
-        expect(exercise_set.weight).to eq(15)
+        expect(exercise_set.weight).to eq(15000)
+        expect(exercise_set.human_weight).to eq(15.0)
         expect(exercise_set.rest).to eq(0)
       end
     end
@@ -459,13 +457,13 @@ RSpec.describe TrainingSessionForm::Steps::ExercisesStep, type: :model do
                 "0" => {
                   "id" => exercise_set.id,
                   "reps" => 10,
-                  "weight" => 15,
+                  "human_weight" => 15,
                   "rest" => 60
                 },
                 "1" => {
                   "id" => second_exercise_set.id,
                   "reps" => 8,
-                  "weight" => 10,
+                  "human_weight" => 10,
                   "rest" => 30
                 }
               }
@@ -477,7 +475,7 @@ RSpec.describe TrainingSessionForm::Steps::ExercisesStep, type: :model do
                 "0" => {
                   "id" => third_exercise_set.id,
                   "reps" => 20,
-                  "weight" => 20,
+                  "human_weight" => 20,
                   "rest" => 20
                 }
               }
@@ -506,15 +504,18 @@ RSpec.describe TrainingSessionForm::Steps::ExercisesStep, type: :model do
         second_exercise_set.reload
         third_exercise_set.reload
 
-        expect(exercise_set.weight).to eq(15)
+        expect(exercise_set.weight).to eq(15000)
+        expect(exercise_set.human_weight).to eq(15.0)
         expect(exercise_set.rest).to eq(60)
         expect(exercise_set.reps).to eq(10)
 
-        expect(second_exercise_set.weight).to eq(10)
+        expect(second_exercise_set.weight).to eq(10000)
+        expect(second_exercise_set.human_weight).to eq(10.0)
         expect(second_exercise_set.rest).to eq(30)
         expect(second_exercise_set.reps).to eq(8)
 
-        expect(third_exercise_set.weight).to eq(20)
+        expect(third_exercise_set.weight).to eq(20000)
+        expect(third_exercise_set.human_weight).to eq(20.0)
         expect(third_exercise_set.rest).to eq(20)
         expect(third_exercise_set.reps).to eq(20)
       end

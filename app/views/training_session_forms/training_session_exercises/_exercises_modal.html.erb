@@ -20,8 +20,8 @@
 
       <label class="input input-bordered flex items-center gap-2 grow w-full">
         <%= f.select :muscle_group_id,
-              MuscleGroup.all.map { |muscle_group| [muscle_group.name, muscle_group.id] },
-              { include_blank: t("admin.exercises.search.placeholder") },
+              MuscleGroup.all.map { |muscle_group| [muscle_group.name.capitalize, muscle_group.id] },
+              { include_blank: t("admin.exercises.search.all_muscle_groups") },
               { class: "bg-transparent outline-none w-full" } %>
       </label>
 

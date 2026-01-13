@@ -32,8 +32,8 @@ fr:
         exercise_set:
           training_session_exercise: "Exercice de session d'entraînement"
           reps: "Répétitions"
-          weight: "Poids"
-          rest: "Repos"
+          weight: "Poids (Kg)"
+          rest: "Repos (Secondes)"
         fields:
           first_name: "Prénom"
           last_name: "Nom de famille"

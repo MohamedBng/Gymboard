@@ -24,6 +24,7 @@
     </turbo-frame>
 
     <div class="mt-6 flex gap-4">
+      <%= f.hidden_field :_exercise_step, value: 1 %>
       <%= f.button type: "submit", class: "btn btn-accent btn-lg gap-2 w-full" do %>
         <%= t("common.continue") %>
         <i class="fa-solid fa-arrow-right"></i>

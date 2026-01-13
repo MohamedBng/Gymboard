@@ -61,8 +61,8 @@ en:
       exercise_set:
         training_session_exercise: "Training Session Exercise"
         reps: "Reps"
-        weight: "Weight"
-        rest: "Rest"
+        weight: "Weight (Kg)"
+        rest: "Rest (Seconds)"
     errors:
       models:
         user:

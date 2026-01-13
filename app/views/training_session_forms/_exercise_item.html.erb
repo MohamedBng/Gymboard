@@ -7,7 +7,7 @@
         <%= training_session_exercise.exercise.title %>
       </p>
 
-      <%= link_to training_sessions_training_session_exercise_path(training_session_exercise.id),
+      <%= link_to training_session_training_session_exercise_path(id: training_session_exercise.id, training_session_id: training_session_id),
             data: { turbo_method: :delete },
             class: "opacity-60 hover:opacity-100" do %>
         <i class="fa-solid fa-trash text-lg"></i>
@@ -18,7 +18,7 @@
 
     <%= turbo_frame_tag "exercise_sets_#{training_session_exercise.id}" do %>
       <div class="sets-container">
-        <%= render "training_session_forms/set_fields", f: training_session_exercise_fields %>
+        <%= render "training_session_forms/set_fields", f: training_session_exercise_fields , training_session_id: training_session_id, training_session_exercise_id: training_session_exercise.id %>
       </div>
     <% end %>
 

@@ -9,7 +9,8 @@
             <% end %>
           </div>
           <%= button_to training_session_training_session_exercises_path(training_session_id: training_session_id, exercise_id: exercise.id),
-                data: { turbo_frame: "_top" },
+                data: { turbo_frame: "_top"},
+                onclick: "document.getElementById('exercises_modal').close()",
                 class: "btn btn-sm btn-circle btn-ghost" do %>
             <i class="fas fa-plus"></i>
           <% end %>
