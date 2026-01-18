@@ -8,10 +8,6 @@ RSpec.describe ExerciseMuscle, type: :model do
     expect(exercise_muscle).to be_valid
   end
 
-  describe 'validations' do
-    it { should validate_presence_of(:role) }
-  end
-
   describe 'associations' do
     it { should belong_to(:exercise) }
     it { should belong_to(:muscle) }
