@@ -5,6 +5,7 @@ class Exercise < ApplicationRecord
 
   belongs_to :muscle_group
   belongs_to :user, optional: true
+  belongs_to :primary_muscle, class_name: "Muscle"
 
   has_many :exercise_muscles, dependent: :destroy
   has_many :muscles, through: :exercise_muscles
