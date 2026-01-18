@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2026_01_15_163505) do
+ActiveRecord::Schema[8.0].define(version: 2026_01_18_172650) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -52,14 +52,13 @@ ActiveRecord::Schema[8.0].define(version: 2026_01_15_163505) do
     t.index ["blob_id", "variation_digest"], name: "index_active_storage_variant_records_uniqueness", unique: true
   end
 
-  create_table "exercise_muscles", force: :cascade do |t|
+  create_table "exercise_secondary_muscles", force: :cascade do |t|
     t.bigint "exercise_id", null: false
     t.bigint "muscle_id", null: false
-    t.integer "role", null: false
     t.datetime "created_at", null: false
     t.datetime "updated_at", null: false
-    t.index ["exercise_id"], name: "index_exercise_muscles_on_exercise_id"
-    t.index ["muscle_id"], name: "index_exercise_muscles_on_muscle_id"
+    t.index ["exercise_id"], name: "index_exercise_secondary_muscles_on_exercise_id"
+    t.index ["muscle_id"], name: "index_exercise_secondary_muscles_on_muscle_id"
   end
 
   create_table "exercise_sets", force: :cascade do |t|
@@ -80,7 +79,9 @@ ActiveRecord::Schema[8.0].define(version: 2026_01_15_163505) do
     t.bigint "muscle_group_id", null: false
     t.bigint "user_id"
     t.datetime "verified_at"
+    t.bigint "primary_muscle_id"
     t.index ["muscle_group_id"], name: "index_exercises_on_muscle_group_id"
+    t.index ["primary_muscle_id"], name: "index_exercises_on_primary_muscle_id"
     t.index ["user_id"], name: "index_exercises_on_user_id"
     t.index ["verified_at"], name: "index_exercises_on_verified_at"
   end
@@ -202,10 +203,11 @@ ActiveRecord::Schema[8.0].define(version: 2026_01_15_163505) do
 
   add_foreign_key "active_storage_attachments", "active_storage_blobs", column: "blob_id"
   add_foreign_key "active_storage_variant_records", "active_storage_blobs", column: "blob_id"
-  add_foreign_key "exercise_muscles", "exercises"
-  add_foreign_key "exercise_muscles", "muscles"
+  add_foreign_key "exercise_secondary_muscles", "exercises"
+  add_foreign_key "exercise_secondary_muscles", "muscles"
   add_foreign_key "exercise_sets", "training_session_exercises"
   add_foreign_key "exercises", "muscle_groups"
+  add_foreign_key "exercises", "muscles", column: "primary_muscle_id"
   add_foreign_key "exercises", "users"
   add_foreign_key "muscles", "muscle_groups"
   add_foreign_key "roles_permissions", "permissions"

@@ -15,6 +15,7 @@ RSpec.describe Exercise, type: :model do
 
   describe 'associations' do
     it { should belong_to(:muscle_group) }
+    it { should belong_to(:primary_muscle) }
   end
 
   describe '.search' do
