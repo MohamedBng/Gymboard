@@ -1,10 +1,10 @@
 class TrainingSessionForms::ExercisesController < Admin::BaseController
   def index
-    if params[:q].present? || params[:muscle_group_id].present?
-      @exercises = Exercise.search(message: params[:q], muscle_group_id: params[:muscle_group_id]).includes(:muscle_group)
-    else
-      @exercises = Exercise.all.includes(:muscle_group)
-    end
+    @exercises = Exercise.search(
+      message: params[:q],
+      muscle_group_id: params[:muscle_group_id],
+      scope: params[:scope],
+    ).includes(:muscle_group)
 
     render turbo_stream: turbo_stream.replace(
       "exercises_list",

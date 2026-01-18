@@ -31,7 +31,7 @@ RSpec.describe Exercise, type: :model do
         described_class.search(muscle_group_id: 'chest')
 
         expect(elasticsearch_proxy).to have_received(:search).with(
-          { query: { term: { muscle_group_id: { value: 'chest', boost: 1.0 } } } }
+          ({ query: { bool: { filter: [ { term: { "muscle_group_id" => { value: "chest" } } } ] } } })
         )
       end
     end
@@ -41,7 +41,7 @@ RSpec.describe Exercise, type: :model do
         described_class.search(message: ' ', muscle_group_id: 'chest')
 
         expect(elasticsearch_proxy).to have_received(:search).with(
-          { query: { term: { muscle_group_id: { value: 'chest', boost: 1.0 } } } }
+          ({ query: { bool: { filter: [ { term: { "muscle_group_id" => { value: "chest" } } } ] } } })
         )
       end
     end
@@ -54,22 +54,23 @@ RSpec.describe Exercise, type: :model do
           {
             query: {
               bool: {
-                must: {
+                must: [ {
                   match: {
-                    title: {
+                    "title" => {
                       query: 'press',
                       fuzziness: 'AUTO'
                     }
                   }
-                },
-                filter: {
-                  term: {
-                    muscle_group_id: {
-                      value: 'chest',
-                      boost: 1.0
+                } ],
+                filter: [
+                  {
+                    term: {
+                      "muscle_group_id" => {
+                        value: 'chest'
+                      }
                     }
                   }
-                }
+                ]
               }
             }
           }
@@ -82,16 +83,7 @@ RSpec.describe Exercise, type: :model do
         described_class.search(message: "press")
 
         expect(elasticsearch_proxy).to have_received(:search).with(
-          {
-            query: {
-              match:  {
-                title:  {
-                  query: 'press',
-                  fuzziness: 'AUTO'
-                }
-              }
-            }
-          }
+          ({ query: { bool: { must: [ { match: { "title" => { fuzziness: 'AUTO', query: "press" } } } ] } } })
         )
       end
     end
@@ -101,17 +93,130 @@ RSpec.describe Exercise, type: :model do
         described_class.search(message: "press", muscle_group_id: " ")
 
         expect(elasticsearch_proxy).to have_received(:search).with(
-          {
-            query: {
-              match:  {
-                title:  {
-                  query: 'press',
-                  fuzziness: 'AUTO'
+          ({ query: { bool: { must: [ { match: { "title" => { fuzziness: 'AUTO', query: "press" } } } ] } } })
+        )
+      end
+    end
+
+    context 'when scope is present' do
+      context 'when scope == "current_user"' do
+        it "do a term query with only current_user_id" do
+          described_class.search(current_user_id: 1, scope: 'current_user')
+
+          expect(elasticsearch_proxy).to have_received(:search).with(
+            ({ query: { bool: { filter: [ { term: { "user_id" => { value: 1 } } } ] } } })
+          )
+        end
+
+        context 'when message is present' do
+          it "do a bool query with message and user_id" do
+            described_class.search(message: 'press', current_user_id: 1, scope: 'current_user')
+
+            expect(elasticsearch_proxy).to have_received(:search).with(
+              {
+                query: {
+                  bool: {
+                    must: [ {
+                      match: {
+                        "title" => {
+                          query: 'press',
+                          fuzziness: 'AUTO'
+                        }
+                      }
+                    } ],
+                    filter: [ {
+                      term: {
+                        "user_id" => {
+                          value: 1
+                        }
+                      }
+                    } ]
+                  }
                 }
               }
-            }
-          }
-        )
+            )
+          end
+        end
+
+        context 'when muscle_group_id is present' do
+          it "do a bool query with muscle_group_id and current_user_id " do
+            described_class.search(muscle_group_id: 12, current_user_id: 1, scope: 'current_user')
+
+            expect(elasticsearch_proxy).to have_received(:search).with(
+              {
+                query: {
+                  bool: {
+                    filter: [
+                      {
+                        term: {
+                          "user_id" => {
+                            value: 1
+                          }
+                        }
+                      },
+                      {
+                        term: {
+                          "muscle_group_id" => {
+                            value: 12
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            )
+          end
+        end
+
+        context 'when message and muscle_group_id are present' do
+          it "do a bool query with message and current_user_id" do
+            described_class.search(message: 'press', muscle_group_id: 12, current_user_id: 1, scope: 'current_user')
+
+            expect(elasticsearch_proxy).to have_received(:search).with(
+              {
+                query: {
+                  bool: {
+                    must: [ {
+                      match: {
+                        "title" => {
+                          query: 'press',
+                          fuzziness: 'AUTO'
+                        }
+                      }
+                    } ],
+                    filter: [
+                      {
+                        term: {
+                          "user_id" => {
+                            value: 1
+                          }
+                        }
+                      },
+                      {
+                        term: {
+                          "muscle_group_id" => {
+                            value: 12
+                          }
+                        }
+                      }
+                    ]
+                  }
+                }
+              }
+            )
+          end
+        end
+      end
+
+      context 'when scope == "verified"' do
+        it "do a exists query with the field verified" do
+          described_class.search(scope: 'verified')
+
+          expect(elasticsearch_proxy).to have_received(:search).with(
+            ({ query: { bool: { filter: [ { exists: { field: 'verified_at' } } ] } } })
+          )
+        end
       end
     end
   end

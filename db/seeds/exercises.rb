@@ -8,6 +8,7 @@ exercises.each do |data|
   exercise_muscle_group = MuscleGroup.find_or_create_by!(name: data["muscle_group"])
   exercise = Exercise.find_or_initialize_by(title: data["title"])
   exercise.muscle_group = exercise_muscle_group
+  exercise.verified_at = DateTime.now
   exercise.save!
   exercises_created += 1 if exercise.previously_new_record?
 

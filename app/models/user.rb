@@ -15,6 +15,7 @@ class User < ApplicationRecord
   has_many :users_roles, dependent: :destroy
   has_many :roles, through: :users_roles
   has_many :training_sessions, dependent: :destroy
+  has_many :exercises, dependent: :nullify
 
   has_rich_text :description
 

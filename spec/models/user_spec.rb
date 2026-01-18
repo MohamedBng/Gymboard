@@ -16,6 +16,7 @@ RSpec.describe User, type: :model do
   describe "associations" do
     it { is_expected.to have_many(:users_roles).dependent(:destroy) }
     it { is_expected.to have_many(:roles) }
+    it { is_expected.to have_many(:exercises).dependent(:nullify) }
   end
 
   describe "profile_image attachment" do

@@ -4,6 +4,7 @@ class Exercise < ApplicationRecord
   validates :title, presence: true, uniqueness: true
 
   belongs_to :muscle_group
+  belongs_to :user, optional: true
 
   has_many :exercise_muscles, dependent: :destroy
   has_many :muscles, through: :exercise_muscles
@@ -23,68 +24,15 @@ class Exercise < ApplicationRecord
     indexes :muscle_group_id, type: "keyword"
   end
 
-  def self.search(message: nil, muscle_group_id: nil)
-    query = {}
+  def self.search(message: nil, muscle_group_id: nil, scope: nil, current_user_id: nil)
+    at_least_one_exercise = [ message, muscle_group_id, scope ].count(&:present?) >= 1
 
-    if message.present? && muscle_group_id.present?
-      query = bool_query(message: message, muscle_group_id:)
-    elsif message.present?
-      query = match_query(message: message)
-    elsif muscle_group_id.present?
-      query = term_query(muscle_group_id: muscle_group_id)
-    end
+    query = at_least_one_exercise ? ExerciseSearchQuery.call(message:, muscle_group_id:, scope:, current_user_id:) : { match_all: {} }
 
     params = {
       query: query
     }
 
     self.__elasticsearch__.search(params).records
-  end
-
-  private
-
-  def self.bool_query(message:, muscle_group_id:)
-    {
-      bool: {
-        must: {
-          match: {
-            title: {
-              query: message,
-              fuzziness: "AUTO"
-            }
-          }
-        },
-        filter: {
-          term: {
-            muscle_group_id: {
-              value: muscle_group_id,
-              boost: 1.0
-            }
-          }
-        }
-      }
-    }
-  end
-
-  def self.match_query(message:)
-    {
-      match: {
-        title: {
-          query: message,
-          fuzziness: "AUTO"
-        }
-      }
-    }
-  end
-
-  def self.term_query(muscle_group_id:)
-    {
-      term: {
-        muscle_group_id: {
-          value: muscle_group_id,
-          boost: 1.0
-        }
-      }
-    }
   end
 end

@@ -3,7 +3,12 @@
       <% exercises.each do |exercise| %>
         <div class="bg-base-200 rounded-lg p-4 flex items-center justify-between mb-2">
           <div class="flex-1">
-            <div class="text-sm font-medium"><%= exercise.title %></div>
+            <div class="text-sm font-medium flex items-center gap-2">
+              <%= exercise.title %>
+              <% if exercise.verified_at.present? %>
+                <i class="fas fa-check-circle text-green-500 text-xs" title="Exercice vérifié"></i>
+              <% end %>
+            </div>
             <% if exercise.muscle_group.present? %>
               <div class="text-xs text-gray-500"><%= exercise.muscle_group.name.capitalize %></div>
             <% end %>
