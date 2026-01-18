@@ -1,6301 +1,2913 @@
 [
   {
-    "title": "Barbell Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Barbell Bench Press",
+    "muscle_group": "Chest",
+    "primary_muscle": {
+      "name": "Pectoralis Major",
+      "muscle_group": "Chest"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
+        "name": "Triceps Brachii",
+        "muscle_group": "Arms"
       },
       {
         "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "muscle_group": "Shoulders"
       }
     ]
   },
   {
-    "title": "Dumbbell Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Barbell Bench Press (Barbell)",
+    "muscle_group": "Chest",
+    "primary_muscle": {
+      "name": "Pectoralis Major",
+      "muscle_group": "Chest"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
+        "name": "Triceps Brachii",
+        "muscle_group": "Arms"
       },
       {
         "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "muscle_group": "Shoulders"
       }
     ]
   },
   {
-    "title": "EZ-Bar Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Barbell Bench Press (Dumbbell)",
+    "muscle_group": "Chest",
+    "primary_muscle": {
+      "name": "Pectoralis Major",
+      "muscle_group": "Chest"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
+        "name": "Triceps Brachii",
+        "muscle_group": "Arms"
       },
       {
         "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "muscle_group": "Shoulders"
       }
     ]
   },
   {
-    "title": "Cable Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Barbell Bench Press (Machine)",
+    "muscle_group": "Chest",
+    "primary_muscle": {
+      "name": "Pectoralis Major",
+      "muscle_group": "Chest"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
+        "name": "Triceps Brachii",
+        "muscle_group": "Arms"
       },
       {
         "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "muscle_group": "Shoulders"
       }
     ]
   },
   {
-    "title": "Machine Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Barbell Bench Press (Unilateral)",
+    "muscle_group": "Chest",
+    "primary_muscle": {
+      "name": "Pectoralis Major",
+      "muscle_group": "Chest"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
+        "name": "Triceps Brachii",
+        "muscle_group": "Arms"
       },
       {
         "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "muscle_group": "Shoulders"
       }
     ]
   },
   {
-    "title": "Smith Machine Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Barbell Bench Press (Paused)",
+    "muscle_group": "Chest",
+    "primary_muscle": {
+      "name": "Pectoralis Major",
+      "muscle_group": "Chest"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
+        "name": "Triceps Brachii",
+        "muscle_group": "Arms"
       },
       {
         "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "muscle_group": "Shoulders"
       }
     ]
   },
   {
-    "title": "Kettlebell Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Barbell Bench Press (Tempo)",
+    "muscle_group": "Chest",
+    "primary_muscle": {
+      "name": "Pectoralis Major",
+      "muscle_group": "Chest"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
+        "name": "Triceps Brachii",
+        "muscle_group": "Arms"
       },
       {
         "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "muscle_group": "Shoulders"
       }
     ]
   },
   {
-    "title": "Bodyweight Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Incline Dumbbell Press",
+    "muscle_group": "Chest",
+    "primary_muscle": {
+      "name": "Upper Pectoralis",
+      "muscle_group": "Chest"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
+        "name": "Triceps Brachii",
+        "muscle_group": "Arms"
       },
       {
         "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "muscle_group": "Shoulders"
       }
     ]
   },
   {
-    "title": "Neutral Grip Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Incline Dumbbell Press (Barbell)",
+    "muscle_group": "Chest",
+    "primary_muscle": {
+      "name": "Upper Pectoralis",
+      "muscle_group": "Chest"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
+        "name": "Triceps Brachii",
+        "muscle_group": "Arms"
       },
       {
         "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "muscle_group": "Shoulders"
       }
     ]
   },
   {
-    "title": "Wide Grip Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Incline Dumbbell Press (Dumbbell)",
+    "muscle_group": "Chest",
+    "primary_muscle": {
+      "name": "Upper Pectoralis",
+      "muscle_group": "Chest"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
+        "name": "Triceps Brachii",
+        "muscle_group": "Arms"
       },
       {
         "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "muscle_group": "Shoulders"
       }
     ]
   },
   {
-    "title": "Close Grip Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Incline Dumbbell Press (Machine)",
+    "muscle_group": "Chest",
+    "primary_muscle": {
+      "name": "Upper Pectoralis",
+      "muscle_group": "Chest"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
+        "name": "Triceps Brachii",
+        "muscle_group": "Arms"
       },
       {
         "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "muscle_group": "Shoulders"
       }
     ]
   },
   {
-    "title": "Single Arm Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Incline Dumbbell Press (Unilateral)",
+    "muscle_group": "Chest",
+    "primary_muscle": {
+      "name": "Upper Pectoralis",
+      "muscle_group": "Chest"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
+        "name": "Triceps Brachii",
+        "muscle_group": "Arms"
       },
       {
         "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "muscle_group": "Shoulders"
       }
     ]
   },
   {
-    "title": "Alternating Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Incline Dumbbell Press (Paused)",
+    "muscle_group": "Chest",
+    "primary_muscle": {
+      "name": "Upper Pectoralis",
+      "muscle_group": "Chest"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
+        "name": "Triceps Brachii",
+        "muscle_group": "Arms"
       },
       {
         "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "muscle_group": "Shoulders"
       }
     ]
   },
   {
-    "title": "Barbell Incline Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Incline Dumbbell Press (Tempo)",
+    "muscle_group": "Chest",
+    "primary_muscle": {
+      "name": "Upper Pectoralis",
+      "muscle_group": "Chest"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
+        "name": "Triceps Brachii",
+        "muscle_group": "Arms"
       },
       {
         "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "muscle_group": "Shoulders"
       }
     ]
   },
   {
-    "title": "Dumbbell Incline Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Chest Fly Machine",
+    "muscle_group": "Chest",
+    "primary_muscle": {
+      "name": "Pectoralis Major",
+      "muscle_group": "Chest"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
         "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "muscle_group": "Shoulders"
       }
     ]
   },
   {
-    "title": "EZ-Bar Incline Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Chest Fly Machine (Barbell)",
+    "muscle_group": "Chest",
+    "primary_muscle": {
+      "name": "Pectoralis Major",
+      "muscle_group": "Chest"
+    },
+    "secondary_muscles": [
       {
         "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "muscle_group": "Shoulders"
       }
     ]
   },
   {
-    "title": "Cable Incline Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Chest Fly Machine (Dumbbell)",
+    "muscle_group": "Chest",
+    "primary_muscle": {
+      "name": "Pectoralis Major",
+      "muscle_group": "Chest"
+    },
+    "secondary_muscles": [
       {
         "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "muscle_group": "Shoulders"
       }
     ]
   },
   {
-    "title": "Machine Incline Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Chest Fly Machine (Machine)",
+    "muscle_group": "Chest",
+    "primary_muscle": {
+      "name": "Pectoralis Major",
+      "muscle_group": "Chest"
+    },
+    "secondary_muscles": [
       {
         "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "muscle_group": "Shoulders"
       }
     ]
   },
   {
-    "title": "Smith Machine Incline Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Chest Fly Machine (Unilateral)",
+    "muscle_group": "Chest",
+    "primary_muscle": {
+      "name": "Pectoralis Major",
+      "muscle_group": "Chest"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
         "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "muscle_group": "Shoulders"
       }
     ]
   },
   {
-    "title": "Kettlebell Incline Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Chest Fly Machine (Paused)",
+    "muscle_group": "Chest",
+    "primary_muscle": {
+      "name": "Pectoralis Major",
+      "muscle_group": "Chest"
+    },
+    "secondary_muscles": [
       {
         "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "muscle_group": "Shoulders"
       }
     ]
   },
   {
-    "title": "Bodyweight Incline Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Chest Fly Machine (Tempo)",
+    "muscle_group": "Chest",
+    "primary_muscle": {
+      "name": "Pectoralis Major",
+      "muscle_group": "Chest"
+    },
+    "secondary_muscles": [
       {
         "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "muscle_group": "Shoulders"
       }
     ]
   },
   {
-    "title": "Neutral Grip Incline Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Push-Up",
+    "muscle_group": "Chest",
+    "primary_muscle": {
+      "name": "Pectoralis Major",
+      "muscle_group": "Chest"
+    },
+    "secondary_muscles": [
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Triceps Brachii",
+        "muscle_group": "Arms"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Core",
+        "muscle_group": "Core"
       }
     ]
   },
   {
-    "title": "Wide Grip Incline Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Push-Up (Barbell)",
+    "muscle_group": "Chest",
+    "primary_muscle": {
+      "name": "Pectoralis Major",
+      "muscle_group": "Chest"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Triceps Brachii",
+        "muscle_group": "Arms"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Core",
+        "muscle_group": "Core"
       }
     ]
   },
   {
-    "title": "Close Grip Incline Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Push-Up (Dumbbell)",
+    "muscle_group": "Chest",
+    "primary_muscle": {
+      "name": "Pectoralis Major",
+      "muscle_group": "Chest"
+    },
+    "secondary_muscles": [
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Triceps Brachii",
+        "muscle_group": "Arms"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Core",
+        "muscle_group": "Core"
       }
     ]
   },
   {
-    "title": "Single Arm Incline Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Push-Up (Machine)",
+    "muscle_group": "Chest",
+    "primary_muscle": {
+      "name": "Pectoralis Major",
+      "muscle_group": "Chest"
+    },
+    "secondary_muscles": [
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Triceps Brachii",
+        "muscle_group": "Arms"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Core",
+        "muscle_group": "Core"
       }
     ]
   },
   {
-    "title": "Alternating Incline Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Push-Up (Unilateral)",
+    "muscle_group": "Chest",
+    "primary_muscle": {
+      "name": "Pectoralis Major",
+      "muscle_group": "Chest"
+    },
+    "secondary_muscles": [
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Triceps Brachii",
+        "muscle_group": "Arms"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Core",
+        "muscle_group": "Core"
       }
     ]
   },
   {
-    "title": "Barbell Decline Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Push-Up (Paused)",
+    "muscle_group": "Chest",
+    "primary_muscle": {
+      "name": "Pectoralis Major",
+      "muscle_group": "Chest"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Triceps Brachii",
+        "muscle_group": "Arms"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Core",
+        "muscle_group": "Core"
       }
     ]
   },
   {
-    "title": "Dumbbell Decline Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Push-Up (Tempo)",
+    "muscle_group": "Chest",
+    "primary_muscle": {
+      "name": "Pectoralis Major",
+      "muscle_group": "Chest"
+    },
+    "secondary_muscles": [
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Triceps Brachii",
+        "muscle_group": "Arms"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Core",
+        "muscle_group": "Core"
       }
     ]
   },
   {
-    "title": "EZ-Bar Decline Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Pull-Up",
+    "muscle_group": "Back",
+    "primary_muscle": {
+      "name": "Latissimus Dorsi",
+      "muscle_group": "Back"
+    },
+    "secondary_muscles": [
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Biceps Brachii",
+        "muscle_group": "Arms"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Rhomboids",
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "Cable Decline Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Pull-Up (Barbell)",
+    "muscle_group": "Back",
+    "primary_muscle": {
+      "name": "Latissimus Dorsi",
+      "muscle_group": "Back"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Biceps Brachii",
+        "muscle_group": "Arms"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Rhomboids",
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "Machine Decline Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Pull-Up (Dumbbell)",
+    "muscle_group": "Back",
+    "primary_muscle": {
+      "name": "Latissimus Dorsi",
+      "muscle_group": "Back"
+    },
+    "secondary_muscles": [
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Biceps Brachii",
+        "muscle_group": "Arms"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Rhomboids",
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "Smith Machine Decline Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Pull-Up (Machine)",
+    "muscle_group": "Back",
+    "primary_muscle": {
+      "name": "Latissimus Dorsi",
+      "muscle_group": "Back"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Biceps Brachii",
+        "muscle_group": "Arms"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Rhomboids",
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "Kettlebell Decline Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Pull-Up (Unilateral)",
+    "muscle_group": "Back",
+    "primary_muscle": {
+      "name": "Latissimus Dorsi",
+      "muscle_group": "Back"
+    },
+    "secondary_muscles": [
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Biceps Brachii",
+        "muscle_group": "Arms"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Rhomboids",
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "Bodyweight Decline Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Pull-Up (Paused)",
+    "muscle_group": "Back",
+    "primary_muscle": {
+      "name": "Latissimus Dorsi",
+      "muscle_group": "Back"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Biceps Brachii",
+        "muscle_group": "Arms"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Rhomboids",
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "Neutral Grip Decline Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Pull-Up (Tempo)",
+    "muscle_group": "Back",
+    "primary_muscle": {
+      "name": "Latissimus Dorsi",
+      "muscle_group": "Back"
+    },
+    "secondary_muscles": [
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Biceps Brachii",
+        "muscle_group": "Arms"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Rhomboids",
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "Wide Grip Decline Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Barbell Row",
+    "muscle_group": "Back",
+    "primary_muscle": {
+      "name": "Latissimus Dorsi",
+      "muscle_group": "Back"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Biceps Brachii",
+        "muscle_group": "Arms"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Erector Spinae",
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "Close Grip Decline Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Barbell Row (Barbell)",
+    "muscle_group": "Back",
+    "primary_muscle": {
+      "name": "Latissimus Dorsi",
+      "muscle_group": "Back"
+    },
+    "secondary_muscles": [
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Biceps Brachii",
+        "muscle_group": "Arms"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Erector Spinae",
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "Single Arm Decline Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Barbell Row (Dumbbell)",
+    "muscle_group": "Back",
+    "primary_muscle": {
+      "name": "Latissimus Dorsi",
+      "muscle_group": "Back"
+    },
+    "secondary_muscles": [
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Biceps Brachii",
+        "muscle_group": "Arms"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Erector Spinae",
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "Alternating Decline Bench Press",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Barbell Row (Machine)",
+    "muscle_group": "Back",
+    "primary_muscle": {
+      "name": "Latissimus Dorsi",
+      "muscle_group": "Back"
+    },
+    "secondary_muscles": [
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Biceps Brachii",
+        "muscle_group": "Arms"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Erector Spinae",
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "Barbell Chest Fly",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Barbell Row (Unilateral)",
+    "muscle_group": "Back",
+    "primary_muscle": {
+      "name": "Latissimus Dorsi",
+      "muscle_group": "Back"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Biceps Brachii",
+        "muscle_group": "Arms"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Erector Spinae",
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "Dumbbell Chest Fly",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Barbell Row (Paused)",
+    "muscle_group": "Back",
+    "primary_muscle": {
+      "name": "Latissimus Dorsi",
+      "muscle_group": "Back"
+    },
+    "secondary_muscles": [
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Biceps Brachii",
+        "muscle_group": "Arms"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Erector Spinae",
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "EZ-Bar Chest Fly",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Barbell Row (Tempo)",
+    "muscle_group": "Back",
+    "primary_muscle": {
+      "name": "Latissimus Dorsi",
+      "muscle_group": "Back"
+    },
+    "secondary_muscles": [
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Biceps Brachii",
+        "muscle_group": "Arms"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Erector Spinae",
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "Cable Chest Fly",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
+    "name": "Lat Pulldown",
+    "muscle_group": "Back",
+    "primary_muscle": {
+      "name": "Latissimus Dorsi",
+      "muscle_group": "Back"
+    },
+    "secondary_muscles": [
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Biceps Brachii",
+        "muscle_group": "Arms"
       }
     ]
   },
   {
-    "title": "Machine Chest Fly",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Lat Pulldown (Barbell)",
+    "muscle_group": "Back",
+    "primary_muscle": {
+      "name": "Latissimus Dorsi",
+      "muscle_group": "Back"
+    },
+    "secondary_muscles": [
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Biceps Brachii",
+        "muscle_group": "Arms"
       }
     ]
   },
   {
-    "title": "Smith Machine Chest Fly",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
+    "name": "Lat Pulldown (Dumbbell)",
+    "muscle_group": "Back",
+    "primary_muscle": {
+      "name": "Latissimus Dorsi",
+      "muscle_group": "Back"
+    },
+    "secondary_muscles": [
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Biceps Brachii",
+        "muscle_group": "Arms"
       }
     ]
   },
   {
-    "title": "Kettlebell Chest Fly",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Lat Pulldown (Machine)",
+    "muscle_group": "Back",
+    "primary_muscle": {
+      "name": "Latissimus Dorsi",
+      "muscle_group": "Back"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Biceps Brachii",
+        "muscle_group": "Arms"
       }
     ]
   },
   {
-    "title": "Bodyweight Chest Fly",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
+    "name": "Lat Pulldown (Unilateral)",
+    "muscle_group": "Back",
+    "primary_muscle": {
+      "name": "Latissimus Dorsi",
+      "muscle_group": "Back"
+    },
+    "secondary_muscles": [
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Biceps Brachii",
+        "muscle_group": "Arms"
       }
     ]
   },
   {
-    "title": "Neutral Grip Chest Fly",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Lat Pulldown (Paused)",
+    "muscle_group": "Back",
+    "primary_muscle": {
+      "name": "Latissimus Dorsi",
+      "muscle_group": "Back"
+    },
+    "secondary_muscles": [
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Biceps Brachii",
+        "muscle_group": "Arms"
       }
     ]
   },
   {
-    "title": "Wide Grip Chest Fly",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Lat Pulldown (Tempo)",
+    "muscle_group": "Back",
+    "primary_muscle": {
+      "name": "Latissimus Dorsi",
+      "muscle_group": "Back"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+        "name": "Biceps Brachii",
+        "muscle_group": "Arms"
+      }
+    ]
+  },
+  {
+    "name": "Seated Cable Row",
+    "muscle_group": "Back",
+    "primary_muscle": {
+      "name": "Middle Trapezius",
+      "muscle_group": "Back"
+    },
+    "secondary_muscles": [
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Rhomboids",
+        "muscle_group": "Back"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Biceps Brachii",
+        "muscle_group": "Arms"
       }
     ]
   },
   {
-    "title": "Close Grip Chest Fly",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Seated Cable Row (Barbell)",
+    "muscle_group": "Back",
+    "primary_muscle": {
+      "name": "Middle Trapezius",
+      "muscle_group": "Back"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
+        "name": "Rhomboids",
+        "muscle_group": "Back"
       },
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Biceps Brachii",
+        "muscle_group": "Arms"
       }
     ]
   },
   {
-    "title": "Single Arm Chest Fly",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Seated Cable Row (Dumbbell)",
+    "muscle_group": "Back",
+    "primary_muscle": {
+      "name": "Middle Trapezius",
+      "muscle_group": "Back"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Rhomboids",
+        "muscle_group": "Back"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Biceps Brachii",
+        "muscle_group": "Arms"
       }
     ]
   },
   {
-    "title": "Alternating Chest Fly",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Seated Cable Row (Machine)",
+    "muscle_group": "Back",
+    "primary_muscle": {
+      "name": "Middle Trapezius",
+      "muscle_group": "Back"
+    },
+    "secondary_muscles": [
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Rhomboids",
+        "muscle_group": "Back"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Biceps Brachii",
+        "muscle_group": "Arms"
       }
     ]
   },
   {
-    "title": "Barbell Chest Press",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Seated Cable Row (Unilateral)",
+    "muscle_group": "Back",
+    "primary_muscle": {
+      "name": "Middle Trapezius",
+      "muscle_group": "Back"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Rhomboids",
+        "muscle_group": "Back"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Biceps Brachii",
+        "muscle_group": "Arms"
       }
     ]
   },
   {
-    "title": "Dumbbell Chest Press",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Seated Cable Row (Paused)",
+    "muscle_group": "Back",
+    "primary_muscle": {
+      "name": "Middle Trapezius",
+      "muscle_group": "Back"
+    },
+    "secondary_muscles": [
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Rhomboids",
+        "muscle_group": "Back"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Biceps Brachii",
+        "muscle_group": "Arms"
       }
     ]
   },
   {
-    "title": "EZ-Bar Chest Press",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Seated Cable Row (Tempo)",
+    "muscle_group": "Back",
+    "primary_muscle": {
+      "name": "Middle Trapezius",
+      "muscle_group": "Back"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Rhomboids",
+        "muscle_group": "Back"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Biceps Brachii",
+        "muscle_group": "Arms"
       }
     ]
   },
   {
-    "title": "Cable Chest Press",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Back Squat",
+    "muscle_group": "Legs",
+    "primary_muscle": {
+      "name": "Quadriceps",
+      "muscle_group": "Legs"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
+        "name": "Gluteus Maximus",
+        "muscle_group": "Glutes"
       },
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Hamstrings",
+        "muscle_group": "Legs"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Core",
+        "muscle_group": "Core"
       }
     ]
   },
   {
-    "title": "Machine Chest Press",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Back Squat (Barbell)",
+    "muscle_group": "Legs",
+    "primary_muscle": {
+      "name": "Quadriceps",
+      "muscle_group": "Legs"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
+        "name": "Gluteus Maximus",
+        "muscle_group": "Glutes"
       },
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Hamstrings",
+        "muscle_group": "Legs"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Core",
+        "muscle_group": "Core"
       }
     ]
   },
   {
-    "title": "Smith Machine Chest Press",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Back Squat (Dumbbell)",
+    "muscle_group": "Legs",
+    "primary_muscle": {
+      "name": "Quadriceps",
+      "muscle_group": "Legs"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
+        "name": "Gluteus Maximus",
+        "muscle_group": "Glutes"
       },
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Hamstrings",
+        "muscle_group": "Legs"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Core",
+        "muscle_group": "Core"
       }
     ]
   },
   {
-    "title": "Kettlebell Chest Press",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Back Squat (Machine)",
+    "muscle_group": "Legs",
+    "primary_muscle": {
+      "name": "Quadriceps",
+      "muscle_group": "Legs"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
+        "name": "Gluteus Maximus",
+        "muscle_group": "Glutes"
       },
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Hamstrings",
+        "muscle_group": "Legs"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Core",
+        "muscle_group": "Core"
       }
     ]
   },
   {
-    "title": "Bodyweight Chest Press",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Back Squat (Unilateral)",
+    "muscle_group": "Legs",
+    "primary_muscle": {
+      "name": "Quadriceps",
+      "muscle_group": "Legs"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
+        "name": "Gluteus Maximus",
+        "muscle_group": "Glutes"
       },
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Hamstrings",
+        "muscle_group": "Legs"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Core",
+        "muscle_group": "Core"
       }
     ]
   },
   {
-    "title": "Neutral Grip Chest Press",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Back Squat (Paused)",
+    "muscle_group": "Legs",
+    "primary_muscle": {
+      "name": "Quadriceps",
+      "muscle_group": "Legs"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
+        "name": "Gluteus Maximus",
+        "muscle_group": "Glutes"
       },
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Hamstrings",
+        "muscle_group": "Legs"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Core",
+        "muscle_group": "Core"
       }
     ]
   },
   {
-    "title": "Wide Grip Chest Press",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Back Squat (Tempo)",
+    "muscle_group": "Legs",
+    "primary_muscle": {
+      "name": "Quadriceps",
+      "muscle_group": "Legs"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
+        "name": "Gluteus Maximus",
+        "muscle_group": "Glutes"
       },
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Hamstrings",
+        "muscle_group": "Legs"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Core",
+        "muscle_group": "Core"
       }
     ]
   },
   {
-    "title": "Close Grip Chest Press",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Romanian Deadlift",
+    "muscle_group": "Legs",
+    "primary_muscle": {
+      "name": "Hamstrings",
+      "muscle_group": "Legs"
+    },
+    "secondary_muscles": [
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Gluteus Maximus",
+        "muscle_group": "Glutes"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Erector Spinae",
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "Single Arm Chest Press",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Romanian Deadlift (Barbell)",
+    "muscle_group": "Legs",
+    "primary_muscle": {
+      "name": "Hamstrings",
+      "muscle_group": "Legs"
+    },
+    "secondary_muscles": [
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Gluteus Maximus",
+        "muscle_group": "Glutes"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Erector Spinae",
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "Alternating Chest Press",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Romanian Deadlift (Dumbbell)",
+    "muscle_group": "Legs",
+    "primary_muscle": {
+      "name": "Hamstrings",
+      "muscle_group": "Legs"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Gluteus Maximus",
+        "muscle_group": "Glutes"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Erector Spinae",
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "Barbell Push-Up",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Romanian Deadlift (Machine)",
+    "muscle_group": "Legs",
+    "primary_muscle": {
+      "name": "Hamstrings",
+      "muscle_group": "Legs"
+    },
+    "secondary_muscles": [
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Gluteus Maximus",
+        "muscle_group": "Glutes"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Erector Spinae",
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "Dumbbell Push-Up",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Romanian Deadlift (Unilateral)",
+    "muscle_group": "Legs",
+    "primary_muscle": {
+      "name": "Hamstrings",
+      "muscle_group": "Legs"
+    },
+    "secondary_muscles": [
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Gluteus Maximus",
+        "muscle_group": "Glutes"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Erector Spinae",
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "EZ-Bar Push-Up",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Romanian Deadlift (Paused)",
+    "muscle_group": "Legs",
+    "primary_muscle": {
+      "name": "Hamstrings",
+      "muscle_group": "Legs"
+    },
+    "secondary_muscles": [
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Gluteus Maximus",
+        "muscle_group": "Glutes"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Erector Spinae",
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "Cable Push-Up",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Romanian Deadlift (Tempo)",
+    "muscle_group": "Legs",
+    "primary_muscle": {
+      "name": "Hamstrings",
+      "muscle_group": "Legs"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Gluteus Maximus",
+        "muscle_group": "Glutes"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Erector Spinae",
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "Machine Push-Up",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
+    "name": "Leg Press",
+    "muscle_group": "Legs",
+    "primary_muscle": {
+      "name": "Quadriceps",
+      "muscle_group": "Legs"
+    },
+    "secondary_muscles": [
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Gluteus Maximus",
+        "muscle_group": "Glutes"
       }
     ]
   },
   {
-    "title": "Smith Machine Push-Up",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Leg Press (Barbell)",
+    "muscle_group": "Legs",
+    "primary_muscle": {
+      "name": "Quadriceps",
+      "muscle_group": "Legs"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Gluteus Maximus",
+        "muscle_group": "Glutes"
       }
     ]
   },
   {
-    "title": "Kettlebell Push-Up",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
+    "name": "Leg Press (Dumbbell)",
+    "muscle_group": "Legs",
+    "primary_muscle": {
+      "name": "Quadriceps",
+      "muscle_group": "Legs"
+    },
+    "secondary_muscles": [
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Gluteus Maximus",
+        "muscle_group": "Glutes"
       }
     ]
   },
   {
-    "title": "Bodyweight Push-Up",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Leg Press (Machine)",
+    "muscle_group": "Legs",
+    "primary_muscle": {
+      "name": "Quadriceps",
+      "muscle_group": "Legs"
+    },
+    "secondary_muscles": [
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Gluteus Maximus",
+        "muscle_group": "Glutes"
       }
     ]
   },
   {
-    "title": "Neutral Grip Push-Up",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
+    "name": "Leg Press (Unilateral)",
+    "muscle_group": "Legs",
+    "primary_muscle": {
+      "name": "Quadriceps",
+      "muscle_group": "Legs"
+    },
+    "secondary_muscles": [
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Gluteus Maximus",
+        "muscle_group": "Glutes"
       }
     ]
   },
   {
-    "title": "Wide Grip Push-Up",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
+    "name": "Leg Press (Paused)",
+    "muscle_group": "Legs",
+    "primary_muscle": {
+      "name": "Quadriceps",
+      "muscle_group": "Legs"
+    },
+    "secondary_muscles": [
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Gluteus Maximus",
+        "muscle_group": "Glutes"
       }
     ]
   },
   {
-    "title": "Close Grip Push-Up",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
+    "name": "Leg Press (Tempo)",
+    "muscle_group": "Legs",
+    "primary_muscle": {
+      "name": "Quadriceps",
+      "muscle_group": "Legs"
+    },
+    "secondary_muscles": [
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Gluteus Maximus",
+        "muscle_group": "Glutes"
       }
     ]
   },
   {
-    "title": "Single Arm Push-Up",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Lying Leg Curl",
+    "muscle_group": "Legs",
+    "primary_muscle": {
+      "name": "Hamstrings",
+      "muscle_group": "Legs"
+    },
+    "secondary_muscles": [
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Gastrocnemius",
+        "muscle_group": "Calves"
       }
     ]
   },
   {
-    "title": "Alternating Push-Up",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Lying Leg Curl (Barbell)",
+    "muscle_group": "Legs",
+    "primary_muscle": {
+      "name": "Hamstrings",
+      "muscle_group": "Legs"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Gastrocnemius",
+        "muscle_group": "Calves"
       }
     ]
   },
   {
-    "title": "Barbell Dip",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Lying Leg Curl (Dumbbell)",
+    "muscle_group": "Legs",
+    "primary_muscle": {
+      "name": "Hamstrings",
+      "muscle_group": "Legs"
+    },
+    "secondary_muscles": [
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Gastrocnemius",
+        "muscle_group": "Calves"
       }
     ]
   },
   {
-    "title": "Dumbbell Dip",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
+    "name": "Lying Leg Curl (Machine)",
+    "muscle_group": "Legs",
+    "primary_muscle": {
+      "name": "Hamstrings",
+      "muscle_group": "Legs"
+    },
+    "secondary_muscles": [
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Gastrocnemius",
+        "muscle_group": "Calves"
       }
     ]
   },
   {
-    "title": "EZ-Bar Dip",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Lying Leg Curl (Unilateral)",
+    "muscle_group": "Legs",
+    "primary_muscle": {
+      "name": "Hamstrings",
+      "muscle_group": "Legs"
+    },
+    "secondary_muscles": [
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Gastrocnemius",
+        "muscle_group": "Calves"
       }
     ]
   },
   {
-    "title": "Cable Dip",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Lying Leg Curl (Paused)",
+    "muscle_group": "Legs",
+    "primary_muscle": {
+      "name": "Hamstrings",
+      "muscle_group": "Legs"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Gastrocnemius",
+        "muscle_group": "Calves"
       }
     ]
   },
   {
-    "title": "Machine Dip",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Lying Leg Curl (Tempo)",
+    "muscle_group": "Legs",
+    "primary_muscle": {
+      "name": "Hamstrings",
+      "muscle_group": "Legs"
+    },
+    "secondary_muscles": [
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Gastrocnemius",
+        "muscle_group": "Calves"
       }
     ]
   },
   {
-    "title": "Smith Machine Dip",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Overhead Press",
+    "muscle_group": "Shoulders",
+    "primary_muscle": {
+      "name": "Anterior Deltoid",
+      "muscle_group": "Shoulders"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Triceps Brachii",
+        "muscle_group": "Arms"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Upper Trapezius",
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "Kettlebell Dip",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Overhead Press (Barbell)",
+    "muscle_group": "Shoulders",
+    "primary_muscle": {
+      "name": "Anterior Deltoid",
+      "muscle_group": "Shoulders"
+    },
+    "secondary_muscles": [
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Triceps Brachii",
+        "muscle_group": "Arms"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Upper Trapezius",
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "Bodyweight Dip",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Overhead Press (Dumbbell)",
+    "muscle_group": "Shoulders",
+    "primary_muscle": {
+      "name": "Anterior Deltoid",
+      "muscle_group": "Shoulders"
+    },
+    "secondary_muscles": [
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Triceps Brachii",
+        "muscle_group": "Arms"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Upper Trapezius",
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "Neutral Grip Dip",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Overhead Press (Machine)",
+    "muscle_group": "Shoulders",
+    "primary_muscle": {
+      "name": "Anterior Deltoid",
+      "muscle_group": "Shoulders"
+    },
+    "secondary_muscles": [
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Triceps Brachii",
+        "muscle_group": "Arms"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Upper Trapezius",
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "Wide Grip Dip",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Overhead Press (Unilateral)",
+    "muscle_group": "Shoulders",
+    "primary_muscle": {
+      "name": "Anterior Deltoid",
+      "muscle_group": "Shoulders"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Triceps Brachii",
+        "muscle_group": "Arms"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Upper Trapezius",
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "Close Grip Dip",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Overhead Press (Paused)",
+    "muscle_group": "Shoulders",
+    "primary_muscle": {
+      "name": "Anterior Deltoid",
+      "muscle_group": "Shoulders"
+    },
+    "secondary_muscles": [
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Triceps Brachii",
+        "muscle_group": "Arms"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Upper Trapezius",
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "Single Arm Dip",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Overhead Press (Tempo)",
+    "muscle_group": "Shoulders",
+    "primary_muscle": {
+      "name": "Anterior Deltoid",
+      "muscle_group": "Shoulders"
+    },
+    "secondary_muscles": [
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
+        "name": "Triceps Brachii",
+        "muscle_group": "Arms"
       },
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Upper Trapezius",
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "Alternating Dip",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
+    "name": "Lateral Raise",
+    "muscle_group": "Shoulders",
+    "primary_muscle": {
+      "name": "Lateral Deltoid",
+      "muscle_group": "Shoulders"
+    },
+    "secondary_muscles": [
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Upper Trapezius",
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "Barbell Pullover",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
+    "name": "Lateral Raise (Barbell)",
+    "muscle_group": "Shoulders",
+    "primary_muscle": {
+      "name": "Lateral Deltoid",
+      "muscle_group": "Shoulders"
+    },
+    "secondary_muscles": [
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Upper Trapezius",
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "Dumbbell Pullover",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
+    "name": "Lateral Raise (Dumbbell)",
+    "muscle_group": "Shoulders",
+    "primary_muscle": {
+      "name": "Lateral Deltoid",
+      "muscle_group": "Shoulders"
+    },
+    "secondary_muscles": [
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Upper Trapezius",
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "EZ-Bar Pullover",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
+    "name": "Lateral Raise (Machine)",
+    "muscle_group": "Shoulders",
+    "primary_muscle": {
+      "name": "Lateral Deltoid",
+      "muscle_group": "Shoulders"
+    },
+    "secondary_muscles": [
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Upper Trapezius",
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "Cable Pullover",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Lateral Raise (Unilateral)",
+    "muscle_group": "Shoulders",
+    "primary_muscle": {
+      "name": "Lateral Deltoid",
+      "muscle_group": "Shoulders"
+    },
+    "secondary_muscles": [
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
+        "name": "Upper Trapezius",
+        "muscle_group": "Back"
+      }
+    ]
+  },
+  {
+    "name": "Lateral Raise (Paused)",
+    "muscle_group": "Shoulders",
+    "primary_muscle": {
+      "name": "Lateral Deltoid",
+      "muscle_group": "Shoulders"
+    },
+    "secondary_muscles": [
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Upper Trapezius",
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "Machine Pullover",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Lateral Raise (Tempo)",
+    "muscle_group": "Shoulders",
+    "primary_muscle": {
+      "name": "Lateral Deltoid",
+      "muscle_group": "Shoulders"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Smith Machine Pullover",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Kettlebell Pullover",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Bodyweight Pullover",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Neutral Grip Pullover",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Upper Trapezius",
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "Wide Grip Pullover",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
+    "name": "Rear Delt Fly",
+    "muscle_group": "Shoulders",
+    "primary_muscle": {
+      "name": "Posterior Deltoid",
+      "muscle_group": "Shoulders"
+    },
+    "secondary_muscles": [
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Rhomboids",
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "Close Grip Pullover",
-    "muscle_group": "chest",
-    "muscles": [
+    "name": "Rear Delt Fly (Barbell)",
+    "muscle_group": "Shoulders",
+    "primary_muscle": {
+      "name": "Posterior Deltoid",
+      "muscle_group": "Shoulders"
+    },
+    "secondary_muscles": [
       {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Rhomboids",
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "Single Arm Pullover",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
-      {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
+    "name": "Rear Delt Fly (Dumbbell)",
+    "muscle_group": "Shoulders",
+    "primary_muscle": {
+      "name": "Posterior Deltoid",
+      "muscle_group": "Shoulders"
+    },
+    "secondary_muscles": [
       {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Rhomboids",
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "Alternating Pullover",
-    "muscle_group": "chest",
-    "muscles": [
-      {
-        "name": "Pectoralis Major",
-        "muscle_group": "chest",
-        "role": "primary"
-      },
+    "name": "Rear Delt Fly (Machine)",
+    "muscle_group": "Shoulders",
+    "primary_muscle": {
+      "name": "Posterior Deltoid",
+      "muscle_group": "Shoulders"
+    },
+    "secondary_muscles": [
       {
-        "name": "Anterior Deltoid",
-        "muscle_group": "shoulders",
-        "role": "secondary"
-      },
-      {
-        "name": "Triceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Rhomboids",
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "Barbell Deadlift",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
+    "name": "Rear Delt Fly (Unilateral)",
+    "muscle_group": "Shoulders",
+    "primary_muscle": {
+      "name": "Posterior Deltoid",
+      "muscle_group": "Shoulders"
+    },
+    "secondary_muscles": [
       {
         "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "Dumbbell Deadlift",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
+    "name": "Rear Delt Fly (Paused)",
+    "muscle_group": "Shoulders",
+    "primary_muscle": {
+      "name": "Posterior Deltoid",
+      "muscle_group": "Shoulders"
+    },
+    "secondary_muscles": [
       {
         "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "EZ-Bar Deadlift",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
+    "name": "Rear Delt Fly (Tempo)",
+    "muscle_group": "Shoulders",
+    "primary_muscle": {
+      "name": "Posterior Deltoid",
+      "muscle_group": "Shoulders"
+    },
+    "secondary_muscles": [
       {
         "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "muscle_group": "Back"
       }
     ]
   },
   {
-    "title": "Cable Deadlift",
-    "muscle_group": "back",
-    "muscles": [
+    "name": "Barbell Curl",
+    "muscle_group": "Arms",
+    "primary_muscle": {
+      "name": "Biceps Brachii",
+      "muscle_group": "Arms"
+    },
+    "secondary_muscles": [
       {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
+        "name": "Brachialis",
+        "muscle_group": "Arms"
       },
       {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Forearms",
+        "muscle_group": "Forearms"
       }
     ]
   },
   {
-    "title": "Machine Deadlift",
-    "muscle_group": "back",
-    "muscles": [
+    "name": "Barbell Curl (Barbell)",
+    "muscle_group": "Arms",
+    "primary_muscle": {
+      "name": "Biceps Brachii",
+      "muscle_group": "Arms"
+    },
+    "secondary_muscles": [
       {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
+        "name": "Brachialis",
+        "muscle_group": "Arms"
       },
       {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Forearms",
+        "muscle_group": "Forearms"
       }
     ]
   },
   {
-    "title": "Smith Machine Deadlift",
-    "muscle_group": "back",
-    "muscles": [
+    "name": "Barbell Curl (Dumbbell)",
+    "muscle_group": "Arms",
+    "primary_muscle": {
+      "name": "Biceps Brachii",
+      "muscle_group": "Arms"
+    },
+    "secondary_muscles": [
       {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
+        "name": "Brachialis",
+        "muscle_group": "Arms"
       },
       {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Forearms",
+        "muscle_group": "Forearms"
       }
     ]
   },
   {
-    "title": "Kettlebell Deadlift",
-    "muscle_group": "back",
-    "muscles": [
+    "name": "Barbell Curl (Machine)",
+    "muscle_group": "Arms",
+    "primary_muscle": {
+      "name": "Biceps Brachii",
+      "muscle_group": "Arms"
+    },
+    "secondary_muscles": [
       {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
+        "name": "Brachialis",
+        "muscle_group": "Arms"
       },
       {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Forearms",
+        "muscle_group": "Forearms"
       }
     ]
   },
   {
-    "title": "Bodyweight Deadlift",
-    "muscle_group": "back",
-    "muscles": [
+    "name": "Barbell Curl (Unilateral)",
+    "muscle_group": "Arms",
+    "primary_muscle": {
+      "name": "Biceps Brachii",
+      "muscle_group": "Arms"
+    },
+    "secondary_muscles": [
       {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
+        "name": "Brachialis",
+        "muscle_group": "Arms"
       },
       {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Forearms",
+        "muscle_group": "Forearms"
       }
     ]
   },
   {
-    "title": "Neutral Grip Deadlift",
-    "muscle_group": "back",
-    "muscles": [
+    "name": "Barbell Curl (Paused)",
+    "muscle_group": "Arms",
+    "primary_muscle": {
+      "name": "Biceps Brachii",
+      "muscle_group": "Arms"
+    },
+    "secondary_muscles": [
       {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
+        "name": "Brachialis",
+        "muscle_group": "Arms"
       },
       {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Forearms",
+        "muscle_group": "Forearms"
       }
     ]
   },
   {
-    "title": "Wide Grip Deadlift",
-    "muscle_group": "back",
-    "muscles": [
+    "name": "Barbell Curl (Tempo)",
+    "muscle_group": "Arms",
+    "primary_muscle": {
+      "name": "Biceps Brachii",
+      "muscle_group": "Arms"
+    },
+    "secondary_muscles": [
       {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
+        "name": "Brachialis",
+        "muscle_group": "Arms"
       },
       {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Forearms",
+        "muscle_group": "Forearms"
       }
     ]
   },
   {
-    "title": "Close Grip Deadlift",
-    "muscle_group": "back",
-    "muscles": [
+    "name": "Hammer Curl",
+    "muscle_group": "Arms",
+    "primary_muscle": {
+      "name": "Brachialis",
+      "muscle_group": "Arms"
+    },
+    "secondary_muscles": [
       {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Brachioradialis",
+        "muscle_group": "Forearms"
       }
     ]
   },
   {
-    "title": "Single Arm Deadlift",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
+    "name": "Hammer Curl (Barbell)",
+    "muscle_group": "Arms",
+    "primary_muscle": {
+      "name": "Brachialis",
+      "muscle_group": "Arms"
+    },
+    "secondary_muscles": [
       {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Brachioradialis",
+        "muscle_group": "Forearms"
       }
     ]
   },
   {
-    "title": "Alternating Deadlift",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
+    "name": "Hammer Curl (Dumbbell)",
+    "muscle_group": "Arms",
+    "primary_muscle": {
+      "name": "Brachialis",
+      "muscle_group": "Arms"
+    },
+    "secondary_muscles": [
       {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Brachioradialis",
+        "muscle_group": "Forearms"
       }
     ]
   },
   {
-    "title": "Barbell Row",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
+    "name": "Hammer Curl (Machine)",
+    "muscle_group": "Arms",
+    "primary_muscle": {
+      "name": "Brachialis",
+      "muscle_group": "Arms"
+    },
+    "secondary_muscles": [
       {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Brachioradialis",
+        "muscle_group": "Forearms"
       }
     ]
   },
   {
-    "title": "Dumbbell Row",
-    "muscle_group": "back",
-    "muscles": [
+    "name": "Hammer Curl (Unilateral)",
+    "muscle_group": "Arms",
+    "primary_muscle": {
+      "name": "Brachialis",
+      "muscle_group": "Arms"
+    },
+    "secondary_muscles": [
       {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Brachioradialis",
+        "muscle_group": "Forearms"
       }
     ]
   },
   {
-    "title": "EZ-Bar Row",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
+    "name": "Hammer Curl (Paused)",
+    "muscle_group": "Arms",
+    "primary_muscle": {
+      "name": "Brachialis",
+      "muscle_group": "Arms"
+    },
+    "secondary_muscles": [
       {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Brachioradialis",
+        "muscle_group": "Forearms"
       }
     ]
   },
   {
-    "title": "Cable Row",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
+    "name": "Hammer Curl (Tempo)",
+    "muscle_group": "Arms",
+    "primary_muscle": {
+      "name": "Brachialis",
+      "muscle_group": "Arms"
+    },
+    "secondary_muscles": [
       {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Brachioradialis",
+        "muscle_group": "Forearms"
       }
     ]
   },
   {
-    "title": "Machine Row",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
+    "name": "Triceps Pushdown",
+    "muscle_group": "Arms",
+    "primary_muscle": {
+      "name": "Triceps Brachii",
+      "muscle_group": "Arms"
+    },
+    "secondary_muscles": [
       {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Anconeus",
+        "muscle_group": "Arms"
       }
     ]
   },
   {
-    "title": "Smith Machine Row",
-    "muscle_group": "back",
-    "muscles": [
+    "name": "Triceps Pushdown (Barbell)",
+    "muscle_group": "Arms",
+    "primary_muscle": {
+      "name": "Triceps Brachii",
+      "muscle_group": "Arms"
+    },
+    "secondary_muscles": [
       {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Anconeus",
+        "muscle_group": "Arms"
       }
     ]
   },
   {
-    "title": "Kettlebell Row",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
+    "name": "Triceps Pushdown (Dumbbell)",
+    "muscle_group": "Arms",
+    "primary_muscle": {
+      "name": "Triceps Brachii",
+      "muscle_group": "Arms"
+    },
+    "secondary_muscles": [
       {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Anconeus",
+        "muscle_group": "Arms"
       }
     ]
   },
   {
-    "title": "Bodyweight Row",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
+    "name": "Triceps Pushdown (Machine)",
+    "muscle_group": "Arms",
+    "primary_muscle": {
+      "name": "Triceps Brachii",
+      "muscle_group": "Arms"
+    },
+    "secondary_muscles": [
       {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Anconeus",
+        "muscle_group": "Arms"
       }
     ]
   },
   {
-    "title": "Neutral Grip Row",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
+    "name": "Triceps Pushdown (Unilateral)",
+    "muscle_group": "Arms",
+    "primary_muscle": {
+      "name": "Triceps Brachii",
+      "muscle_group": "Arms"
+    },
+    "secondary_muscles": [
       {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Anconeus",
+        "muscle_group": "Arms"
       }
     ]
   },
   {
-    "title": "Wide Grip Row",
-    "muscle_group": "back",
-    "muscles": [
+    "name": "Triceps Pushdown (Paused)",
+    "muscle_group": "Arms",
+    "primary_muscle": {
+      "name": "Triceps Brachii",
+      "muscle_group": "Arms"
+    },
+    "secondary_muscles": [
       {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Anconeus",
+        "muscle_group": "Arms"
       }
     ]
   },
   {
-    "title": "Close Grip Row",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
+    "name": "Triceps Pushdown (Tempo)",
+    "muscle_group": "Arms",
+    "primary_muscle": {
+      "name": "Triceps Brachii",
+      "muscle_group": "Arms"
+    },
+    "secondary_muscles": [
       {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Anconeus",
+        "muscle_group": "Arms"
       }
     ]
   },
   {
-    "title": "Single Arm Row",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
+    "name": "Skull Crushers",
+    "muscle_group": "Arms",
+    "primary_muscle": {
+      "name": "Triceps Brachii",
+      "muscle_group": "Arms"
+    },
+    "secondary_muscles": [
       {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Anterior Deltoid",
+        "muscle_group": "Shoulders"
       }
     ]
   },
   {
-    "title": "Alternating Row",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
+    "name": "Skull Crushers (Barbell)",
+    "muscle_group": "Arms",
+    "primary_muscle": {
+      "name": "Triceps Brachii",
+      "muscle_group": "Arms"
+    },
+    "secondary_muscles": [
       {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Anterior Deltoid",
+        "muscle_group": "Shoulders"
       }
     ]
   },
   {
-    "title": "Barbell Pull-Up",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
+    "name": "Skull Crushers (Dumbbell)",
+    "muscle_group": "Arms",
+    "primary_muscle": {
+      "name": "Triceps Brachii",
+      "muscle_group": "Arms"
+    },
+    "secondary_muscles": [
       {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Anterior Deltoid",
+        "muscle_group": "Shoulders"
       }
     ]
   },
   {
-    "title": "Dumbbell Pull-Up",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
+    "name": "Skull Crushers (Machine)",
+    "muscle_group": "Arms",
+    "primary_muscle": {
+      "name": "Triceps Brachii",
+      "muscle_group": "Arms"
+    },
+    "secondary_muscles": [
       {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Anterior Deltoid",
+        "muscle_group": "Shoulders"
       }
     ]
   },
   {
-    "title": "EZ-Bar Pull-Up",
-    "muscle_group": "back",
-    "muscles": [
+    "name": "Skull Crushers (Unilateral)",
+    "muscle_group": "Arms",
+    "primary_muscle": {
+      "name": "Triceps Brachii",
+      "muscle_group": "Arms"
+    },
+    "secondary_muscles": [
       {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Anterior Deltoid",
+        "muscle_group": "Shoulders"
       }
     ]
   },
   {
-    "title": "Cable Pull-Up",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
+    "name": "Skull Crushers (Paused)",
+    "muscle_group": "Arms",
+    "primary_muscle": {
+      "name": "Triceps Brachii",
+      "muscle_group": "Arms"
+    },
+    "secondary_muscles": [
       {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Anterior Deltoid",
+        "muscle_group": "Shoulders"
       }
     ]
   },
   {
-    "title": "Machine Pull-Up",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
+    "name": "Skull Crushers (Tempo)",
+    "muscle_group": "Arms",
+    "primary_muscle": {
+      "name": "Triceps Brachii",
+      "muscle_group": "Arms"
+    },
+    "secondary_muscles": [
       {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
+        "name": "Anterior Deltoid",
+        "muscle_group": "Shoulders"
       }
     ]
   },
   {
-    "title": "Smith Machine Pull-Up",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
+    "name": "Hanging Leg Raise",
+    "muscle_group": "Core",
+    "primary_muscle": {
+      "name": "Rectus Abdominis",
+      "muscle_group": "Core"
+    },
+    "secondary_muscles": [
       {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Kettlebell Pull-Up",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Bodyweight Pull-Up",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Neutral Grip Pull-Up",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Wide Grip Pull-Up",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Close Grip Pull-Up",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Single Arm Pull-Up",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Alternating Pull-Up",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Barbell Chin-Up",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Dumbbell Chin-Up",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "EZ-Bar Chin-Up",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Cable Chin-Up",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Machine Chin-Up",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Smith Machine Chin-Up",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Kettlebell Chin-Up",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Bodyweight Chin-Up",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Neutral Grip Chin-Up",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Wide Grip Chin-Up",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Close Grip Chin-Up",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Single Arm Chin-Up",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Alternating Chin-Up",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Barbell Lat Pulldown",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Dumbbell Lat Pulldown",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "EZ-Bar Lat Pulldown",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Cable Lat Pulldown",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Machine Lat Pulldown",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Smith Machine Lat Pulldown",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Kettlebell Lat Pulldown",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Bodyweight Lat Pulldown",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Neutral Grip Lat Pulldown",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Wide Grip Lat Pulldown",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Close Grip Lat Pulldown",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Single Arm Lat Pulldown",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Alternating Lat Pulldown",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Barbell Seated Row",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Dumbbell Seated Row",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "EZ-Bar Seated Row",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Cable Seated Row",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Machine Seated Row",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Smith Machine Seated Row",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Kettlebell Seated Row",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Bodyweight Seated Row",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Neutral Grip Seated Row",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Wide Grip Seated Row",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Close Grip Seated Row",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Single Arm Seated Row",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Alternating Seated Row",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Barbell Back Extension",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Dumbbell Back Extension",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "EZ-Bar Back Extension",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Cable Back Extension",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Machine Back Extension",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Smith Machine Back Extension",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Kettlebell Back Extension",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Bodyweight Back Extension",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Neutral Grip Back Extension",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Wide Grip Back Extension",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Close Grip Back Extension",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Single Arm Back Extension",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Alternating Back Extension",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Barbell Good Morning",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Dumbbell Good Morning",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "EZ-Bar Good Morning",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Cable Good Morning",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Machine Good Morning",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Smith Machine Good Morning",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Kettlebell Good Morning",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Bodyweight Good Morning",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Neutral Grip Good Morning",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Wide Grip Good Morning",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Close Grip Good Morning",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Single Arm Good Morning",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Alternating Good Morning",
-    "muscle_group": "back",
-    "muscles": [
-      {
-        "name": "Latissimus Dorsi",
-        "muscle_group": "back",
-        "role": "primary"
-      },
-      {
-        "name": "Rhomboids",
-        "muscle_group": "back",
-        "role": "secondary"
-      },
-      {
-        "name": "Biceps Brachii",
-        "muscle_group": "arms",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Barbell Squat",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Dumbbell Squat",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "EZ-Bar Squat",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Cable Squat",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Machine Squat",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Smith Machine Squat",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Kettlebell Squat",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Bodyweight Squat",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Neutral Grip Squat",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Wide Grip Squat",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Close Grip Squat",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Single Arm Squat",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Alternating Squat",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Barbell Front Squat",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Dumbbell Front Squat",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "EZ-Bar Front Squat",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Cable Front Squat",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Machine Front Squat",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Smith Machine Front Squat",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Kettlebell Front Squat",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Bodyweight Front Squat",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Neutral Grip Front Squat",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Wide Grip Front Squat",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Close Grip Front Squat",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Single Arm Front Squat",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Alternating Front Squat",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Barbell Lunge",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Dumbbell Lunge",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "EZ-Bar Lunge",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Cable Lunge",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Machine Lunge",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Smith Machine Lunge",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Kettlebell Lunge",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Bodyweight Lunge",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Neutral Grip Lunge",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Wide Grip Lunge",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Close Grip Lunge",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Single Arm Lunge",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Alternating Lunge",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Barbell Split Squat",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Dumbbell Split Squat",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "EZ-Bar Split Squat",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Cable Split Squat",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Machine Split Squat",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
-      }
-    ]
-  },
-  {
-    "title": "Smith Machine Split Squat",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Hip Flexors",
+        "muscle_group": "Legs"
       }
     ]
   },
   {
-    "title": "Kettlebell Split Squat",
-    "muscle_group": "legs",
-    "muscles": [
+    "name": "Hanging Leg Raise (Barbell)",
+    "muscle_group": "Core",
+    "primary_muscle": {
+      "name": "Rectus Abdominis",
+      "muscle_group": "Core"
+    },
+    "secondary_muscles": [
       {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Hip Flexors",
+        "muscle_group": "Legs"
       }
     ]
   },
   {
-    "title": "Bodyweight Split Squat",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
+    "name": "Hanging Leg Raise (Dumbbell)",
+    "muscle_group": "Core",
+    "primary_muscle": {
+      "name": "Rectus Abdominis",
+      "muscle_group": "Core"
+    },
+    "secondary_muscles": [
       {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Hip Flexors",
+        "muscle_group": "Legs"
       }
     ]
   },
   {
-    "title": "Neutral Grip Split Squat",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
+    "name": "Hanging Leg Raise (Machine)",
+    "muscle_group": "Core",
+    "primary_muscle": {
+      "name": "Rectus Abdominis",
+      "muscle_group": "Core"
+    },
+    "secondary_muscles": [
       {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Hip Flexors",
+        "muscle_group": "Legs"
       }
     ]
   },
   {
-    "title": "Wide Grip Split Squat",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
+    "name": "Hanging Leg Raise (Unilateral)",
+    "muscle_group": "Core",
+    "primary_muscle": {
+      "name": "Rectus Abdominis",
+      "muscle_group": "Core"
+    },
+    "secondary_muscles": [
       {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Hip Flexors",
+        "muscle_group": "Legs"
       }
     ]
   },
   {
-    "title": "Close Grip Split Squat",
-    "muscle_group": "legs",
-    "muscles": [
+    "name": "Hanging Leg Raise (Paused)",
+    "muscle_group": "Core",
+    "primary_muscle": {
+      "name": "Rectus Abdominis",
+      "muscle_group": "Core"
+    },
+    "secondary_muscles": [
       {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Hip Flexors",
+        "muscle_group": "Legs"
       }
     ]
   },
   {
-    "title": "Single Arm Split Squat",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
+    "name": "Hanging Leg Raise (Tempo)",
+    "muscle_group": "Core",
+    "primary_muscle": {
+      "name": "Rectus Abdominis",
+      "muscle_group": "Core"
+    },
+    "secondary_muscles": [
       {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Hip Flexors",
+        "muscle_group": "Legs"
       }
     ]
   },
   {
-    "title": "Alternating Split Squat",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
+    "name": "Cable Crunch",
+    "muscle_group": "Core",
+    "primary_muscle": {
+      "name": "Rectus Abdominis",
+      "muscle_group": "Core"
+    },
+    "secondary_muscles": [
       {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Obliques",
+        "muscle_group": "Core"
       }
     ]
   },
   {
-    "title": "Barbell Leg Press",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
+    "name": "Cable Crunch (Barbell)",
+    "muscle_group": "Core",
+    "primary_muscle": {
+      "name": "Rectus Abdominis",
+      "muscle_group": "Core"
+    },
+    "secondary_muscles": [
       {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Obliques",
+        "muscle_group": "Core"
       }
     ]
   },
   {
-    "title": "Dumbbell Leg Press",
-    "muscle_group": "legs",
-    "muscles": [
+    "name": "Cable Crunch (Dumbbell)",
+    "muscle_group": "Core",
+    "primary_muscle": {
+      "name": "Rectus Abdominis",
+      "muscle_group": "Core"
+    },
+    "secondary_muscles": [
       {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Obliques",
+        "muscle_group": "Core"
       }
     ]
   },
   {
-    "title": "EZ-Bar Leg Press",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
+    "name": "Cable Crunch (Machine)",
+    "muscle_group": "Core",
+    "primary_muscle": {
+      "name": "Rectus Abdominis",
+      "muscle_group": "Core"
+    },
+    "secondary_muscles": [
       {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Obliques",
+        "muscle_group": "Core"
       }
     ]
   },
   {
-    "title": "Cable Leg Press",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
+    "name": "Cable Crunch (Unilateral)",
+    "muscle_group": "Core",
+    "primary_muscle": {
+      "name": "Rectus Abdominis",
+      "muscle_group": "Core"
+    },
+    "secondary_muscles": [
       {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Obliques",
+        "muscle_group": "Core"
       }
     ]
   },
   {
-    "title": "Machine Leg Press",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
+    "name": "Cable Crunch (Paused)",
+    "muscle_group": "Core",
+    "primary_muscle": {
+      "name": "Rectus Abdominis",
+      "muscle_group": "Core"
+    },
+    "secondary_muscles": [
       {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Obliques",
+        "muscle_group": "Core"
       }
     ]
   },
   {
-    "title": "Smith Machine Leg Press",
-    "muscle_group": "legs",
-    "muscles": [
+    "name": "Cable Crunch (Tempo)",
+    "muscle_group": "Core",
+    "primary_muscle": {
+      "name": "Rectus Abdominis",
+      "muscle_group": "Core"
+    },
+    "secondary_muscles": [
       {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Obliques",
+        "muscle_group": "Core"
       }
     ]
   },
   {
-    "title": "Kettlebell Leg Press",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
+    "name": "Plank",
+    "muscle_group": "Core",
+    "primary_muscle": {
+      "name": "Transverse Abdominis",
+      "muscle_group": "Core"
+    },
+    "secondary_muscles": [
       {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
+        "name": "Glutes",
+        "muscle_group": "Glutes"
       },
       {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Shoulders",
+        "muscle_group": "Shoulders"
       }
     ]
   },
   {
-    "title": "Bodyweight Leg Press",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
+    "name": "Plank (Barbell)",
+    "muscle_group": "Core",
+    "primary_muscle": {
+      "name": "Transverse Abdominis",
+      "muscle_group": "Core"
+    },
+    "secondary_muscles": [
       {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
+        "name": "Glutes",
+        "muscle_group": "Glutes"
       },
       {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Shoulders",
+        "muscle_group": "Shoulders"
       }
     ]
   },
   {
-    "title": "Neutral Grip Leg Press",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
+    "name": "Plank (Dumbbell)",
+    "muscle_group": "Core",
+    "primary_muscle": {
+      "name": "Transverse Abdominis",
+      "muscle_group": "Core"
+    },
+    "secondary_muscles": [
       {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
+        "name": "Glutes",
+        "muscle_group": "Glutes"
       },
       {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Shoulders",
+        "muscle_group": "Shoulders"
       }
     ]
   },
   {
-    "title": "Wide Grip Leg Press",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
+    "name": "Plank (Machine)",
+    "muscle_group": "Core",
+    "primary_muscle": {
+      "name": "Transverse Abdominis",
+      "muscle_group": "Core"
+    },
+    "secondary_muscles": [
       {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
+        "name": "Glutes",
+        "muscle_group": "Glutes"
       },
       {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Shoulders",
+        "muscle_group": "Shoulders"
       }
     ]
   },
   {
-    "title": "Close Grip Leg Press",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
+    "name": "Plank (Unilateral)",
+    "muscle_group": "Core",
+    "primary_muscle": {
+      "name": "Transverse Abdominis",
+      "muscle_group": "Core"
+    },
+    "secondary_muscles": [
       {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
+        "name": "Glutes",
+        "muscle_group": "Glutes"
       },
       {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Shoulders",
+        "muscle_group": "Shoulders"
       }
     ]
   },
   {
-    "title": "Single Arm Leg Press",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
+    "name": "Plank (Paused)",
+    "muscle_group": "Core",
+    "primary_muscle": {
+      "name": "Transverse Abdominis",
+      "muscle_group": "Core"
+    },
+    "secondary_muscles": [
       {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
+        "name": "Glutes",
+        "muscle_group": "Glutes"
       },
       {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Shoulders",
+        "muscle_group": "Shoulders"
       }
     ]
   },
   {
-    "title": "Alternating Leg Press",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
+    "name": "Plank (Tempo)",
+    "muscle_group": "Core",
+    "primary_muscle": {
+      "name": "Transverse Abdominis",
+      "muscle_group": "Core"
+    },
+    "secondary_muscles": [
       {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
+        "name": "Glutes",
+        "muscle_group": "Glutes"
       },
       {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Shoulders",
+        "muscle_group": "Shoulders"
       }
     ]
   },
   {
-    "title": "Barbell Leg Extension",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
+    "name": "Standing Calf Raise",
+    "muscle_group": "Calves",
+    "primary_muscle": {
+      "name": "Gastrocnemius",
+      "muscle_group": "Calves"
+    },
+    "secondary_muscles": [
       {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Soleus",
+        "muscle_group": "Calves"
       }
     ]
   },
   {
-    "title": "Dumbbell Leg Extension",
-    "muscle_group": "legs",
-    "muscles": [
+    "name": "Standing Calf Raise (Barbell)",
+    "muscle_group": "Calves",
+    "primary_muscle": {
+      "name": "Gastrocnemius",
+      "muscle_group": "Calves"
+    },
+    "secondary_muscles": [
       {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Soleus",
+        "muscle_group": "Calves"
       }
     ]
   },
   {
-    "title": "EZ-Bar Leg Extension",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
+    "name": "Standing Calf Raise (Dumbbell)",
+    "muscle_group": "Calves",
+    "primary_muscle": {
+      "name": "Gastrocnemius",
+      "muscle_group": "Calves"
+    },
+    "secondary_muscles": [
       {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Soleus",
+        "muscle_group": "Calves"
       }
     ]
   },
   {
-    "title": "Cable Leg Extension",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
+    "name": "Standing Calf Raise (Machine)",
+    "muscle_group": "Calves",
+    "primary_muscle": {
+      "name": "Gastrocnemius",
+      "muscle_group": "Calves"
+    },
+    "secondary_muscles": [
       {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Soleus",
+        "muscle_group": "Calves"
       }
     ]
   },
   {
-    "title": "Machine Leg Extension",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
+    "name": "Standing Calf Raise (Unilateral)",
+    "muscle_group": "Calves",
+    "primary_muscle": {
+      "name": "Gastrocnemius",
+      "muscle_group": "Calves"
+    },
+    "secondary_muscles": [
       {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Soleus",
+        "muscle_group": "Calves"
       }
     ]
   },
   {
-    "title": "Smith Machine Leg Extension",
-    "muscle_group": "legs",
-    "muscles": [
+    "name": "Standing Calf Raise (Paused)",
+    "muscle_group": "Calves",
+    "primary_muscle": {
+      "name": "Gastrocnemius",
+      "muscle_group": "Calves"
+    },
+    "secondary_muscles": [
       {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Soleus",
+        "muscle_group": "Calves"
       }
     ]
   },
   {
-    "title": "Kettlebell Leg Extension",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
+    "name": "Standing Calf Raise (Tempo)",
+    "muscle_group": "Calves",
+    "primary_muscle": {
+      "name": "Gastrocnemius",
+      "muscle_group": "Calves"
+    },
+    "secondary_muscles": [
       {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Soleus",
+        "muscle_group": "Calves"
       }
     ]
   },
   {
-    "title": "Bodyweight Leg Extension",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
+    "name": "Seated Calf Raise",
+    "muscle_group": "Calves",
+    "primary_muscle": {
+      "name": "Soleus",
+      "muscle_group": "Calves"
+    },
+    "secondary_muscles": [
       {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Gastrocnemius",
+        "muscle_group": "Calves"
       }
     ]
   },
   {
-    "title": "Neutral Grip Leg Extension",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
+    "name": "Seated Calf Raise (Barbell)",
+    "muscle_group": "Calves",
+    "primary_muscle": {
+      "name": "Soleus",
+      "muscle_group": "Calves"
+    },
+    "secondary_muscles": [
       {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Gastrocnemius",
+        "muscle_group": "Calves"
       }
     ]
   },
   {
-    "title": "Wide Grip Leg Extension",
-    "muscle_group": "legs",
-    "muscles": [
+    "name": "Seated Calf Raise (Dumbbell)",
+    "muscle_group": "Calves",
+    "primary_muscle": {
+      "name": "Soleus",
+      "muscle_group": "Calves"
+    },
+    "secondary_muscles": [
       {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Gastrocnemius",
+        "muscle_group": "Calves"
       }
     ]
   },
   {
-    "title": "Close Grip Leg Extension",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
+    "name": "Seated Calf Raise (Machine)",
+    "muscle_group": "Calves",
+    "primary_muscle": {
+      "name": "Soleus",
+      "muscle_group": "Calves"
+    },
+    "secondary_muscles": [
       {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Gastrocnemius",
+        "muscle_group": "Calves"
       }
     ]
   },
   {
-    "title": "Single Arm Leg Extension",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
+    "name": "Seated Calf Raise (Unilateral)",
+    "muscle_group": "Calves",
+    "primary_muscle": {
+      "name": "Soleus",
+      "muscle_group": "Calves"
+    },
+    "secondary_muscles": [
       {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Gastrocnemius",
+        "muscle_group": "Calves"
       }
     ]
   },
   {
-    "title": "Alternating Leg Extension",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
+    "name": "Seated Calf Raise (Paused)",
+    "muscle_group": "Calves",
+    "primary_muscle": {
+      "name": "Soleus",
+      "muscle_group": "Calves"
+    },
+    "secondary_muscles": [
       {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Gastrocnemius",
+        "muscle_group": "Calves"
       }
     ]
   },
   {
-    "title": "Barbell Leg Curl",
-    "muscle_group": "legs",
-    "muscles": [
+    "name": "Seated Calf Raise (Tempo)",
+    "muscle_group": "Calves",
+    "primary_muscle": {
+      "name": "Soleus",
+      "muscle_group": "Calves"
+    },
+    "secondary_muscles": [
       {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Gastrocnemius",
+        "muscle_group": "Calves"
       }
     ]
   },
   {
-    "title": "Dumbbell Leg Curl",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
+    "name": "Hip Thrust",
+    "muscle_group": "Glutes",
+    "primary_muscle": {
+      "name": "Gluteus Maximus",
+      "muscle_group": "Glutes"
+    },
+    "secondary_muscles": [
       {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
+        "name": "Hamstrings",
+        "muscle_group": "Legs"
       },
       {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Core",
+        "muscle_group": "Core"
       }
     ]
   },
   {
-    "title": "EZ-Bar Leg Curl",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
+    "name": "Hip Thrust (Barbell)",
+    "muscle_group": "Glutes",
+    "primary_muscle": {
+      "name": "Gluteus Maximus",
+      "muscle_group": "Glutes"
+    },
+    "secondary_muscles": [
       {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
+        "name": "Hamstrings",
+        "muscle_group": "Legs"
       },
       {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Core",
+        "muscle_group": "Core"
       }
     ]
   },
   {
-    "title": "Cable Leg Curl",
-    "muscle_group": "legs",
-    "muscles": [
+    "name": "Hip Thrust (Dumbbell)",
+    "muscle_group": "Glutes",
+    "primary_muscle": {
+      "name": "Gluteus Maximus",
+      "muscle_group": "Glutes"
+    },
+    "secondary_muscles": [
       {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
+        "name": "Hamstrings",
+        "muscle_group": "Legs"
       },
       {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Core",
+        "muscle_group": "Core"
       }
     ]
   },
   {
-    "title": "Machine Leg Curl",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
+    "name": "Hip Thrust (Machine)",
+    "muscle_group": "Glutes",
+    "primary_muscle": {
+      "name": "Gluteus Maximus",
+      "muscle_group": "Glutes"
+    },
+    "secondary_muscles": [
       {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
+        "name": "Hamstrings",
+        "muscle_group": "Legs"
       },
       {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Core",
+        "muscle_group": "Core"
       }
     ]
   },
   {
-    "title": "Smith Machine Leg Curl",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
+    "name": "Hip Thrust (Unilateral)",
+    "muscle_group": "Glutes",
+    "primary_muscle": {
+      "name": "Gluteus Maximus",
+      "muscle_group": "Glutes"
+    },
+    "secondary_muscles": [
       {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
+        "name": "Hamstrings",
+        "muscle_group": "Legs"
       },
       {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Core",
+        "muscle_group": "Core"
       }
     ]
   },
   {
-    "title": "Kettlebell Leg Curl",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
+    "name": "Hip Thrust (Paused)",
+    "muscle_group": "Glutes",
+    "primary_muscle": {
+      "name": "Gluteus Maximus",
+      "muscle_group": "Glutes"
+    },
+    "secondary_muscles": [
       {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
+        "name": "Hamstrings",
+        "muscle_group": "Legs"
       },
       {
-        "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "name": "Core",
+        "muscle_group": "Core"
       }
     ]
   },
   {
-    "title": "Bodyweight Leg Curl",
-    "muscle_group": "legs",
-    "muscles": [
+    "name": "Hip Thrust (Tempo)",
+    "muscle_group": "Glutes",
+    "primary_muscle": {
+      "name": "Gluteus Maximus",
+      "muscle_group": "Glutes"
+    },
+    "secondary_muscles": [
       {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
+        "name": "Hamstrings",
+        "muscle_group": "Legs"
       },
       {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
+        "name": "Core",
+        "muscle_group": "Core"
+      }
+    ]
+  },
+  {
+    "name": "Cable Kickback",
+    "muscle_group": "Glutes",
+    "primary_muscle": {
+      "name": "Gluteus Maximus",
+      "muscle_group": "Glutes"
+    },
+    "secondary_muscles": [
       {
         "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "muscle_group": "Legs"
       }
     ]
   },
   {
-    "title": "Neutral Grip Leg Curl",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
+    "name": "Cable Kickback (Barbell)",
+    "muscle_group": "Glutes",
+    "primary_muscle": {
+      "name": "Gluteus Maximus",
+      "muscle_group": "Glutes"
+    },
+    "secondary_muscles": [
       {
         "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "muscle_group": "Legs"
       }
     ]
   },
   {
-    "title": "Wide Grip Leg Curl",
-    "muscle_group": "legs",
-    "muscles": [
+    "name": "Cable Kickback (Dumbbell)",
+    "muscle_group": "Glutes",
+    "primary_muscle": {
+      "name": "Gluteus Maximus",
+      "muscle_group": "Glutes"
+    },
+    "secondary_muscles": [
       {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
         "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "muscle_group": "Legs"
       }
     ]
   },
   {
-    "title": "Close Grip Leg Curl",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
+    "name": "Cable Kickback (Machine)",
+    "muscle_group": "Glutes",
+    "primary_muscle": {
+      "name": "Gluteus Maximus",
+      "muscle_group": "Glutes"
+    },
+    "secondary_muscles": [
       {
         "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "muscle_group": "Legs"
       }
     ]
   },
   {
-    "title": "Single Arm Leg Curl",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
+    "name": "Cable Kickback (Unilateral)",
+    "muscle_group": "Glutes",
+    "primary_muscle": {
+      "name": "Gluteus Maximus",
+      "muscle_group": "Glutes"
+    },
+    "secondary_muscles": [
       {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
-      {
         "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "muscle_group": "Legs"
       }
     ]
   },
   {
-    "title": "Alternating Leg Curl",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
+    "name": "Cable Kickback (Paused)",
+    "muscle_group": "Glutes",
+    "primary_muscle": {
+      "name": "Gluteus Maximus",
+      "muscle_group": "Glutes"
+    },
+    "secondary_muscles": [
       {
         "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "muscle_group": "Legs"
       }
     ]
   },
   {
-    "title": "Barbell Calf Raise",
-    "muscle_group": "legs",
-    "muscles": [
-      {
-        "name": "Quadriceps",
-        "muscle_group": "legs",
-        "role": "primary"
-      },
-      {
-        "name": "Gluteus Maximus",
-        "muscle_group": "glutes",
-        "role": "secondary"
-      },
+    "name": "Cable Kickback (Tempo)",
+    "muscle_group": "Glutes",
+    "primary_muscle": {
+      "name": "Gluteus Maximus",
+      "muscle_group": "Glutes"
+    },
+    "secondary_muscles": [
       {
         "name": "Hamstrings",
-        "muscle_group": "legs",
-        "role": "secondary"
+        "muscle_group": "Legs"
       }
     ]
   }

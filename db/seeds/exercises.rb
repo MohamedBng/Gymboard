@@ -6,14 +6,21 @@ exercises = JSON.parse(File.read(exercises_file_path))
 exercises_created = 0
 exercises.each do |data|
   exercise_muscle_group = MuscleGroup.find_or_create_by!(name: data["muscle_group"])
-  exercise = Exercise.find_or_initialize_by(title: data["title"])
+  exercise = Exercise.find_or_initialize_by(title: data["name"])
   exercise.muscle_group = exercise_muscle_group
+
+  primary_muscle_muscle_group = MuscleGroup.find_or_create_by!(name: data["primary_muscle"]["muscle_group"])
+  primary_muscle = Muscle.find_or_initialize_by(name: data["primary_muscle"]["name"])
+  primary_muscle.muscle_group = primary_muscle_muscle_group
+  primary_muscle.save!
+
+  exercise.primary_muscle = primary_muscle
   exercise.verified_at = DateTime.now
   exercise.save!
   exercises_created += 1 if exercise.previously_new_record?
 
 
-  data["muscles"].each do |muscle_data|
+  data["secondary_muscles"].each do |muscle_data|
     muscle_muscle_group = MuscleGroup.find_or_create_by!(name: muscle_data["muscle_group"])
 
     muscle = Muscle.find_or_initialize_by(name: muscle_data["name"])
@@ -24,8 +31,6 @@ exercises.each do |data|
       exercise: exercise,
       muscle: muscle
     )
-
-    exercise_muscle.role = muscle_data["role"]
 
     exercise_muscle.save!
   end
