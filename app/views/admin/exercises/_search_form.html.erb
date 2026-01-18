@@ -16,7 +16,7 @@
 
     <div class="flex items-center gap-2 grow">
       <i class="fas fa-dumbbell"></i>
-      <%= f.select :muscles_name_eq, Muscle.order(:name).pluck(:name).map { |n| [n.capitalize, n] }, { include_blank: t("admin.exercises.search.all_muscles") },
+      <%= f.select :primary_muscle_name_eq, Muscle.order(:name).pluck(:name).map { |n| [n.capitalize, n] }, { include_blank: t("admin.exercises.search.all_muscles") },
           class: "select select-bordered w-full" %>
     </div>
 

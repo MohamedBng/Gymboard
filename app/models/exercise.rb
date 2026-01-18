@@ -7,8 +7,8 @@ class Exercise < ApplicationRecord
   belongs_to :user, optional: true
   belongs_to :primary_muscle, class_name: "Muscle"
 
-  has_many :exercise_muscles, dependent: :destroy
-  has_many :muscles, through: :exercise_muscles
+  has_many :exercise_secondary_muscles, dependent: :destroy
+  has_many :secondary_muscles, through: :exercise_secondary_muscles, source: :muscle
   has_many :training_session_exercises, dependent: :destroy
   has_many :training_sessions, through: :training_session_exercises
 
@@ -17,7 +17,7 @@ class Exercise < ApplicationRecord
   end
 
   def self.ransackable_associations(auth_object = nil)
-    %w[muscles muscle_group]
+    %w[primary_muscle muscle_group]
   end
 
   mappings do

@@ -18,16 +18,13 @@
         </div>
 
         <div class="flex flex-wrap gap-2 justify-end mt-4">
-          <% exercise.exercise_muscles.each do |exercise_muscle| %>
-            <% if exercise_muscle.role == 'primary' %>
-              <div class="badge badge-outline badge-primary">
+          <div class="badge badge-outline badge-primary">
+            <%= exercise.primary_muscle.name %>
+          </div>
+          <% exercise.exercise_secondary_muscles.each do |exercise_muscle| %>
+             <div class="badge badge-outline badge-secondary">
                 <%= exercise_muscle.muscle.name %>
               </div>
-            <% else %>
-              <div class="badge badge-outline badge-secondary">
-                <%= exercise_muscle.muscle.name %>
-              </div>
-            <% end %>
           <% end %>
         </div>
       </div>
