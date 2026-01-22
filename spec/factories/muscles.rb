@@ -1,6 +1,6 @@
 FactoryBot.define do
   factory :muscle do
-    sequence(:name) { |n| "#{Faker::Sports::Basketball.player} #{n}" }
+    sequence(:name) { |n| "muscle-#{n}" }
     association :muscle_group
   end
 end

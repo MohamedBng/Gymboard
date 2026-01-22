@@ -221,4 +221,40 @@ RSpec.describe Exercise, type: :model do
       end
     end
   end
+
+  describe 'elastic search indexer callbacks' do
+    context 'when creating an exercise' do
+      it "enqueue a Elasticsearch::IndexerJob with the good arguments" do
+        expect {
+          create(:exercise)
+        }.to have_enqueued_job(Elasticsearch::IndexerJob)
+        .with('index', 'Exercise', kind_of(Integer))
+        .on_queue('elasticsearch')
+      end
+    end
+
+    context 'when updating an exercise' do
+      let(:exercise) { create(:exercise) }
+
+      it "enqueue a Elasticsearch::IndexerJob with the good arguments" do
+        expect {
+          exercise.update!(title: "new name")
+        }.to have_enqueued_job(Elasticsearch::IndexerJob)
+        .with('update', 'Exercise', exercise.id)
+        .on_queue('elasticsearch')
+      end
+    end
+
+    context 'when deleting an exercise' do
+      let(:exercise) { create(:exercise) }
+
+      it "enqueue a Elasticsearch::IndexerJob with the good arguments" do
+        expect {
+          exercise.destroy!
+        }.to have_enqueued_job(Elasticsearch::IndexerJob)
+        .with('delete', 'Exercise', exercise.id)
+        .on_queue('elasticsearch')
+      end
+    end
+  end
 end
