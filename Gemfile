@@ -102,3 +102,5 @@ gem "geocoder", "~> 1.8"
 gem "elasticsearch-model"
 
 gem "elasticsearch-rails"
+
+gem "sidekiq", "~> 8.1"

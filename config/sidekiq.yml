@@ -1,0 +1,4 @@
+:queues:
+  - [elasticsearch, 5]
+  - [default, 2]
+  - [mailers, 1]
