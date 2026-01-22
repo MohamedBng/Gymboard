@@ -5,7 +5,7 @@ class Elasticsearch::IndexerJob < ApplicationJob
 
   def perform(operation, klass, record_id)
     case operation.to_s
-    when /create|update/
+    when /index|update/
       record = klass.constantize.find(record_id)
       record.__elasticsearch__.client = Client
       record.__elasticsearch__.__send__ "#{operation}_document"

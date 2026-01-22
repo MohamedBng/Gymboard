@@ -19,18 +19,18 @@ RSpec.describe Elasticsearch::IndexerJob, type: :job do
     end
   end
 
-  context 'create operation' do
+  context 'index operation' do
     before do
       allow(Exercise).to receive(:find).with(record.id).and_return(record)
       allow(record).to receive(:__elasticsearch__).and_return(elasticsearch_proxy)
       allow(elasticsearch_proxy).to receive(:client=)
-      allow(elasticsearch_proxy).to receive(:create_document)
+      allow(elasticsearch_proxy).to receive(:index_document)
     end
 
     it 'send a update_document request to elasticsearch' do
-      described_class.perform_now('create', 'Exercise', record.id)
+      described_class.perform_now('index', 'Exercise', record.id)
 
-      expect(elasticsearch_proxy).to have_received(:create_document)
+      expect(elasticsearch_proxy).to have_received(:index_document)
     end
   end
 

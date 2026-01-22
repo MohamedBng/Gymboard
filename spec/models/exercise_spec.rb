@@ -228,7 +228,7 @@ RSpec.describe Exercise, type: :model do
         expect {
           create(:exercise)
         }.to have_enqueued_job(Elasticsearch::IndexerJob)
-        .with('create', 'Exercise', kind_of(Integer))
+        .with('index', 'Exercise', kind_of(Integer))
         .on_queue('elasticsearch')
       end
     end
