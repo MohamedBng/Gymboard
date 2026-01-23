@@ -26,7 +26,7 @@ Rails.application.routes.draw do
   end
 
   namespace :training_session_forms do
-    resources :exercises, only: [ :index ]
+    resources :exercises, only: [ :index, :new, :create ]
   end
 
   namespace :admin do
