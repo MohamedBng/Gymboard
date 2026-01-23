@@ -1,0 +1,10 @@
+<turbo-frame id="exercise-form">
+  <%= form_with(model: @exercise, url: training_session_forms_exercises_path ) do |f| %>
+    <%= f.label "title" %>
+    <%= f.text_field :title %>
+    <%= f.select :muscle_group_id, MuscleGroup.all.map { |muscle_group| [muscle_group.name, muscle_group.id] } %>
+    <%= f.select :primary_muscle_id, Muscle.all.map { |muscle| [muscle.name, muscle.id] } %>
+    <%= f.hidden_field :training_session_id, value: training_session_id %>
+    <%= f.submit "submit" %>
+  <% end %>
+</turbo-frame>
