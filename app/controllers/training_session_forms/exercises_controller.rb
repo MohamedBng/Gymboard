@@ -20,7 +20,7 @@ class TrainingSessionForms::ExercisesController < Admin::BaseController
     render turbo_stream: turbo_stream.replace(
       "exercise-picker",
       partial: "training_session_forms/training_session_exercises/exercise_form",
-      locals: {training_session_id: params[:training_session_id]}
+      locals: { training_session_id: params[:training_session_id] }
     )
   end
 
@@ -37,8 +37,8 @@ class TrainingSessionForms::ExercisesController < Admin::BaseController
 
     if exercise.save
       render turbo_stream: turbo_stream.replace(
-        'exercise-form',
-        partial: 'training_session_forms/training_session_exercises/exercises_picker',
+        "exercise-form",
+        partial: "training_session_forms/training_session_exercises/exercises_picker",
         locals: { exercises: @exercises, training_session_id: params[:training_session_id], training_session: training_session }
       )
     end
