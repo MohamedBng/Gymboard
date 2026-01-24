@@ -23,7 +23,7 @@ class Exercise < ApplicationRecord
   mappings do
     indexes :title, type: "text"
     indexes :user_id, type: "keyword"
-    indexes :muscle_group_id, type: "keyword",
+    indexes :muscle_group_id, type: "keyword"
     indexes :verified_at, type: "date"
   end
 
