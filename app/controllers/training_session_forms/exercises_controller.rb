@@ -49,9 +49,7 @@ class TrainingSessionForms::ExercisesController < Admin::BaseController
       :title,
       :primary_muscle_id,
       :muscle_group_id,
-      exercise_secondary_muscles_attributes: [
-        :muscle_id
-      ]
+      :secondary_muscle_ids
     )
   end
 end
