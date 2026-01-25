@@ -25,23 +25,37 @@ class TrainingSessionForms::ExercisesController < Admin::BaseController
   end
 
   def create
-    exercise = Exercise.new(user: current_user, **exercise_params)
-    training_session = TrainingSession.find(params[:exercise][:training_session_id])
+    @exercise = Exercise.new(user: current_user, **exercise_params)
 
-    @exercises = Exercise.search(
-      message: params[:q],
-      muscle_group_id: params[:muscle_group_id],
-      scope: params[:scope],
-      current_user_id: current_user.id
-    ).includes(:muscle_group)
-
-    if exercise.save
+    if @exercise.save
       render turbo_stream: turbo_stream.replace(
         "exercise-form",
         partial: "training_session_forms/training_session_exercises/exercises_picker",
-        locals: { exercises: @exercises, training_session_id: params[:training_session_id], training_session: training_session }
+        locals: {
+          current_user_id: current_user.id,
+          scope: 'current_user',
+          message: params[:exercise][:title],
+          muscle_group_id: params[:exercise][:muscle_group_id],
+          training_session_id: params[:exercise][:training_session_id]
+        }
+      )
+    else
+      flash.now[:error] = @exercise.errors.full_messages.join(",")
+
+      render turbo_stream: turbo_stream.replace(
+        "exercise-form",
+        partial: "training_session_forms/training_session_exercises/exercise_form",
+        locals: { training_session_id: params[:exercise][:training_session_id] }
       )
     end
+  end
+
+  def back_to_picker
+    render turbo_stream: turbo_stream.replace(
+      'exercise-form',
+      partial: "training_session_forms/training_session_exercises/exercises_picker",
+      locals: { training_session_id: params[:training_session_id] }
+    )
   end
 
   def exercise_params
