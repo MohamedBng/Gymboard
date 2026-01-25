@@ -1,9 +1,32 @@
+
 <turbo-frame id="exercise-form">
+  <%= button_to back_to_picker_training_session_forms_exercises_path,
+        form_class: "btn btn-sm btn-circle btn-ghost absolute top-2",
+        params: {training_session_id: training_session_id} do %>
+    <i class="fas fa-arrow-left text-xl"></i>
+  <% end %>
+
+  <%= render "shared/flash_error" %>
+  <h3 class="font-bold text-lg mb-4 mt-6">Create an exercise</h3>
   <%= form_with(model: @exercise, url: training_session_forms_exercises_path ) do |f| %>
-    <%= f.label "title" %>
-    <%= f.text_field :title %>
-    <%= f.select :muscle_group_id, MuscleGroup.all.map { |muscle_group| [muscle_group.name, muscle_group.id] } %>
-    <%= f.select :primary_muscle_id, Muscle.all.map { |muscle| [muscle.name, muscle.id] } %>
+    <div class= 'form-control mb-2'>
+      <%= f.label "title", class: 'label label-text label-xs' %>
+      <%= f.text_field :title, class: 'input input-bordered input-sm w-full' %>
+    </div>
+    <div class="mb-2 flex flex-col">
+      <%= f.label "Muscle Group", class: 'label label-text label-xs' %>
+      <%= f.select :muscle_group_id, MuscleGroup.all.map { |muscle_group| [muscle_group.name_capitalized, muscle_group.id] }, {}, {class: 'select select-neutral'} %>
+    </div>
+    <div class="mb-2 flex flex-col">
+      <%= f.label "Primary Muscle", class: 'label label-text label-xs' %>
+      <%= f.select :primary_muscle_id, Muscle.all.map { |muscle| [muscle.name, muscle.id] }, {}, {class: 'select select-neutral'} %>
+    </div>
+
+    <div class="mb-2 flex flex-col">
+      <%= f.label "Secondary Muscle", class: 'label label-text label-xs' %>
+      <%= f.collection_select(:secondary_muscle_ids, Muscle.order(:name), :id, :name_capitalized, {}, {multiple: true}) %>
+    </div>
+
     <%= f.hidden_field :training_session_id, value: training_session_id %>
     <%= f.submit "submit" %>
   <% end %>
