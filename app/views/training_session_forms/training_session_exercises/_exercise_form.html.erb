@@ -22,12 +22,20 @@
       <%= f.select :primary_muscle_id, Muscle.all.map { |muscle| [muscle.name, muscle.id] }, {}, {class: 'select select-neutral'} %>
     </div>
 
-    <div class="mb-2 flex flex-col">
-      <%= f.label "Secondary Muscle", class: 'label label-text label-xs' %>
-      <%= f.collection_select(:secondary_muscle_ids, Muscle.order(:name), :id, :name_capitalized, {}, {multiple: true}) %>
-    </div>
+
+    <div
+      class="mb-2 flex flex-col"
+      data-controller="multi-select"
+      data-multi-select-options-value="<%= Muscle.order(:name).map { |muscle| { id: muscle.id, label: muscle.name.titleize } }.to_json %>"
+      data-multi-select-input-name-value="exercise[secondary_muscle_ids][]"
+      data-multi-select-placeholder-value="Select secondary muscles"
+      data-multi-select-label-value="Secondary Muscles"
+    ></div>
 
     <%= f.hidden_field :training_session_id, value: training_session_id %>
-    <%= f.submit "submit" %>
+    <%= f.button type: "submit", class: "btn btn-accent btn-lg w-full gap-2 flex-1" do %>
+      <%= t("common.continue") %>
+      <i class="fa-solid fa-arrow-right"></i>
+    <% end %>
   <% end %>
 </turbo-frame>
