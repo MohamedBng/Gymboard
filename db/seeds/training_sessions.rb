@@ -302,7 +302,7 @@ training_sessions.each_with_index do |data, index|
       exercise_data[:muscles].each do |muscle_data|
         muscle_muscle_group = MuscleGroup.find_or_create_by!(name: muscle_data[:muscle_group])
         muscle = Muscle.find_or_create_by!(name: muscle_data[:name], muscle_group: muscle_muscle_group)
-        exercise_muscle = ExerciseMuscle.find_or_initialize_by(
+        exercise_muscle = ExerciseSecondaryMuscle.find_or_initialize_by(
           exercise: exercise,
           muscle: muscle
         )
