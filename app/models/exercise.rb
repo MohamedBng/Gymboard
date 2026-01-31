@@ -1,7 +1,7 @@
 class Exercise < ApplicationRecord
   include Searchable
 
-  validates :title, presence: true, uniqueness: true
+  validates :title, presence: true, uniqueness: { scope: :user_id }
 
   belongs_to :muscle_group, optional: true
   belongs_to :user, optional: true
