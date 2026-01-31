@@ -10,15 +10,15 @@
   <h3 class="font-bold text-lg mb-4 mt-6">Create an exercise</h3>
   <%= form_with(model: @exercise, url: training_session_forms_exercises_path ) do |f| %>
     <div class= 'form-control mb-2'>
-      <%= f.label "title", class: 'label label-text label-xs' %>
+      <%= f.label :title, t('activerecord.attributes.exercise.title'), class: 'label label-text label-xs' %>
       <%= f.text_field :title, class: 'input input-bordered input-sm w-full', required: true %>
     </div>
     <div class="mb-2 flex flex-col">
-      <%= f.label "Muscle Group", class: 'label label-text label-xs' %>
+      <%= f.label :muscle_group, t('activerecord.attributes.exercise.muscle_group'), class: 'label label-text label-xs' %>
       <%= f.select :muscle_group_id, MuscleGroup.all.map { |muscle_group| [muscle_group.name_capitalized, muscle_group.id] }, {include_blank: true}, {class: 'select select-neutral'} %>
     </div>
     <div class="mb-2 flex flex-col">
-      <%= f.label "Primary Muscle", class: 'label label-text label-xs' %>
+      <%= f.label :primary_muscle, t('activerecord.attributes.exercise.primary_muscle'), class: 'label label-text label-xs' %>
       <%= f.select :primary_muscle_id, Muscle.all.map { |muscle| [muscle.name, muscle.id] }, {include_blank: true}, {class: 'select select-neutral'} %>
     </div>
 
@@ -28,8 +28,7 @@
       data-controller="multi-select"
       data-multi-select-options-value="<%= Muscle.order(:name).map { |muscle| { id: muscle.id, label: muscle.name.titleize } }.to_json %>"
       data-multi-select-input-name-value="exercise[secondary_muscle_ids][]"
-      data-multi-select-placeholder-value="Select secondary muscles"
-      data-multi-select-label-value="Secondary Muscles"
+      data-multi-select-label-value="<%= t('activerecord.attributes.exercise.secondary_muscles') %>"
     ></div>
 
     <%= f.hidden_field :training_session_id, value: training_session_id %>
