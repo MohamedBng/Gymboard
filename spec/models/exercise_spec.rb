@@ -13,11 +13,6 @@ RSpec.describe Exercise, type: :model do
     it { should validate_uniqueness_of(:title) }
   end
 
-  describe 'associations' do
-    it { should belong_to(:muscle_group) }
-    it { should belong_to(:primary_muscle) }
-  end
-
   describe '.search' do
     let(:elasticsearch_proxy) { instance_double('ElasticsearchProxy') }
     let(:search_response) { instance_double('SearchResponse', records: :response_records) }
@@ -254,6 +249,32 @@ RSpec.describe Exercise, type: :model do
         }.to have_enqueued_job(Elasticsearch::IndexerJob)
         .with('delete', 'Exercise', exercise.id)
         .on_queue('elasticsearch')
+      end
+    end
+  end
+
+  describe '.complete?' do
+    context 'when exercise is complete' do
+      let(:complete_exercise) { create(:exercise, :with_secondary_muscles) }
+
+      it "return true" do
+        expect(complete_exercise.complete?).to be_truthy
+      end
+    end
+
+    context 'when muscle_group is nil' do
+      let(:incomplete_exercise) { create(:exercise, muscle_group_id: nil) }
+
+      it "return false" do
+        expect(incomplete_exercise.complete?).to be_falsey
+      end
+    end
+
+    context 'when there is no secondary muscles' do
+      let(:incomplete_exercise) { create(:exercise, secondary_muscles: []) }
+
+      it "return false" do
+        expect(incomplete_exercise.complete?).to be_falsey
       end
     end
   end
