@@ -33,7 +33,7 @@ class TrainingSessionForms::ExercisesController < Admin::BaseController
         partial: "training_session_forms/training_session_exercises/exercises_picker",
         locals: {
           current_user_id: current_user.id,
-          scope: 'current_user',
+          scope: "current_user",
           message: params[:exercise][:title],
           muscle_group_id: params[:exercise][:muscle_group_id],
           training_session_id: params[:exercise][:training_session_id]
@@ -52,7 +52,7 @@ class TrainingSessionForms::ExercisesController < Admin::BaseController
 
   def back_to_picker
     render turbo_stream: turbo_stream.replace(
-      'exercise-form',
+      "exercise-form",
       partial: "training_session_forms/training_session_exercises/exercises_picker",
       locals: { training_session_id: params[:training_session_id] }
     )
