@@ -13,17 +13,8 @@ roles_with_colors.each do |role_name, color|
   role.update!(color: color)
 end
 
-# Seed muscle groups
-load Rails.root.join('db', 'seeds', 'muscle_groups.rb')
-
-# Seed muscles
-load Rails.root.join('db', 'seeds', 'muscles.rb')
-
 # Seed exercises
 load Rails.root.join('db', 'seeds', 'exercises.rb')
-
-# Seed training sessions
-load Rails.root.join('db', 'seeds', 'training_sessions.rb')
 
 # Assign permissions
 perms = {

@@ -4,12 +4,66 @@ class TrainingSessionForms::ExercisesController < Admin::BaseController
       message: params[:q],
       muscle_group_id: params[:muscle_group_id],
       scope: params[:scope],
+      current_user_id: current_user.id
     ).includes(:muscle_group)
 
     render turbo_stream: turbo_stream.replace(
       "exercises_list",
       partial: "training_session_forms/training_session_exercises/exercises_list",
       locals: { exercises: @exercises, training_session_id: params[:training_session_id] }
+    )
+  end
+
+  def new
+    @exercise = Exercise.new
+
+    render turbo_stream: turbo_stream.replace(
+      "exercise-picker",
+      partial: "training_session_forms/training_session_exercises/exercise_form",
+      locals: { training_session_id: params[:training_session_id] }
+    )
+  end
+
+  def create
+    @exercise = Exercise.new(user: current_user, **exercise_params)
+
+    if @exercise.save
+      render turbo_stream: turbo_stream.replace(
+        "exercise-form",
+        partial: "training_session_forms/training_session_exercises/exercises_picker",
+        locals: {
+          current_user_id: current_user.id,
+          scope: "current_user",
+          message: params[:exercise][:title],
+          muscle_group_id: params[:exercise][:muscle_group_id],
+          training_session_id: params[:exercise][:training_session_id]
+        }
+      )
+    else
+      flash.now[:error] = @exercise.errors.full_messages.join(",")
+
+      render turbo_stream: turbo_stream.replace(
+        "exercise-form",
+        partial: "training_session_forms/training_session_exercises/exercise_form",
+        locals: { training_session_id: params[:exercise][:training_session_id] }
+      )
+    end
+  end
+
+  def back_to_picker
+    render turbo_stream: turbo_stream.replace(
+      "exercise-form",
+      partial: "training_session_forms/training_session_exercises/exercises_picker",
+      locals: { training_session_id: params[:training_session_id] }
+    )
+  end
+
+  def exercise_params
+    params.require(:exercise).permit(
+      :title,
+      :primary_muscle_id,
+      :muscle_group_id,
+      secondary_muscle_ids: []
     )
   end
 end

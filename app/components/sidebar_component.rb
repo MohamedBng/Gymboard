@@ -6,7 +6,7 @@ class SidebarComponent < ViewComponent::Base
   end
 
   erb_template <<-ERB
-    <aside class="hidden md:flex bg-base-100 flex-col transition-all duration-300 w-20" data-controller="sidebar" data-sidebar-expanded-class="w-64" data-sidebar-collapsed-class="w-20">
+    <aside class="hidden md:flex bg-base-300 flex-col transition-all duration-300 w-20 border-r border-gray-300 dark:border-gray-700" data-controller="sidebar" data-sidebar-expanded-class="w-64" data-sidebar-collapsed-class="w-20">
       <div class="flex-1 p-4 space-y-6">
         <%= link_to root_path, class: 'text-2xl font-bold flex items-center gap-2' do %>
           <%= image_tag 'logo.png', alt: 'Logo', class: 'h-10 w-10' %>

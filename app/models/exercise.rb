@@ -3,9 +3,9 @@ class Exercise < ApplicationRecord
 
   validates :title, presence: true, uniqueness: true
 
-  belongs_to :muscle_group
+  belongs_to :muscle_group, optional: true
   belongs_to :user, optional: true
-  belongs_to :primary_muscle, class_name: "Muscle"
+  belongs_to :primary_muscle, class_name: "Muscle", optional: true
 
   has_many :exercise_secondary_muscles, dependent: :destroy
   has_many :secondary_muscles, through: :exercise_secondary_muscles, source: :muscle
@@ -20,9 +20,15 @@ class Exercise < ApplicationRecord
     %w[primary_muscle muscle_group]
   end
 
+  def complete?
+    [ title, secondary_muscles, primary_muscle, muscle_group ].all?(&:present?)
+  end
+
   mappings do
     indexes :title, type: "text"
+    indexes :user_id, type: "keyword"
     indexes :muscle_group_id, type: "keyword"
+    indexes :verified_at, type: "date"
   end
 
   def self.search(message: nil, muscle_group_id: nil, scope: nil, current_user_id: nil)

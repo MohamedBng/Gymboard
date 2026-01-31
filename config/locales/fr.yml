@@ -18,6 +18,8 @@ fr:
         exercise:
           title: "Titre"
           muscle_group: "Groupe musculaire"
+          primary_muscle: "Muscle principal"
+          secondary_muscles: "Muscles secondaires"
         muscle:
           name: "Nom"
         exercise_muscle:

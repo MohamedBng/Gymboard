@@ -26,10 +26,10 @@
   <div class="flex h-full" data-controller="dashboard">
     <%= render SidebarComponent.new(current_user: current_user) %>
 
-    <div class="flex flex-col flex-1 min-w-0 bg-base-200">
+    <div class="flex flex-col flex-1 min-w-0 bg-base-300">
       <%= render HeadbarComponent.new(current_user: current_user) %>
 
-      <main class="flex-1 overflow-auto p-6 pb-20 md:pb-6 w-full max-w-screen-xl mx-auto">
+      <main class="flex-1 overflow-auto p-6 pb-20 md:pb-6 w-full max-w-screen-xl mx-auto bg-base-300">
         <turbo-frame id="main">
           <%= render "shared/flash_success" %>
           <%= yield %>

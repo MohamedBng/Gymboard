@@ -34,6 +34,9 @@ application.register("headbar", HeadbarController)
 import HelloController from "./hello_controller"
 application.register("hello", HelloController)
 
+import MultiSelectController from "./multi_select_controller"
+application.register("multi-select", MultiSelectController)
+
 import SelectAllController from "./select_all_controller"
 application.register("select-all", SelectAllController)
 

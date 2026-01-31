@@ -27,7 +27,7 @@ exercises.each do |data|
     muscle.muscle_group = muscle_muscle_group
     muscle.save!
 
-    exercise_muscle = ExerciseMuscle.find_or_initialize_by(
+    exercise_muscle = ExerciseSecondaryMuscle.find_or_initialize_by(
       exercise: exercise,
       muscle: muscle
     )
