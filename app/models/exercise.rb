@@ -20,6 +20,10 @@ class Exercise < ApplicationRecord
     %w[primary_muscle muscle_group]
   end
 
+  def complete?
+    [title, secondary_muscles, primary_muscle, muscle_group].all?(&:present?)
+  end
+
   mappings do
     indexes :title, type: "text"
     indexes :user_id, type: "keyword"
