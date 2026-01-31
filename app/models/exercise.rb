@@ -3,9 +3,9 @@ class Exercise < ApplicationRecord
 
   validates :title, presence: true, uniqueness: true
 
-  belongs_to :muscle_group
+  belongs_to :muscle_group, optional: true
   belongs_to :user, optional: true
-  belongs_to :primary_muscle, class_name: "Muscle"
+  belongs_to :primary_muscle, class_name: "Muscle", optional: true
 
   has_many :exercise_secondary_muscles, dependent: :destroy
   has_many :secondary_muscles, through: :exercise_secondary_muscles, source: :muscle
