@@ -21,7 +21,7 @@ class Exercise < ApplicationRecord
   end
 
   def complete?
-    [title, secondary_muscles, primary_muscle, muscle_group].all?(&:present?)
+    [ title, secondary_muscles, primary_muscle, muscle_group ].all?(&:present?)
   end
 
   mappings do
