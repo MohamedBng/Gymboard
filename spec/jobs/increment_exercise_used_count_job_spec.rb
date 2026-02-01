@@ -23,11 +23,11 @@ RSpec.describe IncrementExerciseUsedCountJob, type: :job do
     expect(lateral_raises.used_count).to eq(3)
   end
 
-  it "enqueue a Elasticsearch::IndexerJob for each exercises" do
+  it "enqueue a Elasticsearch::Exercise::BulkUpdateUsedCountJob for each exercises" do
     described_class.perform_now(training_session.id)
 
     expect {
       described_class.perform_now(training_session.id)
-    }.to have_enqueued_job(Elasticsearch::IndexerJob).exactly(2).times
+    }.to have_enqueued_job(Elasticsearch::Exercise::BulkUpdateUsedCountJob).with(training_session.exercise_ids)
   end
 end
