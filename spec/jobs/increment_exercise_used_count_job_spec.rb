@@ -1,9 +1,9 @@
 require 'rails_helper'
 
 RSpec.describe IncrementExerciseUsedCountJob, type: :job do
-  let(:bench_press) { create(:exercise, title: 'bench press', used_count: 5)}
-  let(:lateral_raises) { create(:exercise, title: 'lateral raises', used_count: 2)}
-  let(:training_session) { create(:training_session)}
+  let(:bench_press) { create(:exercise, title: 'bench press', used_count: 5) }
+  let(:lateral_raises) { create(:exercise, title: 'lateral raises', used_count: 2) }
+  let(:training_session) { create(:training_session) }
 
   let!(:lateral_raises_training_session_exercise) {
     create(:training_session_exercise, training_session: training_session, exercise: lateral_raises)
