@@ -19,9 +19,7 @@ class IncrementExerciseUsedCountJob < ApplicationJob
         raise ActiveRecord::Rollback
       end
 
-      ids.each do |id|
-        Elasticsearch::IndexerJob.perform_later(:update, "exercise", id)
-      end
+      Elasticsearch::Exercise::BulkUpdateUsedCountJob.perform_later(ids)
     end
   end
 end
