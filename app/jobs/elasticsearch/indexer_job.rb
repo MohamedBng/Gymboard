@@ -1,5 +1,6 @@
 class Elasticsearch::IndexerJob < ApplicationJob
   queue_as :elasticsearch
+  self.enqueue_after_transaction_commit = true
 
   Client = Elasticsearch::Client.new(host: ENV.fetch("ELASTICSEARCH_CLIENT_URL", "http://localhost:9200"))
 

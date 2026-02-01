@@ -10,7 +10,7 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema[8.0].define(version: 2026_01_31_145203) do
+ActiveRecord::Schema[8.0].define(version: 2026_02_01_135126) do
   # These are extensions that must be enabled in order to support this database
   enable_extension "pg_catalog.plpgsql"
 
@@ -80,6 +80,7 @@ ActiveRecord::Schema[8.0].define(version: 2026_01_31_145203) do
     t.bigint "user_id"
     t.datetime "verified_at"
     t.bigint "primary_muscle_id"
+    t.integer "used_count", default: 0
     t.index ["muscle_group_id"], name: "index_exercises_on_muscle_group_id"
     t.index ["primary_muscle_id"], name: "index_exercises_on_primary_muscle_id"
     t.index ["user_id"], name: "index_exercises_on_user_id"
