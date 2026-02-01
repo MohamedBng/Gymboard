@@ -20,15 +20,19 @@ class TrainingSessionForm
     def submit(attributes = {})
       return false unless valid?
 
-      training_session.status = :active if TrainingSessionForm::LAST_STEP == step
+      ActiveRecord::Base.transaction do
+        training_session.update!(attributes)
 
-      if training_session.update!(attributes)
+        TrainingSessionFinalizerService.call(training_session) if TrainingSessionForm::LAST_STEP == step
+
         session[:training_session_step] = next_step
+
         true
-      else
-        errors.add(:base, training_session.errors.full_messages)
-        false
       end
+
+    rescue ActiveRecord::RecordInvalid => e
+      errors.add(:base, e.record.errors.full_messages)
+      false
     end
   end
 end
