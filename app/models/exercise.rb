@@ -24,6 +24,30 @@ class Exercise < ApplicationRecord
     [ title, secondary_muscles, primary_muscle, muscle_group ].all?(&:present?)
   end
 
+  def self.bulk_update_used_count(exercise_ids)
+    return if exercise_ids.blank?
+
+    body = exercise_ids.map do |id|
+      {
+        update: {
+          _index: index_name,
+          _id: id,
+          data: {
+            script: {
+              source: "ctx._source.used_count += 1"
+            }
+          }
+        }
+      }
+    end
+
+    res = __elasticsearch__.client.bulk(body: body)
+
+    Rails.logger.error("ES bulk errors: #{res}") if res["errors"]
+
+    res
+  end
+
   mappings do
     indexes :title, type: "text"
     indexes :user_id, type: "keyword"
