@@ -6,6 +6,30 @@ RSpec.describe Exercise, type: :model do
   describe 'validations' do
     it { should validate_presence_of(:title) }
     it { should validate_uniqueness_of(:title).scoped_to(:user_id) }
+
+    context 'when exercise is set to public' do
+      let(:exercise) { create(:exercise, title: "bench press", public: false)}
+
+      it "raise an error if primary_muscle is not present" do
+        exercise = build(:exercise, primary_muscle_id: nil, public: false)
+        expect(exercise).to_not be_valid
+      end
+
+      it "raise an error if muscle_group is not present" do
+        exercise = build(:exercise, muscle_group_id: nil, public: false)
+        expect(exercise).to_not be_valid
+      end
+
+      it "raise an error if title is not present" do
+        exercise = build(:exercise, title: nil, public: false)
+        expect(exercise).to_not be_valid
+      end
+
+      it "is valid if title, muscle_group and primary_muscle are present" do
+        exercise = build(:exercise, public: true)
+        expect(exercise).to be_valid
+      end
+    end
   end
 
   describe '.search' do
