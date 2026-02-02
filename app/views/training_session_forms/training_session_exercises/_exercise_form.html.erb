@@ -33,11 +33,11 @@
     ></div>
 
     <div class="mb-4 flex flex-col">
-      <%= f.label :public, "Share with other users", class: 'label label-text label-xs' %>
+      <%= f.label :public, t('exercises.new.share_with_other_users'), class: 'label label-text label-xs' %>
       <div class="fieldset bg-base-100 border-base-300 rounded-box w-full border p-4" >
         <div class="label">
         <%= f.checkbox :public, {disabled: true, class: 'toggle', data: {"enable-field-target": 'fieldToEnable'}}, true, false %>
-          Only complete exercise can be public
+          <%= t('exercises.new.only_complete_exercises_can_be_public') %>
         </div>
       </div>
     </div>

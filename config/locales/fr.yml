@@ -250,6 +250,9 @@ fr:
     exercises: "Exercices"
     trainings: "Entraînements"
   exercises:
+    new:
+      share_with_other_users: "Partager aux autres utilisateurs ?"
+      only_complete_exercises_can_be_public: "Seuls les exercices complets peuvent être publics."
   tables:
     users:
       name: "Nom"
