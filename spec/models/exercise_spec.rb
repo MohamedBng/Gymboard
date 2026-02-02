@@ -8,8 +8,8 @@ RSpec.describe Exercise, type: :model do
     it { should validate_uniqueness_of(:title).scoped_to(:user_id) }
 
     context 'when exercise is set to public' do
-      let(:muscle_group) { create(:muscle_group)}
-      let(:muscle) { create(:muscle)}
+      let(:muscle_group) { create(:muscle_group) }
+      let(:muscle) { create(:muscle) }
 
       it "raise an error if primary_muscle is not present" do
         exercise = build(:exercise, title: "bench press", primary_muscle: nil, muscle_group: muscle_group, public: true)
