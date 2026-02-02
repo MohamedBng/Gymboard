@@ -8,8 +8,8 @@ RSpec.describe Exercise, type: :model do
     it { should validate_uniqueness_of(:title).scoped_to(:user_id) }
 
     context 'when exercise is set to public' do
-      let(:muscle_group) { create(:muscle_group) }
-      let(:muscle) { create(:muscle) }
+      let(:muscle_group) { create(:muscle_group)}
+      let(:muscle) { create(:muscle)}
 
       it "raise an error if primary_muscle is not present" do
         exercise = build(:exercise, title: "bench press", primary_muscle: nil, muscle_group: muscle_group, public: true)
@@ -22,7 +22,7 @@ RSpec.describe Exercise, type: :model do
       end
 
       it "raise an error if title is not present" do
-        exercise = build(:exercise, title: nil, muscle_group: muscle_group, primary_muscle: muscle, public: true)
+        exercise = build(:exercise, title: nil, muscle_group: muscle_group, primary_muscle: muscle, public: false)
         expect(exercise).to_not be_valid
       end
 
@@ -42,12 +42,22 @@ RSpec.describe Exercise, type: :model do
       allow(elasticsearch_proxy).to receive(:search).and_return(search_response)
     end
 
+    context 'when any params is present' do
+      it "does a match all query" do
+        described_class.search
+
+        expect(elasticsearch_proxy).to have_received(:search).with(
+          ({ query: { term: {public: true}} })
+        )
+      end
+    end
+
     context 'when only muscle_group_id is present' do
       it "do a term query" do
         described_class.search(muscle_group_id: 'chest')
 
         expect(elasticsearch_proxy).to have_received(:search).with(
-          ({ query: { bool: { filter: [ { term: { "muscle_group_id" => { value: "chest" } } } ] } } })
+          ({ query: { bool: { filter: [ { term: { "public" => { value: "true" } } }, { term: { "muscle_group_id" => { value: "chest" } } } ] } } })
         )
       end
     end
@@ -57,13 +67,34 @@ RSpec.describe Exercise, type: :model do
         described_class.search(message: ' ', muscle_group_id: 'chest')
 
         expect(elasticsearch_proxy).to have_received(:search).with(
-          ({ query: { bool: { filter: [ { term: { "muscle_group_id" => { value: "chest" } } } ] } } })
+          {
+            query: {
+              bool: {
+                filter: [
+                  {
+                    term: {
+                      "public" => {
+                        value: "true"
+                      }
+                    }
+                  },
+                  {
+                    term: {
+                      "muscle_group_id" => {
+                        value: "chest"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          }
         )
       end
     end
 
     context 'when muscle_group_id and message are present' do
-      it "do a bool query including a must match on title and a filter by term on muscle group" do
+      it "do a bool query including a must match on title and a filter by term on muscle group and public" do
         described_class.search(message: 'press', muscle_group_id: 'chest')
 
         expect(elasticsearch_proxy).to have_received(:search).with(
@@ -79,6 +110,13 @@ RSpec.describe Exercise, type: :model do
                   }
                 } ],
                 filter: [
+                  {
+                    term: {
+                      "public" => {
+                        value: 'true'
+                      }
+                    },
+                  },
                   {
                     term: {
                       "muscle_group_id" => {
@@ -99,7 +137,31 @@ RSpec.describe Exercise, type: :model do
         described_class.search(message: "press")
 
         expect(elasticsearch_proxy).to have_received(:search).with(
-          ({ query: { bool: { must: [ { match: { "title" => { fuzziness: 'AUTO', query: "press" } } } ] } } })
+          ({
+            query: {
+              bool: {
+                must: [
+                  {
+                    match: {
+                      "title" => {
+                        query: "press",
+                        fuzziness: "AUTO"
+                      }
+                    }
+                  }
+                ],
+                filter: [
+                  {
+                    term: {
+                      "public" => {
+                        value: 'true'
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          })
         )
       end
     end
@@ -109,7 +171,31 @@ RSpec.describe Exercise, type: :model do
         described_class.search(message: "press", muscle_group_id: " ")
 
         expect(elasticsearch_proxy).to have_received(:search).with(
-          ({ query: { bool: { must: [ { match: { "title" => { fuzziness: 'AUTO', query: "press" } } } ] } } })
+          ({
+            query: {
+              bool: {
+                must: [
+                  {
+                    match: {
+                      "title" => {
+                        query: "press",
+                        fuzziness: "AUTO"
+                      }
+                    }
+                  }
+                ],
+                filter: [
+                  {
+                    term: {
+                      "public" => {
+                        value: 'true'
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          })
         )
       end
     end
@@ -230,7 +316,26 @@ RSpec.describe Exercise, type: :model do
           described_class.search(scope: 'verified')
 
           expect(elasticsearch_proxy).to have_received(:search).with(
-            ({ query: { bool: { filter: [ { exists: { field: 'verified_at' } } ] } } })
+            ({
+              query: {
+                bool: {
+                  filter: [
+                    {
+                      exists: {
+                        field: 'verified_at'
+                      }
+                    },
+                    {
+                      term: {
+                        "public" => {
+                          value: 'true'
+                        }
+                      }
+                    }
+                  ]
+                }
+              }
+            })
           )
         end
       end
