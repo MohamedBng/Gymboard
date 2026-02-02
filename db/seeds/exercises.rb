@@ -16,6 +16,7 @@ exercises.each do |data|
 
   exercise.primary_muscle = primary_muscle
   exercise.verified_at = DateTime.now
+  exercise.public = true
   exercise.save!
   exercises_created += 1 if exercise.previously_new_record?
 
