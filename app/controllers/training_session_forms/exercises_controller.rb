@@ -31,7 +31,7 @@ class TrainingSessionForms::ExercisesController < Admin::BaseController
       render turbo_stream: turbo_stream.replace(
         "exercise-form",
         partial: "training_session_forms/training_session_exercises/exercises_picker",
-        locals: {training_session_id: params[:training_session_id] }
+        locals: { training_session_id: params[:training_session_id] }
       )
     else
       flash.now[:error] = @exercise.errors.full_messages.join(",")
