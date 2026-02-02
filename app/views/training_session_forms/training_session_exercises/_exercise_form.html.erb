@@ -8,20 +8,21 @@
 
   <%= render "shared/flash_error" %>
   <h3 class="font-bold text-lg mb-4 mt-6">Create an exercise</h3>
-  <%= form_with(model: @exercise, url: training_session_forms_exercises_path ) do |f| %>
+  <%= form_with(model: @exercise, url: training_session_forms_exercises_path, data: {controller: 'enable-field'} ) do |f| %>
     <div class= 'form-control mb-2'>
       <%= f.label :title, t('activerecord.attributes.exercise.title'), class: 'label label-text label-xs' %>
-      <%= f.text_field :title, class: 'input input-bordered input-sm w-full', required: true %>
-    </div>
-    <div class="mb-2 flex flex-col">
-      <%= f.label :muscle_group, t('activerecord.attributes.exercise.muscle_group'), class: 'label label-text label-xs' %>
-      <%= f.select :muscle_group_id, MuscleGroup.all.map { |muscle_group| [muscle_group.name_capitalized, muscle_group.id] }, {include_blank: true}, {class: 'select select-neutral'} %>
-    </div>
-    <div class="mb-2 flex flex-col">
-      <%= f.label :primary_muscle, t('activerecord.attributes.exercise.primary_muscle'), class: 'label label-text label-xs' %>
-      <%= f.select :primary_muscle_id, Muscle.all.map { |muscle| [muscle.name, muscle.id] }, {include_blank: true}, {class: 'select select-neutral'} %>
+      <%= f.text_field :title, class: 'input input-bordered input-sm w-full', required: true, data: { "enable-field-target": 'requiredField' } %>
     </div>
 
+    <div class="mb-2 flex flex-col">
+      <%= f.label :muscle_group, t('activerecord.attributes.exercise.muscle_group'), class: 'label label-text label-xs' %>
+      <%= f.select :muscle_group_id, MuscleGroup.all.map { |muscle_group| [muscle_group.name_capitalized, muscle_group.id] }, {include_blank: true}, {data: { "enable-field-target": 'requiredField'}, class: 'select select-neutral w-full'} %>
+    </div>
+
+    <div class="mb-2 flex flex-col">
+      <%= f.label :primary_muscle, t('activerecord.attributes.exercise.primary_muscle'), class: 'label label-text label-xs' %>
+      <%= f.select :primary_muscle_id, Muscle.all.map { |muscle| [muscle.name, muscle.id] }, {include_blank: true}, {class: 'select select-neutral w-full'} %>
+    </div>
 
     <div
       class="mb-2 flex flex-col"
@@ -30,6 +31,16 @@
       data-multi-select-input-name-value="exercise[secondary_muscle_ids][]"
       data-multi-select-label-value="<%= t('activerecord.attributes.exercise.secondary_muscles') %>"
     ></div>
+
+    <div class="mb-4 flex flex-col">
+      <%= f.label :public, "Share with other users", class: 'label label-text label-xs' %>
+      <div class="fieldset bg-base-100 border-base-300 rounded-box w-full border p-4" >
+        <div class="label">
+        <%= f.checkbox :public, {disabled: true, class: 'toggle', data: {"enable-field-target": 'fieldToEnable'}}, true, false %>
+          Only complete exercise can be public
+        </div>
+      </div>
+    </div>
 
     <%= f.hidden_field :training_session_id, value: training_session_id %>
     <%= f.button type: "submit", class: "btn btn-accent btn-lg w-full gap-2 flex-1" do %>
