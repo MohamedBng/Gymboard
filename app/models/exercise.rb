@@ -2,6 +2,7 @@ class Exercise < ApplicationRecord
   include Searchable
 
   validates :title, presence: true, uniqueness: { scope: :user_id }
+  validates :muscle_group_id, :primary_muscle_id, presence: true, if: :public?
 
   belongs_to :muscle_group, optional: true
   belongs_to :user, optional: true
