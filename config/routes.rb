@@ -26,9 +26,11 @@ Rails.application.routes.draw do
   end
 
   namespace :training_session_forms do
-    resources :exercises, only: [ :index, :new, :create ] do
-      collection do
-        post :back_to_picker
+    resources :training_sessions do
+      resources :exercises, only: [ :index, :new, :create ] do
+        collection do
+          post :back_to_picker
+        end
       end
     end
   end
