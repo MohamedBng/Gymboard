@@ -240,6 +240,10 @@ en:
     roles: "Roles"
     exercises: "Exercises"
     trainings: "Trainings"
+  exercises:
+    new:
+      share_with_other_users: "Share with other users ?"
+      only_complete_exercises_can_be_public: "Only complete exercises can be public."
   tables:
     users:
       name: "Name"

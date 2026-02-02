@@ -63,6 +63,7 @@ class TrainingSessionForms::ExercisesController < Admin::BaseController
       :title,
       :primary_muscle_id,
       :muscle_group_id,
+      :public,
       secondary_muscle_ids: []
     )
   end

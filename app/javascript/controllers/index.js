@@ -19,8 +19,8 @@ application.register("dashboard", DashboardController)
 import DockController from "./dock_controller"
 application.register("dock", DockController)
 
-import EnableSubmitButtonController from "./enable_submit_button_controller"
-application.register("enable-submit-button", EnableSubmitButtonController)
+import EnableFieldController from "./enable_field_controller"
+application.register("enable-field", EnableFieldController)
 
 import FilePreviewController from "./file_preview_controller"
 application.register("file-preview", FilePreviewController)

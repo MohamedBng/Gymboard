@@ -26,7 +26,7 @@
                     url:   admin_role_user_roles_path(role),
                     scope: :role_user,
                     method: :post,
-                    data:  { turbo_frame: "main", controller: "select-all enable-submit-button" } do |form| %>
+                    data:  { turbo_frame: "main", controller: "select-all enable-field" } do |form| %>
 
         <% if users_available.any? %>
 
@@ -37,7 +37,7 @@
                     data: {
                         action: "select-all#toggleAll",
                         "select-all-target": "master",
-                        "enable-submit-button-target": "checkbox"
+                        "enable-field-target": "requiredCheckbox"
                     } %>
             </div>
 
@@ -53,7 +53,7 @@
               <%= form.check_box :user_ids,
                   { multiple: true,
                       class: "checkbox checkbox-accent",
-                      data:  { "enable-submit-button-target": "checkbox", "select-all-target": "checkbox" }
+                      data:  { "enable-field-target": "requiredCheckbox", "select-all-target": "checkbox" }
                   },
                   user.id,
                   nil %>
@@ -62,7 +62,7 @@
 
           <div class="flex justify-end mt-4">
               <%= form.submit t("admin.roles.users_list.add_selected_users"),
-                              class: "btn btn-accent btn-soft", disabled: true, data: { "enable-submit-button-target": "submitButton" } %>
+                              class: "btn btn-accent btn-soft", disabled: true, data: { "enable-field-target": "fieldToEnable" } %>
           </div>
         <% else %>
           <div class="alert alert-info shadow-lg">

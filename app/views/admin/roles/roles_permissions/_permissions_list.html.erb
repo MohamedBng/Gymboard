@@ -26,7 +26,7 @@
                     url:   admin_role_roles_permissions_path(role),
                     scope: :role_permission,
                     method: :post,
-                    data:  { turbo_frame: "main", controller: "select-all enable-submit-button" } do |form| %>
+                    data:  { turbo_frame: "main", controller: "select-all enable-field" } do |form| %>
 
         <% if permissions_available.any? %>
 
@@ -37,7 +37,7 @@
                     data: {
                         action: "select-all#toggleAll",
                         "select-all-target": "master",
-                        "enable-submit-button-target": "checkbox"
+                        "enable-field-target": "requiredCheckbox"
                     } %>
             </div>
 
@@ -49,7 +49,7 @@
                 <%= form.check_box :permission_ids,
                     { multiple: true,
                         class: "checkbox checkbox-accent",
-                        data:  { "enable-submit-button-target": "checkbox", "select-all-target": "checkbox" }
+                        data:  { "enable-field-target": "requiredCheckbox", "select-all-target": "checkbox" }
                     },
                     permission.id,
                     nil %>
@@ -58,7 +58,7 @@
 
             <div class="flex justify-end mt-4">
                     <%= form.submit t("admin.roles.permissions_list.add_selected_permissions"),
-                                    class: "btn btn-accent btn-soft", disabled: true, data: { "enable-submit-button-target": "submitButton" } %>
+                                    class: "btn btn-accent btn-soft", disabled: true, data: { "enable-field-target": "fieldToEnable" } %>
             </div>
         <% else %>
           <div class="alert alert-info shadow-lg">
