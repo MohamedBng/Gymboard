@@ -60,7 +60,7 @@ class Exercise < ApplicationRecord
   def self.search(message: nil, muscle_group_id: nil, scope: nil, current_user_id: nil)
     at_least_one_exercise = [ message, muscle_group_id, scope ].count(&:present?) >= 1
 
-    query = at_least_one_exercise ? ExerciseSearchQuery.call(message:, muscle_group_id:, scope:, current_user_id:) : { term: {public: true} }
+    query = at_least_one_exercise ? ExerciseSearchQuery.call(message:, muscle_group_id:, scope:, current_user_id:) : { term: { public: true } }
 
     params = {
       query: query
