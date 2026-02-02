@@ -20,7 +20,7 @@
 
     <div class="mb-2 flex flex-col">
       <%= f.label :primary_muscle, t('activerecord.attributes.exercise.primary_muscle'), class: 'label label-text label-xs' %>
-      <%= f.select :primary_muscle_id, Muscle.all.map { |muscle| [muscle.name, muscle.id] }, {include_blank: true}, {class: 'select select-neutral w-full'} %>
+      <%= f.select :primary_muscle_id, Muscle.all.map { |muscle| [muscle.name, muscle.id] }, {include_blank: true}, {data: { "enable-field-target": 'requiredField'}, class: 'select select-neutral w-full'} %>
     </div>
 
     <div
