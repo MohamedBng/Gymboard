@@ -29,12 +29,15 @@ class ExerciseSearchQuery
       case scope
       when "verified"
         filter << exists_query(field: "verified_at")
+        filter << term_query(field: "public", field_value: "true")
       when "current_user"
         raise ArgumentError if current_user_id.blank?
         filter << term_query(field: "user_id", field_value: current_user_id)
       else
         raise ArgumentError
       end
+    else
+      filter << term_query(field: "public", field_value: "true")
     end
 
 
