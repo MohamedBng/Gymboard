@@ -53,13 +53,14 @@ class Exercise < ApplicationRecord
     indexes :title, type: "text"
     indexes :user_id, type: "keyword"
     indexes :muscle_group_id, type: "keyword"
+    indexes :public, type: "boolean"
     indexes :verified_at, type: "date"
   end
 
   def self.search(message: nil, muscle_group_id: nil, scope: nil, current_user_id: nil)
     at_least_one_exercise = [ message, muscle_group_id, scope ].count(&:present?) >= 1
 
-    query = at_least_one_exercise ? ExerciseSearchQuery.call(message:, muscle_group_id:, scope:, current_user_id:) : { match_all: {} }
+    query = at_least_one_exercise ? ExerciseSearchQuery.call(message:, muscle_group_id:, scope:, current_user_id:) : { term: {public: true} }
 
     params = {
       query: query
