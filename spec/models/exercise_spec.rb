@@ -8,25 +8,26 @@ RSpec.describe Exercise, type: :model do
     it { should validate_uniqueness_of(:title).scoped_to(:user_id) }
 
     context 'when exercise is set to public' do
-      let(:exercise) { create(:exercise, title: "bench press", public: false)}
+      let(:muscle_group) { create(:muscle_group)}
+      let(:muscle) { create(:muscle)}
 
       it "raise an error if primary_muscle is not present" do
-        exercise = build(:exercise, primary_muscle_id: nil, public: false)
+        exercise = build(:exercise, title: "bench press", primary_muscle: nil, muscle_group: muscle_group, public: true)
         expect(exercise).to_not be_valid
       end
 
       it "raise an error if muscle_group is not present" do
-        exercise = build(:exercise, muscle_group_id: nil, public: false)
+        exercise = build(:exercise, title: "bench press", muscle_group: nil, primary_muscle: muscle, public: true)
         expect(exercise).to_not be_valid
       end
 
       it "raise an error if title is not present" do
-        exercise = build(:exercise, title: nil, public: false)
+        exercise = build(:exercise, title: nil, muscle_group: muscle_group, primary_muscle: muscle, public: true)
         expect(exercise).to_not be_valid
       end
 
       it "is valid if title, muscle_group and primary_muscle are present" do
-        exercise = build(:exercise, public: true)
+        exercise = build(:exercise, title: "bench press", muscle_group: muscle_group, primary_muscle: muscle, public: true)
         expect(exercise).to be_valid
       end
     end
