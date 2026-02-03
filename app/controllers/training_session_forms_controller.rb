@@ -21,7 +21,7 @@ class TrainingSessionFormsController < BaseController
     else
       flash.now[:error] = @step.errors.full_messages.join(", ")
       @exercises = Exercise.all.includes(:muscle_group)
-      render :new, status: :unprocessable_entity
+      render :new, status: :unprocessable_content
     end
   end
 

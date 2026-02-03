@@ -254,7 +254,7 @@ RSpec.describe 'Admin::Users', type: :request do
         end
 
         it 'responds with status 422' do
-          expect(response).to have_http_status(:unprocessable_entity)
+          expect(response).to have_http_status(:unprocessable_content)
         end
       end
     end
@@ -449,7 +449,7 @@ RSpec.describe 'Admin::Users', type: :request do
           post admin_users_path, params: { user: invalid_attributes }
         }.not_to change(User, :count)
 
-        expect(response).to have_http_status(:unprocessable_entity)
+        expect(response).to have_http_status(:unprocessable_content)
         expect(response).to render_template(:new)
         expect(flash[:error]).to be_present
       end
