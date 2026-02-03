@@ -20,7 +20,7 @@ class Admin::RolesController < Admin::BaseController
       redirect_to admin_roles_path, notice: t("admin.roles.create.success")
     else
       flash.now[:error] = @role.errors.full_messages.to_sentence
-      render :new, status: :unprocessable_entity
+      render :new, status: :unprocessable_content
     end
   end
 
@@ -42,7 +42,7 @@ class Admin::RolesController < Admin::BaseController
         "role_basic_info_#{@role.id}",
         partial: "admin/roles/basic_infos/form",
         locals: { role: @role }
-      ), status: :unprocessable_entity
+      ), status: :unprocessable_content
     end
   end
 

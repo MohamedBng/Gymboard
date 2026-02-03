@@ -131,10 +131,10 @@ RSpec.describe 'Admin::Roles', type: :request do
           expect { post admin_roles_path, params: invalid_attributes }.not_to change(Role, :count)
         end
 
-        it "re-renders the 'new' template with unprocessable_entity status" do
+        it "re-renders the 'new' template with unprocessable_content status" do
           post admin_roles_path, params: invalid_attributes
           expect(response).to render_template(:new)
-          expect(response).to have_http_status(:unprocessable_entity)
+          expect(response).to have_http_status(:unprocessable_content)
         end
 
         it 'sets an error flash message' do
@@ -289,7 +289,7 @@ RSpec.describe 'Admin::Roles', type: :request do
         end
 
         it 'responds with status 422' do
-          expect(response).to have_http_status(:unprocessable_entity)
+          expect(response).to have_http_status(:unprocessable_content)
         end
 
         it 'sets an error flash message' do

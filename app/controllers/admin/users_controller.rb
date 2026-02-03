@@ -27,7 +27,7 @@ class Admin::UsersController < Admin::BaseController
       redirect_to admin_user_path(@user), notice: t("admin.users.create.success")
     else
       flash.now[:error] = @user.errors.full_messages.to_sentence
-      render :new, status: :unprocessable_entity
+      render :new, status: :unprocessable_content
     end
   end
 
@@ -51,7 +51,7 @@ class Admin::UsersController < Admin::BaseController
         "user_infos_#{@user.id}",
         partial: "admin/users/user_infos/form",
         locals: { user: @user }
-      ), status: :unprocessable_entity
+      ), status: :unprocessable_content
     end
   end
 
@@ -78,7 +78,7 @@ class Admin::UsersController < Admin::BaseController
         "user_infos_#{@user.id}",
         partial: "admin/users/user_infos/plaintext",
         locals: { user: @user }
-      ), status: :unprocessable_entity
+      ), status: :unprocessable_content
     end
   end
 
