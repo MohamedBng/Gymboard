@@ -42,6 +42,15 @@ RSpec.describe Exercise, type: :model do
     end
   end
 
+  describe '.restore_soft_delete!' do
+    let(:exercise) { build(:exercise, delete_at: nil) }
+    it "set delete_at to nil" do
+      exercise.restore_soft_delete!
+
+      expect(exercise.delete_at).to be_nil
+    end
+  end
+
   describe '.search' do
     let(:elasticsearch_proxy) { instance_double('ElasticsearchProxy') }
     let(:search_response) { instance_double('SearchResponse', records: :response_records) }
