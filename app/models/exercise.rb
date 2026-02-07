@@ -17,6 +17,10 @@ class Exercise < ApplicationRecord
     self.update!(delete_at: DateTime.now)
   end
 
+  def restore_soft_delete!
+    self.update!(delete_at: nil)
+  end
+
   def self.ransackable_attributes(auth_object = nil)
     %w[title]
   end
