@@ -34,7 +34,7 @@ RSpec.describe Exercise, type: :model do
   end
 
   describe '.soft_delete!' do
-    let(:exercise) {build(:exercise, delete_at: nil)}
+    let(:exercise) { build(:exercise, delete_at: nil) }
     it "set delete_at to current date time" do
       exercise.soft_delete!
 
