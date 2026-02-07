@@ -33,6 +33,15 @@ RSpec.describe Exercise, type: :model do
     end
   end
 
+  describe '.soft_delete!' do
+    let(:exercise) {build(:exercise, delete_at: nil)}
+    it "set delete_at to current date time" do
+      exercise.soft_delete!
+
+      expect(exercise.delete_at).to be_within(1.second).of(DateTime.now)
+    end
+  end
+
   describe '.search' do
     let(:elasticsearch_proxy) { instance_double('ElasticsearchProxy') }
     let(:search_response) { instance_double('SearchResponse', records: :response_records) }
