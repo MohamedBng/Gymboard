@@ -166,7 +166,7 @@ GEM
     factory_bot_rails (6.4.4)
       factory_bot (~> 6.5)
       railties (>= 5.0.0)
-    faker (3.5.1)
+    faker (3.5.2)
       i18n (>= 1.8.11, < 2)
     faraday (2.13.1)
       faraday-net_http (>= 2.0, < 3.5)
@@ -582,7 +582,7 @@ DEPENDENCIES
   elasticsearch-model
   elasticsearch-rails
   factory_bot_rails (~> 6.4.4)
-  faker (~> 3.5.1)
+  faker (~> 3.5.2)
   fastimage (~> 2.3)
   geocoder (~> 1.8)
   i18n (~> 1.14.7)
