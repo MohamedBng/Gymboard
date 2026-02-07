@@ -13,6 +13,10 @@ class Exercise < ApplicationRecord
   has_many :training_session_exercises, dependent: :destroy
   has_many :training_sessions, through: :training_session_exercises
 
+  def soft_delete!
+    self.update!(delete_at: DateTime.now)
+  end
+
   def self.ransackable_attributes(auth_object = nil)
     %w[title]
   end
