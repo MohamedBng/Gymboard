@@ -1,4 +1,15 @@
 class TrainingSessions::TrainingSessionExercisesController < BaseController
+  def new
+    @exercises = Exercise.search(
+      message: params[:q],
+      muscle_group_id: params[:muscle_group_id],
+      scope: params[:scope],
+      current_user_id: current_user.id
+    ).includes(:muscle_group)
+
+    @training_session_id = params[:training_session_id]
+  end
+
   def create
     training_session = TrainingSession.find(params[:training_session_id])
     training_session_exercise = TrainingSessionExercise.create!(
