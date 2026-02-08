@@ -1,0 +1,45 @@
+<%= link_to ( request.referrer || training_sessions_path), form_class: "btn btn-sm btn-circle btn-ghost absolute top-2" do %>
+    <i class="fas fa-arrow-left text-xl"></i>
+<% end %>
+
+  <%= render "shared/flash_error" %>
+  <h3 class="font-bold text-lg mb-4 mt-6">Create an exercise</h3>
+  <%= form_with(model: @exercise, url: exercises_path, data: {turbo_frame: 'main', turbo_action: 'advance', controller: 'enable-field'} ) do |f| %>
+    <div class= 'form-control mb-2'>
+      <%= f.label :title, t('activerecord.attributes.exercise.title'), class: 'label label-text label-xs' %>
+      <%= f.text_field :title, class: 'input input-bordered input-sm w-full', data: { "enable-field-target": 'requiredField' } %>
+    </div>
+
+    <div class="mb-2 flex flex-col">
+      <%= f.label :muscle_group, t('activerecord.attributes.exercise.muscle_group'), class: 'label label-text label-xs' %>
+      <%= f.select :muscle_group_id, MuscleGroup.all.map { |muscle_group| [muscle_group.name_capitalized, muscle_group.id] }, {include_blank: true}, {data: { "enable-field-target": 'requiredField'}, class: 'select select-neutral w-full'} %>
+    </div>
+
+    <div class="mb-2 flex flex-col">
+      <%= f.label :primary_muscle, t('activerecord.attributes.exercise.primary_muscle'), class: 'label label-text label-xs' %>
+      <%= f.select :primary_muscle_id, Muscle.all.map { |muscle| [muscle.name, muscle.id] }, {include_blank: true}, {data: { "enable-field-target": 'requiredField'}, class: 'select select-neutral w-full'} %>
+    </div>
+
+    <div
+      class="mb-2 flex flex-col"
+      data-controller="multi-select"
+      data-multi-select-options-value="<%= Muscle.order(:name).map { |muscle| { id: muscle.id, label: muscle.name.titleize } }.to_json %>"
+      data-multi-select-input-name-value="exercise[secondary_muscle_ids][]"
+      data-multi-select-label-value="<%= t('activerecord.attributes.exercise.secondary_muscles') %>"
+    ></div>
+
+    <div class="mb-4 flex flex-col">
+      <%= f.label :public, t('exercises.new.share_with_other_users'), class: 'label label-text label-xs' %>
+      <div class="fieldset bg-base-100 border-base-300 rounded-box w-full border p-4" >
+        <div class="label">
+        <%= f.checkbox :public, {disabled: true, class: 'toggle', data: {"enable-field-target": 'fieldToEnable'}}, true, false %>
+          <%= t('exercises.new.only_complete_exercises_can_be_public') %>
+        </div>
+      </div>
+    </div>
+
+    <%= f.button type: "submit", class: "btn btn-accent btn-lg w-full gap-2 flex-1" do %>
+      <%= t("common.continue") %>
+      <i class="fa-solid fa-arrow-right"></i>
+    <% end %>
+  <% end %>
