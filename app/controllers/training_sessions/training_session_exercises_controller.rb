@@ -7,7 +7,7 @@ class TrainingSessions::TrainingSessionExercisesController < BaseController
       current_user_id: current_user.id
     ).includes(:muscle_group)
 
-    @training_session_id = params[:training_session_id]
+    @training_session = TrainingSession.find(params[:training_session_id])
   end
 
   def create
@@ -19,6 +19,8 @@ class TrainingSessions::TrainingSessionExercisesController < BaseController
 
     training_session_exercise.exercise_sets.create
 
+    flash[:success] = "Exercise successfully added"
+
     redirect_to new_training_session_form_path(training_session)
   end
 
@@ -27,5 +29,20 @@ class TrainingSessions::TrainingSessionExercisesController < BaseController
     training_session_exercise = TrainingSessionExercise.find_by(id: params[:id])
     training_session_exercise.destroy if training_session_exercise
     redirect_to new_training_session_form_path(params[:training_session_id])
+  end
+
+  def search_exercises
+    @exercises = Exercise.search(
+      message: params[:q],
+      muscle_group_id: params[:muscle_group_id],
+      scope: params[:scope],
+      current_user_id: current_user.id
+    ).includes(:muscle_group)
+
+    render turbo_stream: turbo_stream.replace(
+      "exercises_list",
+      partial: "training_sessions/training_session_exercises/exercises_list",
+      locals: { exercises: @exercises, training_session_id: params[:training_session_id] }
+    )
   end
 end
