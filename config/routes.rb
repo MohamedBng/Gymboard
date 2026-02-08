@@ -13,25 +13,21 @@ Rails.application.routes.draw do
 
   resources :training_sessions, only: :index do
     resources :training_session_exercises, only: [:new, :create, :destroy ], module: :training_sessions do
+      collection do
+        get :search_exercises
+      end
+
       resources :exercise_sets, only: [ :create, :destroy ], module: :training_session_exercises
     end
   end
+
+  resources :exercises, only: [:new, :create]
 
   resources :exercise_sets, only: :update
 
   resources :training_session_forms, only: [ :new, :update ] do
     collection do
       post :go_back_to_previous_step
-    end
-  end
-
-  namespace :training_session_forms do
-    resources :training_sessions do
-      resources :exercises, only: [ :index, :new, :create ] do
-        collection do
-          post :back_to_picker
-        end
-      end
     end
   end
 
