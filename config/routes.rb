@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
 
   resources :training_sessions, only: :index do
-    resources :training_session_exercises, only: [ :create, :destroy ], module: :training_sessions do
+    resources :training_session_exercises, only: [:new, :create, :destroy ], module: :training_sessions do
       resources :exercise_sets, only: [ :create, :destroy ], module: :training_session_exercises
     end
   end
