@@ -1,16 +1,19 @@
+
+<%= link_to new_training_session_form_path(@training_session), form_class: "btn btn-sm btn-circle btn-ghost absolute top-2" do %>
+    <i class="fas fa-arrow-left text-xl"></i>
+<% end %>
 <div class="flex flex-row items-center justify-between mt-6 mb-4">
   <h3 class="font-bold text-lg">
     <%= t("training_sessions.training_session_exercises.new.title") %>
   </h3>
 
-  <%= button_to new_training_session_forms_training_session_exercise_url(@training_session_id),
-    method: :get,
-    form_class: "btn btn-accent btn-outline btn-xs inline-flex items-center gap-1 sm:gap-2 hover:bg-accent-focus hover:shadow-lg hover:shadow-accent/50 hover:scale-105 transition-all duration-300 shrink-0" do %>
-    Create an exercise
+  <%= link_to new_exercise_path,
+        class: "btn btn-accent btn-outline btn-xs inline-flex items-center gap-1 sm:gap-2 hover:bg-accent-focus hover:shadow-lg hover:shadow-accent/50 hover:scale-105 transition-all duration-300 shrink-0" do %>
+        Create an exercise
   <% end %>
 </div>
 
-<%= form_with(url: training_session_forms_training_session_exercises_path(@training_session_id), method: :get, html: {data: {controller: 'auto-submit'}, class: "mb-4"}) do |f| %>
+<%= form_with(url: search_exercises_training_session_training_session_exercises_path(@training_session), method: :get, html: {data: {controller: 'auto-submit'}, class: "mb-4"}) do |f| %>
   <label class="input input-bordered flex items-center gap-2 grow w-full mb-2">
     <i class="fas fa-search"></i>
     <%= f.text_field :q,
@@ -50,5 +53,5 @@
   </div>
 <% end %>
 
-<turbo-frame id='exercises_list' src="<%= training_session_forms_training_session_exercises_path(@training_session_id) %>">
+<turbo-frame id='exercises_list' src="<%= search_exercises_training_session_training_session_exercises_path(@training_session) %>">
 </turbo-frame>
