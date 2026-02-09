@@ -12,7 +12,7 @@ Rails.application.routes.draw do
 
 
   resources :training_sessions, only: :index do
-    resources :training_session_exercises, only: [:new, :create, :destroy ], module: :training_sessions do
+    resources :training_session_exercises, only: [ :new, :create, :destroy ], module: :training_sessions do
       collection do
         get :search_exercises
       end
@@ -21,7 +21,7 @@ Rails.application.routes.draw do
     end
   end
 
-  resources :exercises, only: [:new, :create]
+  resources :exercises, only: [ :new, :create ]
 
   resources :exercise_sets, only: :update
 
