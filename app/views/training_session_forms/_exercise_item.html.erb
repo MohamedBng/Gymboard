@@ -8,7 +8,7 @@
       </p>
 
       <%= link_to training_session_training_session_exercise_path(id: training_session_exercise.id, training_session_id: training_session_id),
-            data: { turbo_method: :delete },
+            data: { turbo_frame: 'main', turbo_method: :delete },
             class: "opacity-60 hover:opacity-100" do %>
         <i class="fa-solid fa-trash text-lg"></i>
       <% end %>
