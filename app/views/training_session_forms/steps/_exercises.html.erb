@@ -9,14 +9,14 @@
           <%= pluralize(training_session.training_session_exercises.count, 'exercise') %>
         </span>
       </div>
-      <button
-        type="button"
-        onclick="document.getElementById('exercises_modal').showModal()"
-        class="btn btn-accent btn-outline btn-sm sm:btn-md md:btn-lg inline-flex items-center gap-1 sm:gap-2 hover:bg-accent-focus hover:shadow-lg hover:shadow-accent/50 hover:scale-105 transition-all duration-300 w-full sm:w-auto shrink-0">
+
+      <%= link_to new_training_session_training_session_exercise_path(training_session.id),
+        data: { turbo_frame: "main", turbo_action: "advance" },
+        class: "btn btn-accent btn-outline btn-sm sm:btn-md md:btn-lg inline-flex items-center gap-1 sm:gap-2 hover:bg-accent-focus hover:shadow-lg hover:shadow-accent/50 hover:scale-105 transition-all duration-300 w-full sm:w-auto shrink-0"  do %>
         <i class="fas fa-plus"></i>
         <span class="hidden xs:inline"><%= t("training_sessions.new.add_exercise_button") %></span>
         <span class="inline xs:hidden text-xs"><%= t("training_sessions.new.add_exercise_button_short") %></span>
-      </button>
+      <% end %>
     </div>
 
     <turbo-frame id="current_session">
@@ -24,7 +24,6 @@
     </turbo-frame>
 
     <div class="mt-6 flex gap-4">
-      <%= f.hidden_field :_exercise_step, value: 1 %>
       <%= f.button type: "submit", class: "btn btn-accent btn-lg gap-2 w-full" do %>
         <%= t("common.continue") %>
         <i class="fa-solid fa-arrow-right"></i>
@@ -32,6 +31,4 @@
     </div>
   </div>
 <% end %>
-
-<%= render partial: 'training_session_forms/training_session_exercises/exercises_modal', locals: { training_session: training_session, exercises: exercises } %>
 

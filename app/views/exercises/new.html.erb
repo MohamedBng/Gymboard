@@ -1,16 +1,13 @@
-
-<turbo-frame id="exercise-form">
-  <%= button_to back_to_picker_training_session_forms_training_session_exercises_path(training_session_id),
-        form_class: "btn btn-sm btn-circle btn-ghost absolute top-2" do %>
+<%= link_to ( request.referrer || training_sessions_path), form_class: "btn btn-sm btn-circle btn-ghost absolute top-2" do %>
     <i class="fas fa-arrow-left text-xl"></i>
-  <% end %>
+<% end %>
 
   <%= render "shared/flash_error" %>
   <h3 class="font-bold text-lg mb-4 mt-6">Create an exercise</h3>
-  <%= form_with(model: @exercise, url: training_session_forms_training_session_exercises_path(training_session_id), data: {controller: 'enable-field'} ) do |f| %>
+  <%= form_with(model: @exercise, url: exercises_path, data: {turbo_frame: 'main', turbo_action: 'advance', controller: 'enable-field'} ) do |f| %>
     <div class= 'form-control mb-2'>
       <%= f.label :title, t('activerecord.attributes.exercise.title'), class: 'label label-text label-xs' %>
-      <%= f.text_field :title, class: 'input input-bordered input-sm w-full', required: true, data: { "enable-field-target": 'requiredField' } %>
+      <%= f.text_field :title, class: 'input input-bordered input-sm w-full', data: { "enable-field-target": 'requiredField' } %>
     </div>
 
     <div class="mb-2 flex flex-col">
@@ -46,4 +43,3 @@
       <i class="fa-solid fa-arrow-right"></i>
     <% end %>
   <% end %>
-</turbo-frame>
